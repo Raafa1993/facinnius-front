@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export default function Header() {
+  const [menuFixed, setMenuFixed] = useState<boolean>(false);
+
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        setMenuFixed(true);
+      } else if (window.scrollY === 0) {
+        setMenuFixed(false);
+      }
+    });
+    return () =>
+      document.removeEventListener("scroll", () => {
+        setMenuFixed(false);
+      });
+  }, []);
+
   return (
-    <header className="header" id="header">
+    <header className={`header ${menuFixed ? 'scroll-header' : ''}`} id="header">
       <nav className="nav container">
         <a href="#" className="nav__logo">
           Shop.

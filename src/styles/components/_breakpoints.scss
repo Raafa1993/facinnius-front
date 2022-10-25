@@ -38,6 +38,16 @@
         }
     }
 
+    .quality{
+        &__img-small{
+            transform: translateX(-6rem);
+        }
+        &__buttons{
+            flex-direction: column;
+            row-gap: 1rem;
+        }
+    }
+
     .new{
         &__img{
             width: 230px;
@@ -113,7 +123,11 @@
     .brand__container{
         grid-template-columns: repeat(4, max-content);
     }
-
+    .quality__content {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+    
     .footer__container{
         grid-template-columns: repeat(2, max-content);
         justify-content: space-between;
@@ -218,6 +232,28 @@
         &__img{
             width: 80px;
             margin-bottom: 1.5rem;
+        }
+    }
+
+    .quality{
+        &__content{
+            column-gap: 6rem;
+        }
+        &__images{
+            margin-top: 2rem;
+        }
+        &__img-big{
+            width: 428px;
+        }
+        &__img-small{
+            width: 153px;
+            transform: translateX(-7rem);
+        }
+        &__title{
+            margin-bottom: 1.5rem;
+        }
+        &__special{
+            margin-bottom: 1rem;
         }
     }
 }
