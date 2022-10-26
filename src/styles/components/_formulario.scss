@@ -24,6 +24,15 @@
     border-radius: 5px;
     width: 100%;
     box-sizing: border-box;
+  }
+  .form select {
+    font: 400 1rem/1.5 "Roboto", sans-serif;
+    background: var(--cor-1);
+    border: 1px solid var(--cor-2);
+    padding: 12px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
   } 
   
   .form input[type="text"]:focus, 
@@ -34,6 +43,12 @@
     background: var(--cor-0);
     box-shadow: 0 0 0 2px #fea;
   }
+  .form select:focus {
+    outline: none;
+    border-color: var(--cor-p1);
+    background: var(--cor-0);
+    box-shadow: 0 0 0 2px #fea;
+  } 
   
   @media (max-width: 600px) {
     .form {

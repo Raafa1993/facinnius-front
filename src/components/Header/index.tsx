@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 export default function Header() {
@@ -20,38 +21,46 @@ export default function Header() {
   return (
     <header className={`header ${menuFixed ? 'scroll-header' : ''}`} id="header">
       <nav className="nav container">
-        <a href="/" className="nav__logo">
+        <Link href="/" className="nav__logo">
           Facinnius.
-        </a>
+        </Link>
 
         <div className="nav__menu" id="nav-menu">
           <ul className="nav__list">
             <li className="nav__item">
-              <a href="#" className="nav__link active-link">
-                <i className="ri-home-line"></i>
-                <span>Home</span>
-              </a>
+              <Link href="/" className="nav__link active-link">
+                <a>
+                  <i className="ri-home-line"></i>
+                  <span>Home</span>
+                </a>
+              </Link>
             </li>
 
             <li className="nav__item">
-              <a href="#new" className="nav__link">
-                <i className="ri-price-tag-3-line"></i>
-                <span>Produtos</span>
-              </a>
+              <Link href="/lista-produtos" className="nav__link">
+                <a>
+                  <i className="ri-price-tag-3-line"></i>
+                  <span>Produtos</span>
+                </a>
+              </Link>
             </li>
 
             <li className="nav__item">
-              <a href="#collection" className="nav__link">
-                <i className="ri-compass-line"></i>
-                <span>Onde encotrar</span>
-              </a>
+              <Link href="/locais" className="nav__link">
+                <a>
+                  <i className="ri-compass-line"></i>
+                  <span>Onde encotrar</span>
+                </a>
+              </Link>
             </li>
 
             <li className="nav__item">
-              <a href="#products" className="nav__link">
-                <i className="ri-t-shirt-line"></i>
-                <span>Contato</span>
-              </a>
+              <Link href="/contato" className="nav__link">
+                <a>
+                  <i className="ri-t-shirt-line"></i>
+                  <span>Contato</span>
+                </a>
+              </Link>
             </li>
           </ul>
         </div>

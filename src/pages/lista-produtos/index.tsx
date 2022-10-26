@@ -1,14 +1,21 @@
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { ChangeEvent, useEffect, useState } from "react";
+import { BiFilter } from "react-icons/bi";
 import { RiArrowRightLine } from "react-icons/ri";
+import Filtered from "../../components/Filtered";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import ModalDefault from "../../components/ModalDefault";
 import { ItemsData } from "../../data/ItemsData";
 
 export default function ProductsList() {
+
   const router = useRouter();
+  const { sexo } = router.query
   const [modal, setModal] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [filtros, setFiltros] = useState<any>({});
+  const query = router.query
+  const [formData, setFormData] = useState<any>({});
 
   function handleOnClickProduct(id: any, title: string) {
     router.push({
@@ -17,9 +24,57 @@ export default function ProductsList() {
     });
   }
 
+  useEffect(() => {
+    getFilterItems()
+  }, [formData])
+
+  console.log('router', query)
+  console.log('FORMDATA', formData)
+
+  function handleSelectChange(event: ChangeEvent<HTMLSelectElement>) {
+    const { name, value } = event.target;
+
+    setFormData({ ...formData, [name]: value });
+  }
+
+  function handleInputChange(event: ChangeEvent<HTMLInputElement>) {
+    const { name, value } = event.target;
+
+    setFormData({ ...formData, [name]: value });
+  }
+
+  const getFilterItems = async () => {
+    var newFilter = formData as any
+    var size = 0
+    for(var key in newFilter) { 
+        if( newFilter[key] ){
+            size++ 
+        } else {
+            delete newFilter[key]
+        }
+    }
+
+    if( size > 0 ){
+        var queryString = new URLSearchParams(newFilter).toString()
+        queryString += ``
+        router.push({
+          query: queryString
+        })
+        console.log("QUERY", queryString)
+    }
+
+}
+
   return (
     <>
       <Header />
+      <Filtered
+        isOpen={modal}
+        handleCloseModal={() => setModal(false)}
+        handleInputChange={handleInputChange}
+        handleSelectChange={handleSelectChange}
+        formValue={formData}
+      />
       <main className="main">
         <section className="quality section" id="premium">
           <div className="quality__container container">
@@ -29,12 +84,19 @@ export default function ProductsList() {
             >
               <h2 className="section__titleSpecialty">
                 Specialty coffees that make you happy and cheer you up!
+                {sexo}
               </h2>
 
-              <div className="field-group">
+              <div className="field-group" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <h3>Specialty coffees</h3>
-                <button onClick={() => setModal(!modal)}>Filtrar</button>
+                <div className="filterItems">
+                  <button style={{ cursor: 'pointer', gap: '12px', display: 'flex', alignItems: 'center' }} className="buttonDefault specialty__button" onClick={() => setModal(!modal)}>
+                    <BiFilter size={18} />
+                    Filtrar itens
+                  </button>
+                </div>
               </div>
+
             </div>
           </div>
 
@@ -43,7 +105,7 @@ export default function ProductsList() {
             style={{ marginTop: "4rem" }}
           >
             {ItemsData.map((row) => (
-              <article className="new__card">
+              <article className="new__card"  key={row.id}>
                 <img src={row.imagem} className="new__img" alt="teste" />
 
                 <button
@@ -64,20 +126,6 @@ export default function ProductsList() {
           </div>
         </section>
         <Footer />
-        
-        {modal && (
-          <ModalDefault
-            id="modalFilter"
-            onClose={() => setModal(false)}
-            visible={modal}
-          >
-           
-
-           <div className="containerMo" style={{ width: '600px', height: '500px', backgroundColor: '#fff' }}>
-
-           </div>
-          </ModalDefault>
-        )}
       </main>
     </>
   );

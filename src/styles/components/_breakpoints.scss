@@ -1,6 +1,20 @@
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 340px){
+
+    .cart{
+        .cart__container {
+            .orcamento_filter {
+                .orcamento-produto_filter {
+                    .orcamento-conteudo_filter {
+                        flex-direction: column;
+
+                    }
+                }
+            }
+        }
+    }
+
     .container{
         margin-left: 1rem;
         margin-right: 1rem;
@@ -117,6 +131,12 @@
 }
 
 @media screen and (min-width: 767px){
+
+    .cart{
+        width: 600px !important;
+        box-shadow: -2px 0 4px hsla(0, 0%, 15%, .1);
+    }
+
     .home__container,
     .new__container{
         grid-template-columns: repeat(2, max-content);
