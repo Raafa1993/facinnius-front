@@ -29,7 +29,7 @@ export default function ProductsList() {
   }, [formData])
 
   console.log('router', query)
-  console.log('FORMDATA', formData)
+  console.log('FORMDATA', ItemsData.filter((obj) => obj.filter.includes(formData.sexo)))
 
   function handleSelectChange(event: ChangeEvent<HTMLSelectElement>) {
     const { name, value } = event.target;
