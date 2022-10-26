@@ -54,6 +54,8 @@ export default function ProductsList() {
         }
     }
 
+    console.log("NEW", newFilter)
+
     if( size > 0 ){
         var queryString = new URLSearchParams(newFilter).toString()
         queryString += ``
