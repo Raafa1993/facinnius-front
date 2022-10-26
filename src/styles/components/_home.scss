@@ -1,40 +1,76 @@
 /*=============== HOME ===============*/
-.home{
-    background-color: var(--bg-color);
-    overflow: hidden;
-    transition: .4s; /*For animation dark mode*/
+.home {
+  background-color: var(--bg-color);
+  overflow: hidden;
+  transition: 0.4s; /*For animation dark mode*/
 
-    &__container{
-        padding: 4rem 0 1rem;
-        row-gap: 8.5rem;
-    }
-    &__title{
-        font-size: var(--biggest-font-size);
-        font-weight: 400;
-    }
-    &__description{
-        color: var(--title-color);
-        margin: 1rem 0 2rem;
-    }
-    &__title,
-    &__description{
-        line-height: 140%;
-    }
-    &__images{
-        position: relative;
-        width: 310px;
-        justify-self: center;
+  .swiper {
+    width: 100%;
+    height: 600px;
 
-        & img:nth-child(1){
-            width: 224px;
-            position: absolute;
-            right: -1.5rem;
-            top: -9.5rem;
-        }
-        & img:nth-child(2){
-            width: 180px;
-            margin-left: .5rem;
-            position: relative;
-        }
+    @media screen and (max-width: 1023px) {
+      height: 400px;
     }
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__container {
+    padding: 4rem 0 1rem;
+    row-gap: 8.5rem;
+  }
+  &__title {
+    font-size: var(--biggest-font-size);
+    font-weight: 400;
+  }
+  &__description {
+    color: var(--title-color);
+    margin: 1rem 0 2rem;
+  }
+  &__title,
+  &__description {
+    line-height: 140%;
+  }
+  &__images {
+    position: relative;
+    width: 310px;
+    justify-self: center;
+
+    & img:nth-child(1) {
+      width: 224px;
+      position: absolute;
+      right: -1.5rem;
+      top: -9.5rem;
+    }
+    & img:nth-child(2) {
+      width: 180px;
+      margin-left: 0.5rem;
+      position: relative;
+    }
+  }
 }

@@ -90,6 +90,13 @@
 
 /* For medium devices */
 @media screen and (min-width: 576px){
+
+    .home > div {
+        &.swipper {
+            height: 500px;
+        }
+    }
+
     .specialty__category{
         grid-template-columns: repeat(2, 200px);
         column-gap: 3rem;
@@ -136,6 +143,11 @@
 
 /* For large devices */
 @media screen and (min-width: 1023px){
+    .home  {
+        &.swiper {
+            height: 500px;
+        }
+    }
     .section{
         padding: 7rem 0 1rem;
 
@@ -278,6 +290,11 @@
 
 @media screen and (min-width: 1124px){
     .home{
+
+        &.swipper {
+            height: 500px;
+        }
+
         &__container{
             padding: 10rem 0 3rem;
             column-gap: 0;
