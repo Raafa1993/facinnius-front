@@ -1,5 +1,5 @@
 import React from "react";
-import { RiArrowRightLine, RiArrowLeftLine } from "react-icons/ri";
+import { RiArrowRightLine, RiArrowLeftLine, RiHomeWifiFill } from "react-icons/ri";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -8,6 +8,8 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper";
 import { ItemsData } from "../../data/ItemsData";
 import { useRouter } from "next/router";
+import { ProdutosData } from "../../data/ProdutosData";
+import Image from "next/image";
 
 export default function Products() {
   const router = useRouter()
@@ -21,7 +23,7 @@ export default function Products() {
 
   return (
     <section className="products section" id="products">
-      <h2 className="section__title">Best Products</h2>
+      <h2 className="section__title">Nossos produtos</h2>
 
       <div className="products__container container swiper">
         <div className="swiper-wrapper">
@@ -44,18 +46,16 @@ export default function Products() {
             slidesPerView="auto"
             loop={true}
           >
-            {ItemsData.map((row) => (
-              <SwiperSlide key={row.id} onClick={() => handleOnClickProduct(row.id, row.titulo)} className="products__card swiper-slide" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-                {/* <article className="products__card"> */}
-                  <img
-                    src={row.imagem}
-                    alt={row.titulo}
+            {ProdutosData.map((row) => (
+              <SwiperSlide key={row.id} onClick={() => handleOnClickProduct(row.id, row.title)} className="products__card swiper-slide" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                  <Image
+                    src={row.imagem as any}
+                    alt={row.title}
                     className="products__img"
                   />
 
-                  <h2 className="products__title">{row.titulo}</h2>
-                  <span className="products__price">{row.subtitulo}</span>
-                {/* </article> */}
+                  <h2 className="products__title">{row.title}</h2>
+                  {/* <span className="products__price">{row.subtitulo}</span> */}
               </SwiperSlide>
             ))}
 

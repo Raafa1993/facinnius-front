@@ -38,7 +38,7 @@ export default function Main() {
   };
 
   return (
-    <section className="home" style={{ paddingTop: '4.5rem' }} id="home">
+    <section className="home" style={{ marginTop: '4.5rem' }} id="home">
       {/* <div className="home__container container grid">
         <div className="home__data">
           <h1 className="home__title">

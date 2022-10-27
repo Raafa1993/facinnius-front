@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { ChangeEvent, useEffect, useState } from "react";
 import { BiFilter } from "react-icons/bi";
@@ -5,17 +6,14 @@ import { RiArrowRightLine } from "react-icons/ri";
 import Filtered from "../../components/Filtered";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import { ItemsData } from "../../data/ItemsData";
+import { ProdutosData } from "../../data/ProdutosData";
 
 export default function ProductsList() {
-
   const router = useRouter();
-  const { sexo } = router.query
   const [modal, setModal] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [filtros, setFiltros] = useState<any>({});
   const query = router.query
   const [formData, setFormData] = useState<any>({});
+  const filterItems = ProdutosData.filter((obj) => obj.filtros.includes(formData.sexo) || obj.filtros.includes(formData.cabelo) || obj.filtros.includes(formData.tipoCabelo) || obj.filtros.includes(formData.desejoCabelo) || obj.filtros.includes(formData.comprimento) || obj.filtros.includes(formData.aspecto))
 
   function handleOnClickProduct(id: any, title: string) {
     router.push({
@@ -24,12 +22,12 @@ export default function ProductsList() {
     });
   }
 
+  console.log("NEW", filterItems)
+
+
   useEffect(() => {
     getFilterItems()
   }, [formData])
-
-  console.log('router', query)
-  console.log('FORMDATA', ItemsData.filter((obj) => obj.filter.includes(formData.sexo)))
 
   function handleSelectChange(event: ChangeEvent<HTMLSelectElement>) {
     const { name, value } = event.target;
@@ -54,7 +52,6 @@ export default function ProductsList() {
         }
     }
 
-    console.log("NEW", newFilter)
 
     if( size > 0 ){
         var queryString = new URLSearchParams(newFilter).toString()
@@ -85,12 +82,11 @@ export default function ProductsList() {
               style={{ gridTemplateColumns: "1fr" }}
             >
               <h2 className="section__titleSpecialty">
-                Specialty coffees that make you happy and cheer you up!
-                {sexo}
+                Lista de produtos Facinnius 
               </h2>
 
               <div className="field-group" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <h3>Specialty coffees</h3>
+                <h3>Linhas especiais</h3>
                 <div className="filterItems">
                   <button style={{ cursor: 'pointer', gap: '12px', display: 'flex', alignItems: 'center' }} className="buttonDefault specialty__button" onClick={() => setModal(!modal)}>
                     <BiFilter size={18} />
@@ -106,17 +102,17 @@ export default function ProductsList() {
             className="new__container container grid"
             style={{ marginTop: "4rem" }}
           >
-            {ItemsData.map((row) => (
-              <article className="new__card"  key={row.id}>
-                <img src={row.imagem} className="new__img" alt="teste" />
+            {filterItems.map((row) => (
+              <article className="new__card" key={row.id}>
+                <Image src={row.imagem} className="new__img" alt="teste" />
 
                 <button
-                  onClick={() => handleOnClickProduct(row.id, row.titulo)}
+                  onClick={() => handleOnClickProduct(row.id, row.title)}
                   className="new__link"
                 >
                   <div className="new__data">
-                    <h2 className="new__title">{row.titulo}</h2>
-                    <span className="new__subtitle">{row.subtitulo}</span>
+                    <h2 className="new__title">{row.title}</h2>
+                    {/* <span className="new__subtitle">{row.title}</span> */}
                   </div>
 
                   <i className="ri-arrow-right-line">

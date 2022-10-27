@@ -12,7 +12,7 @@ interface Props {
 
 export default function Filtered({ isOpen, handleInputChange, formValue, handleSelectChange, handleCloseModal }: Props) {
   const router = useRouter()
-  const { sexo } = router.query
+  const { sexo, cabelo, tipoCabelo, desejoCabelo, comprimento, aspecto } = router.query
 
   return (
     <div className={`cart ${isOpen && "show-cart"}`} id="cart">
@@ -55,7 +55,7 @@ export default function Filtered({ isOpen, handleInputChange, formValue, handleS
             <h2 className="font-1-xs cor-5">Dados do cabelo</h2>
             <div className="col-2">
               <label htmlFor="cabelo">Você considera seu cabelo?</label>
-              <select id="cabelo" name="cabelo" onChange={handleSelectChange}>
+              <select id="cabelo" name="cabelo" value={cabelo} onChange={handleSelectChange}>
                 <option value="0">Selecione uma opção</option>
                 <option value="liso">Liso</option>
                 <option value="ondulado">Ondulado</option>
@@ -65,26 +65,26 @@ export default function Filtered({ isOpen, handleInputChange, formValue, handleS
             </div>
 
             <div className="col-2">
-              <label htmlFor="cabeleireiro">Tipo de cabelo</label>
-              <select id="cabeleireiro" name="cabeleireiro" onChange={handleSelectChange}>
+              <label htmlFor="tipoCabelo">Tipo de cabelo</label>
+              <select id="tipoCabelo" name="tipoCabelo" value={cabelo} onChange={handleSelectChange}>
                 <option value="0">Selecione uma opção</option>
                 <option value="natural">Natural</option>
-                <option value="mechas">Com mechas</option>
-                <option value="alisamento">Com alisamento</option>
-                <option value="coloração">Com coloração</option>
+                <option value="comMechas">Com mechas</option>
+                <option value="comAlisamento">Com alisamento</option>
+                <option value="comColoração">Com coloração</option>
               </select>
             </div>
 
-            <div className="col-2">
-              <label htmlFor="cabeleireiro">Desejo para o meu cabelo</label>
-              <select id="cabeleireiro" name="cabeleireiro" onChange={handleSelectChange}>
+            {/* <div className="col-2">
+              <label htmlFor="desejoCabelo">Desejo para o meu cabelo</label>
+              <select id="desejoCabelo" name="desejoCabelo" onChange={handleSelectChange}>
                 <option value="0">Selecione uma opção</option>
                 <option value="natural">Natural</option>
                 <option value="mechas">Com mechas</option>
                 <option value="alisamento">Com alisamento</option>
                 <option value="coloração">Com coloração</option>
               </select>
-            </div>
+            </div> */}
             
           </div>
           <div className="orcamento-produto_filter">
@@ -95,13 +95,13 @@ export default function Filtered({ isOpen, handleInputChange, formValue, handleS
               className="orcamento-conteudo_filter field-group_filter"
               id="orcamento-bikcraft_filter"
             >
-              <input type="radio" name="comprimento" value="longo" id="longo" onChange={handleInputChange}/>
+              <input type="radio" name="comprimento" value="longo" checked={comprimento === 'longo'} id="longo" onChange={handleInputChange}/>
               <label htmlFor="longo">Longo</label>
 
-              <input type="radio" name="comprimento" value="medio" id="medio" onChange={handleInputChange}/>
+              <input type="radio" name="comprimento" value="medio" checked={comprimento === 'medio'} id="medio" onChange={handleInputChange}/>
               <label htmlFor="medio">Médio</label>
 
-              <input type="radio" name="comprimento" value="curto" id="curto" onChange={handleInputChange}/>
+              <input type="radio" name="comprimento" value="curto" checked={comprimento === 'curto'} id="curto" onChange={handleInputChange}/>
               <label htmlFor="curto">Curto</label>
             </div>
           </div>
@@ -114,18 +114,18 @@ export default function Filtered({ isOpen, handleInputChange, formValue, handleS
               className="orcamento-conteudo_filter field-group_filter"
               id="orcamento-bikcraft_filter"
             >
-              <input type="radio" name="aspecto" value="oleoso" id="oleoso" onChange={handleInputChange}/>
-              <label htmlFor="oleoso">Longo</label>
+              <input type="radio" name="aspecto" value="oleoso" checked={aspecto === 'curto'} id="oleoso" onChange={handleInputChange}/>
+              <label htmlFor="oleoso">Oleoso</label>
 
-              <input type="radio" name="aspecto" value="seco" id="seco" onChange={handleInputChange}/>
+              <input type="radio" name="aspecto" value="seco" checked={aspecto === 'seco'} id="seco" onChange={handleInputChange}/>
               <label htmlFor="seco">Seco</label>
 
-              <input type="radio" name="aspecto" value="misto" id="misto" onChange={handleInputChange}/>
+              <input type="radio" name="aspecto" value="misto" checked={aspecto === 'misto'} id="misto" onChange={handleInputChange}/>
               <label htmlFor="misto">Misto</label>
             </div>
           </div>
 
-          <div className="orcamento-produto_filter">
+          {/* <div className="orcamento-produto_filter">
             <h2 className="font-1-xs cor-5" style={{ marginBottom: "12px" }}>
               Com que frequencia lava o cabelo?
             </h2>
@@ -178,7 +178,7 @@ export default function Filtered({ isOpen, handleInputChange, formValue, handleS
               <label htmlFor="ferramentasNao">Não</label>
 
             </div>
-          </div>
+          </div> */}
       
         </div>
       </div>

@@ -1,15 +1,15 @@
+import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import { ItemsData } from "../../data/ItemsData";
+import { ProdutosData } from "../../data/ProdutosData";
 
 export default function Products() {
   const router = useRouter();
 
-  const filterProductsId = ItemsData.filter(obj => obj.id === Number(router.query.id))[0]
+  const filterProductsId = ProdutosData.filter(obj => obj.id === Number(router.query.id))[0]
 
-  console.log("FilterID", filterProductsId)
 
   return (
     <>
@@ -18,14 +18,14 @@ export default function Products() {
         <section className="quality section" id="premium">
           <div className="quality__container container">
             <h2 className="section__title">
-              We offer a premium and better quality preparation just for you!
+              Oferecemos uma preparação premium e de melhor qualidade só para você!
             </h2>
 
             <div className="quality__content grid">
               <div className="quality__images">
-                <img
+                <Image
                   src={filterProductsId.imagem}
-                  alt={filterProductsId.titulo}
+                  alt={filterProductsId.title}
                   className="quality__img-big"
                 />
                 {/* <img
@@ -36,9 +36,9 @@ export default function Products() {
               </div>
 
               <div className="quality__data">
-                <h1 className="quality__title">{filterProductsId.titulo}</h1>
-                <h2 className="quality__price">{filterProductsId.subtitulo}</h2>
-                <span className="quality__special">Especial Price</span>
+                <h1 className="quality__title">{filterProductsId.title}</h1>
+                {/* <h2 className="quality__price">{filterProductsId.title}</h2>
+                <span className="quality__special">Especial Price</span> */}
                 <p className="quality__description">
                   {filterProductsId.descricao}
                 </p>

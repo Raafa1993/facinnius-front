@@ -1,19 +1,28 @@
+import { useRouter } from "next/router";
 import React from "react";
 import { RiArrowRightLine } from "react-icons/ri";
 
 export default function Collection() {
+  const router = useRouter()
+
+  function handleOnClickProduct(typo: any) {
+    router.push({
+      pathname: `/lista-produtos/`,
+      query: { sexo: typo },
+    })
+  }
   return (
     <section className="collection section" id="collection">
       <div className="collection__container container">
         <div className="collection__explore">
           <div className="collection__data-men">
             <h2 className="collection__title">
-              Men <br />
-              Collection
+              Produtos <br />
+              Masculinos
             </h2>
-            <a href="#" className="button__link">
-              Explore Clothes <i className="ri-arrow-right-line"><RiArrowRightLine /></i>
-            </a>
+            <button onClick={() => handleOnClickProduct('masculino')} className="button__link">
+              Veja mais <i className="ri-arrow-right-line"><RiArrowRightLine /></i>
+            </button>
           </div>
 
           <img src="../images/collection1.png" alt="collection image" />
@@ -24,12 +33,12 @@ export default function Collection() {
 
           <div className="collection__data-women">
             <h2 className="collection__title">
-              Women <br />
-              Collection
+              Produtos <br />
+              Femininos
             </h2>
-            <a href="#" className="button__link">
-              Explore Clothes <i className="ri-arrow-right-line"><RiArrowRightLine /></i>
-            </a>
+            <button onClick={() => handleOnClickProduct('feminino')} className="button__link">
+              Veja mais <i className="ri-arrow-right-line"><RiArrowRightLine /></i>
+            </button>
           </div>
         </div>
       </div>

@@ -6,6 +6,9 @@
         display: inline-flex;
         align-items: center;
         column-gap: .5rem;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
         
         & i{
             font-size: 1rem;
