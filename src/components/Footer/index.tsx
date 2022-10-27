@@ -1,5 +1,5 @@
 import React from "react";
-import { RiFacebookFill, RiInstagramFill, RiWhatsappFill } from "react-icons/ri";
+import { RiFacebookFill, RiInstagramFill, RiWhatsappFill, RiYoutubeFill } from "react-icons/ri";
 
 export default function Footer() {
   return (
@@ -7,34 +7,34 @@ export default function Footer() {
       <div className="footer__container container grid">
         <div>
           <a href="#" className="footer__logo">
-            Shop.
+            Facinnius.
           </a>
 
           <p className="footer__description">
-            Committed to bringing you the <br />
-            best clothing from popular <br />
-            brands.
+            Comprometidos em <br />
+            levar até você os melhores <br />
+            Produtos.
           </p>
         </div>
 
         <div className="footer__content">
           <div>
-            <h3 className="footer__title">Company</h3>
+            <h3 className="footer__title">Companhia</h3>
 
             <ul className="footer__links">
               <li>
                 <a href="#" className="footer__link">
-                  Shop
+                  Produtos
                 </a>
               </li>
               <li>
                 <a href="#" className="footer__link">
-                  Category
+                  Linhas
                 </a>
               </li>
               <li>
                 <a href="#" className="footer__link">
-                  Contact info
+                  Contato
                 </a>
               </li>
             </ul>
@@ -46,44 +46,42 @@ export default function Footer() {
             <ul className="footer__links">
               <li>
                 <a href="#" className="footer__link">
-                  Events
-                </a>
-              </li>
-              <li>
-                <a href="#" className="footer__link">
-                  Popular news
-                </a>
-              </li>
-              <li>
-                <a href="#" className="footer__link">
-                  Recent news
+                  Eventos
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="footer__title">Office</h3>
+            <h3 className="footer__title">Locao</h3>
 
             <p className="footer__information">
-              Monday - Saturday <br />
-              9AM - 10PM
+              Av Nova Zelândia, 1050 <br />
+              Parque Capuava - Santo André/SP
+            </p>
+
+            <p className="footer__information" style={{ marginTop: '10px' }}>
+              CEP 09270-190
+            </p>
+
+            <p className="footer__information" style={{ marginTop: '10px' }}>
+              CNPJ 20.712.759/0001-04
             </p>
           </div>
 
           <div>
-            <h3 className="footer__title">Contact us</h3>
+            <h3 className="footer__title">Redes sociasi</h3>
 
             <ul className="footer__social">
               <a
-                href="https://www.facebook.com/"
+                href="https://pt-br.facebook.com/facinnius/"
                 target="_blank"
                 className="footer__social-link"
               >
                 <i className="ri-facebook-fill"><RiFacebookFill /></i>
               </a>
               <a
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/facinnius/"
                 target="_blank"
                 className="footer__social-link"
               >
@@ -91,11 +89,11 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://api.whatsapp.com/send?phone=51123456789&text=Hello, more information!"
+                href="https://www.youtube.com/facinnius-cosmeticos"
                 target="_blank"
                 className="footer__social-link"
               >
-                <i className="ri-whatsapp-line"><RiWhatsappFill /></i>
+                <i className="ri-whatsapp-line"><RiYoutubeFill /></i>
               </a>
             </ul>
           </div>
@@ -104,11 +102,11 @@ export default function Footer() {
 
       <div className="footer__info container">
         <span className="footer__copy">
-          &#169; Bedimcode. All rigths reserved
+          &#169; M10web. Todos os direitos reservados
         </span>
 
         <a href="#" className="footer__privacy">
-          Terms & Conditions
+          Termos & Condiçoes
         </a>
       </div>
     </footer>

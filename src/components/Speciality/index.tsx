@@ -10,12 +10,12 @@ export default function Speciality() {
       <div className="specialty__container">
         <div className="specialty__box">
           <h2 className="section__titleSpecialty">
-            Specialty coffees that make you happy and cheer you up!
+            Produtos especiais para cuidar de você!
           </h2>
 
           <div>
-            <a href="#" className="buttonDefault specialty__button">
-              See more
+            <a href="/lista-produtos" className="buttonDefault specialty__button">
+              Veja mais
             </a>
           </div>
         </div>
@@ -28,9 +28,9 @@ export default function Speciality() {
               className="specialty__img"
             />
 
-            <h3 className="specialty__title">Selected Coffee</h3>
+            <h3 className="specialty__title">Linhas premium</h3>
             <p className="specialty__description">
-              We select the best premium coffee, for a true taste.
+              linahs premium esperando por você.
             </p>
           </div>
 
@@ -41,9 +41,9 @@ export default function Speciality() {
               className="specialty__img"
             />
 
-            <h3 className="specialty__title">Delicious Cookies</h3>
+            <h3 className="specialty__title">Qualidade</h3>
             <p className="specialty__description">
-              Enjoy your coffee with some hot cookies
+              Aproveite e desfrute do melhor que a Faccinus oferece.
             </p>
           </div>
 
@@ -54,9 +54,9 @@ export default function Speciality() {
               className="specialty__img"
             />
 
-            <h3 className="specialty__title">Enjoy at Home</h3>
+            <h3 className="specialty__title">Tecnologia</h3>
             <p className="specialty__description">
-              Enjoy the best coffee in the comfort of your home.
+              Todas as nossas linhas oferecem produtos de qualidade
             </p>
           </div>
         </div>

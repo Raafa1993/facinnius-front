@@ -3,13 +3,13 @@ export const LinhasData = [
     id: 1, // auto increment
     title: "LINHA PROFISSIONAL",
     imagem: 'https://facinnius.com.br/assets/application/uploads/produtos/OLINHOSS_5e8b602aeea9d.png',
-    produtoId: [1, 3, 4, 5],
+    produtoId: [1, 3, 4, 5, 10, 9, 8, 28],
   },
   {
     id: 2, // auto increment
     title: "LINHA INFINITY ONE GOLD",
     imagem: 'https://facinnius.com.br/assets/application/uploads/produtos/therapy_5e8b555fc3ff0.png',
-    produtoId: [1, 3, 4, 5],
+    produtoId: [6],
   },
   {
     id: 3, // auto increment

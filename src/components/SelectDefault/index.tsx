@@ -53,7 +53,7 @@ export function SelectDefault({ name, label, error, children, icon: Icon, ...res
           id={name}
           {...rest}
         >
-        <option value="0">Selecione uma opção</option>
+        <option value="0">Todas as opções</option>
           {children}
         </select>
 

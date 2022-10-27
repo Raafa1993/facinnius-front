@@ -24,6 +24,9 @@
         margin: auto 0;
         transform: translateX(-5rem);
     }
+    &__titleFaccinnius {
+        font-size: var(--h2-font-size);
+    }
     &__title,
     &__price{
         font-size: var(--h1-font-size);

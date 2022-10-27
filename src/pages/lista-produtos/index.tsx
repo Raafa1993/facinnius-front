@@ -13,7 +13,8 @@ export default function ProductsList() {
   const [modal, setModal] = useState(false);
   const query = router.query
   const [formData, setFormData] = useState<any>({});
-  const filterItems = ProdutosData.filter((obj) => obj.filtros.includes(formData.sexo) || obj.filtros.includes(formData.cabelo) || obj.filtros.includes(formData.tipoCabelo) || obj.filtros.includes(formData.desejoCabelo) || obj.filtros.includes(formData.comprimento) || obj.filtros.includes(formData.aspecto))
+  const filterItems =  ProdutosData.filter((obj) => obj.filtros.includes(formData.sexo) || obj.filtros.includes(formData.cabelo) || obj.filtros.includes(formData.tipoCabelo) || obj.filtros.includes(formData.desejoCabelo) || obj.filtros.includes(formData.comprimento) || obj.filtros.includes(formData.aspecto)) || ProdutosData
+  const verifiFilter = filterItems.length <= 0 ? ProdutosData : filterItems
 
   function handleOnClickProduct(id: any, title: string) {
     router.push({
@@ -21,9 +22,6 @@ export default function ProductsList() {
       query: { id },
     });
   }
-
-  console.log("NEW", filterItems)
-
 
   useEffect(() => {
     getFilterItems()
@@ -102,7 +100,7 @@ export default function ProductsList() {
             className="new__container container grid"
             style={{ marginTop: "4rem" }}
           >
-            {filterItems.map((row) => (
+            {verifiFilter.map((row) => (
               <article className="new__card" key={row.id}>
                 <Image src={row.imagem} className="new__img" alt="teste" />
 

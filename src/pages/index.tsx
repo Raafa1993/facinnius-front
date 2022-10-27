@@ -7,6 +7,7 @@ import Header from "../components/Header";
 import Main from "../components/Main";
 import Products from "../components/Products";
 import Speciality from "../components/Speciality";
+import i18n from "../i18n";
 
 export default function Home() {
 

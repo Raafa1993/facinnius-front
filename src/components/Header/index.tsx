@@ -1,5 +1,8 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import LanguagesSwitch from "../LanguagesSwitch";
+import logoFacinnius from '../../../public/images/logoFacinnius.png'
+import Image from "next/image";
 
 export default function Header() {
   const [menuFixed, setMenuFixed] = useState<boolean>(false);
@@ -21,9 +24,14 @@ export default function Header() {
   return (
     <header className={`header ${menuFixed ? 'scroll-header' : ''}`} id="header">
       <nav className="nav container">
-        <Link href="/" className="nav__logo">
-          Facinnius.
+        <Link href="/" className="nav__logo"  >
+          <a style={{ display: 'flex', alignItems: 'center', justifyItems: 'center' }}>
+            <Image src={logoFacinnius} alt="Logo" />
+            Facinnius.
+          </a>
         </Link>
+
+        {/* <LanguagesSwitch /> */}
 
         <div className="nav__menu" id="nav-menu">
           <ul className="nav__list">
@@ -49,7 +57,7 @@ export default function Header() {
               <Link href="/locais" className="nav__link">
                 <a>
                   <i className="ri-compass-line"></i>
-                  <span>Onde encotrar</span>
+                  <span>Locais</span>
                 </a>
               </Link>
             </li>

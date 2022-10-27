@@ -1,13 +1,29 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
+import api from "../../services/api";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useRouter } from "next/router";
 
 export default function Contato() {
+  const router = useRouter()
   const [typeForm, setTypeForm] = useState('contato')
   const [formData, setFormData] = useState<any>({})
 
   function handleOnSelectForm(event: ChangeEvent<HTMLInputElement>) {
-    setFormData({})
+    setFormData({
+      nome: '',
+      telefone: '',
+      email: '',
+      regiao: '',
+      cabeleireiro: '',
+      mensagem: '',
+      endereco: '',
+      numero: '',
+      cidade: '',
+      opiniao: ''
+    })
     setTypeForm(event.target.value)
   }
 
@@ -32,26 +48,16 @@ export default function Contato() {
   async function handleSubimit(event: FormEvent) {
     event.preventDefault();
 
-    // const { name, email, whatsapp } = formData;
-    // const uf = selectedUf;
-    // const city = selectedCity;
-    // const [latitude, longitude] = selectedPosition;
-    // const items = selectedItems;
+    try {
+      const response = await api.post(`send-email/${typeForm}`, formData);
+      console.log('response', response.data)
+      toast.success('Dados enviado com sucesso!')
 
-    // const data = {
-    //   name,
-    //   email,
-    //   whatsapp,
-    //   uf,
-    //   city,
-    //   latitude,
-    //   longitude,
-    //   items
-    // };
+      router.push('/');
+    } catch(error: any) {
+      toast.error(error.response.data.result)
+    }
 
-    // await api.post('points', data);
-
-    alert('Dados enviados')
   }
 
   return (
@@ -79,8 +85,8 @@ export default function Contato() {
                 <input type="radio" name="distribuidor" value="distribuidor" checked={typeForm === 'distribuidor'} id="distribuidor" onChange={(e) => handleOnSelectForm(e)}/>
                 <label htmlFor="distribuidor">Seja um distribuidor</label>
 
-                <input type="radio" name="opniao" value="opniao" id="opniao" checked={typeForm === 'opniao'} onChange={(e) => handleOnSelectForm(e)}/>
-                <label htmlFor="opniao">Deixe sua opnião</label>
+                <input type="radio" name="opiniao" value="opiniao" id="opiniao" checked={typeForm === 'opiniao'} onChange={(e) => handleOnSelectForm(e)}/>
+                <label htmlFor="opiniao">Deixe sua opnião</label>
               </div>
             </div>
 
@@ -120,7 +126,7 @@ export default function Contato() {
                   </>
                 )}
 
-                {typeForm === 'opniao' && (
+                {typeForm === 'opiniao' && (
                   <>
                     <div className="col-2">
                       <label htmlFor="categoria">Você é cabeleireiro?</label>
@@ -159,8 +165,8 @@ export default function Contato() {
 
                 {typeForm !== 'distribuidor' && (
                   <div className="col-2">
-                    <label htmlFor={typeForm === 'opniao' ? 'opniao' : 'mensagem'}>{typeForm === 'opniao' ? 'Deixe sua opnião' : 'Deixe sua mensagem'}</label>
-                    <textarea value={typeForm === 'opniao' ? formData.opniao : formData.mensagem} name={typeForm === 'opniao' ? 'opniao' : 'mensagem'} id={typeForm === 'opniao' ? 'opniao' : 'mensagem'} onChange={handleTextareaChange}/>
+                    <label htmlFor={typeForm === 'opiniao' ? 'opiniao' : 'mensagem'}>{typeForm === 'opiniao' ? 'Deixe sua opnião' : 'Deixe sua mensagem'}</label>
+                    <textarea value={typeForm === 'opiniao' ? formData.opiniao : formData.mensagem} name={typeForm === 'opiniao' ? 'opiniao' : 'mensagem'} id={typeForm === 'opiniao' ? 'opiniao' : 'mensagem'} onChange={handleTextareaChange}/>
                   </div>
                 )}
 
