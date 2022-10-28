@@ -1,6 +1,10 @@
-import { useRouter } from "next/router";
 import React from "react";
+import Image from "next/image";
+import { useRouter } from "next/router";
 import { RiArrowRightLine } from "react-icons/ri";
+
+import Collection1 from '../../../public/images/collection1.png';
+import Collection2 from '../../../public/images/collection2.png';
 
 export default function Collection() {
   const router = useRouter()
@@ -25,11 +29,11 @@ export default function Collection() {
             </button>
           </div>
 
-          <img src="../images/collection1.png" alt="collection image" />
+          <Image src={Collection1} alt="collection image" />
         </div>
 
         <div className="collection__explore">
-          <img src="../images/collection2.png" alt="collection image" />
+          <Image src={Collection2} alt="collection image" />
 
           <div className="collection__data-women">
             <h2 className="collection__title">

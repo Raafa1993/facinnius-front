@@ -71,7 +71,7 @@ export default function Locails() {
               lojas locais<span className="cor-p1">.</span>
             </h2>
             {verifiFilter.map((row) => (
-              <div className="lojas-item">
+              <div key={row.id} className="lojas-item">
                 <Image
                   src={LocalImg}
                   width="1120"

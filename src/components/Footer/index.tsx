@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { RiFacebookFill, RiInstagramFill, RiWhatsappFill, RiYoutubeFill } from "react-icons/ri";
 
@@ -6,9 +7,11 @@ export default function Footer() {
     <footer className="footer section">
       <div className="footer__container container grid">
         <div>
-          <a href="#" className="footer__logo">
-            Facinnius.
-          </a>
+          <Link href="#" className="footer__logo">
+            <a className="footer__logo">
+              Facinnius.
+            </a>
+          </Link>
 
           <p className="footer__description">
             Comprometidos em <br />
@@ -23,19 +26,25 @@ export default function Footer() {
 
             <ul className="footer__links">
               <li>
-                <a href="#" className="footer__link">
-                  Produtos
-                </a>
+                <Link href="/lista-produtos" className="footer__link">
+                  <a className="footer__link">
+                    Produtos
+                  </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="footer__link">
-                  Linhas
-                </a>
+                <Link href="#new" className="footer__link">
+                  <a className="footer__link">
+                    Linhas
+                  </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="footer__link">
-                  Contato
-                </a>
+                <Link href="/contato" className="footer__link">
+                  <a className="footer__link">
+                    Contato
+                  </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -45,9 +54,11 @@ export default function Footer() {
 
             <ul className="footer__links">
               <li>
-                <a href="#" className="footer__link">
-                  Eventos
-                </a>
+                <Link href="#" className="footer__link">
+                  <a  className="footer__link">
+                    Eventos
+                  </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -76,6 +87,7 @@ export default function Footer() {
               <a
                 href="https://pt-br.facebook.com/facinnius/"
                 target="_blank"
+                rel="noreferrer"
                 className="footer__social-link"
               >
                 <i className="ri-facebook-fill"><RiFacebookFill /></i>
@@ -83,6 +95,7 @@ export default function Footer() {
               <a
                 href="https://www.instagram.com/facinnius/"
                 target="_blank"
+                rel="noreferrer"
                 className="footer__social-link"
               >
                 <i className="ri-instagram-line"><RiInstagramFill /></i>
@@ -91,6 +104,7 @@ export default function Footer() {
               <a
                 href="https://www.youtube.com/facinnius-cosmeticos"
                 target="_blank"
+                rel="noreferrer"
                 className="footer__social-link"
               >
                 <i className="ri-whatsapp-line"><RiYoutubeFill /></i>
