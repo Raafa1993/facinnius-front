@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { BiXCircle } from "react-icons/bi";
 
 interface Props {
@@ -11,7 +12,9 @@ interface Props {
 }
 
 export default function Filtered({ isOpen, handleInputChange, formValue, handleSelectChange, handleCloseModal }: Props) {
-  const router = useRouter()
+  const router = useRouter();
+  const { t } = useTranslation();
+
   const { sexo, cabelo, tipoCabelo, desejoCabelo, comprimento, aspecto } = router.query
 
   return (
@@ -24,20 +27,20 @@ export default function Filtered({ isOpen, handleInputChange, formValue, handleS
         <BiXCircle />
       </i>
 
-      <h2 className="cart__title-center">Filtros</h2>
+      <h2 className="cart__title-center">{t('filtro_titulo')}</h2>
 
       <div className="cart__container">
         <div className="orcamento_filter">
           <div className="orcamento-produto_filter">
             <h2 className="font-1-xs cor-5" style={{ marginBottom: "12px" }}>
-              Qual o seu sexo?
+            {t('filtro_questao1_titulo')}
             </h2>
             <div
               className="orcamento-conteudo_filter field-group_filter"
               id="orcamento-bikcraft_filter"
             >
               <input type="radio" name="sexo" value="feminino" id="feminino" checked={sexo === 'feminino'} onChange={handleInputChange}/>
-              <label htmlFor="feminino">Feminino</label>
+              <label htmlFor="feminino">{t('filtro_questao1_option1')}</label>
 
               <input
                 type="radio"
@@ -47,31 +50,31 @@ export default function Filtered({ isOpen, handleInputChange, formValue, handleS
                 id="masculino"
                 onChange={handleInputChange}
               />
-              <label htmlFor="masculino">Masculino</label>
+              <label htmlFor="masculino">{t('filtro_questao1_option2')}</label>
             </div>
           </div>
 
           <div className="orcamento-dados_filter form">
-            <h2 className="font-1-xs cor-5">Dados do cabelo</h2>
+            <h2 className="font-1-xs cor-5">{t('filtro_questao2_titulo')}</h2>
             <div className="col-2">
-              <label htmlFor="cabelo">Você considera seu cabelo?</label>
+              <label htmlFor="cabelo">{t('filtro_questao2_option1_placeholder')}</label>
               <select id="cabelo" name="cabelo" value={cabelo} onChange={handleSelectChange}>
-                <option value="0">Selecione uma opção</option>
-                <option value="liso">Liso</option>
-                <option value="ondulado">Ondulado</option>
-                <option value="cacheado">Cacheado</option>
-                <option value="crespo">Crespo</option>
+                <option value="0">{t('filtro_questao2_option0')}</option>
+                <option value="liso">{t('filtro_questao2_option1')}</option>
+                <option value="ondulado">{t('filtro_questao2_option2')}</option>
+                <option value="cacheado">{t('filtro_questao2_option3')}</option>
+                <option value="crespo">{t('filtro_questao2_option4')}</option>
               </select>
             </div>
 
             <div className="col-2">
-              <label htmlFor="tipoCabelo">Tipo de cabelo</label>
+              <label htmlFor="tipoCabelo">{t('filtro_questao3_option1_placeholder')}</label>
               <select id="tipoCabelo" name="tipoCabelo" value={cabelo} onChange={handleSelectChange}>
-                <option value="0">Selecione uma opção</option>
-                <option value="natural">Natural</option>
-                <option value="comMechas">Com mechas</option>
-                <option value="comAlisamento">Com alisamento</option>
-                <option value="comColoração">Com coloração</option>
+                <option value="0">{t('filtro_questao3_option0')}</option>
+                <option value="natural">{t('filtro_questao3_option1')}</option>
+                <option value="comMechas">{t('filtro_questao3_option2')}</option>
+                <option value="comAlisamento">{t('filtro_questao3_option3')}</option>
+                <option value="comColoração">{t('filtro_questao3_option4')}</option>
               </select>
             </div>
 
@@ -89,39 +92,39 @@ export default function Filtered({ isOpen, handleInputChange, formValue, handleS
           </div>
           <div className="orcamento-produto_filter">
             <h2 className="font-1-xs cor-5" style={{ marginBottom: "12px" }}>
-              Comprimento do seu cabelo?
+            {t('filtro_questao4_titulo')}
             </h2>
             <div
               className="orcamento-conteudo_filter field-group_filter"
               id="orcamento-bikcraft_filter"
             >
               <input type="radio" name="comprimento" value="longo" checked={comprimento === 'longo'} id="longo" onChange={handleInputChange}/>
-              <label htmlFor="longo">Longo</label>
+              <label htmlFor="longo">{t('filtro_questao4_option1')}</label>
 
               <input type="radio" name="comprimento" value="medio" checked={comprimento === 'medio'} id="medio" onChange={handleInputChange}/>
-              <label htmlFor="medio">Médio</label>
+              <label htmlFor="medio">{t('filtro_questao4_option2')}</label>
 
               <input type="radio" name="comprimento" value="curto" checked={comprimento === 'curto'} id="curto" onChange={handleInputChange}/>
-              <label htmlFor="curto">Curto</label>
+              <label htmlFor="curto">{t('filtro_questao4_option3')}</label>
             </div>
           </div>
 
           <div className="orcamento-produto_filter">
             <h2 className="font-1-xs cor-5" style={{ marginBottom: "12px" }}>
-              aspecto do seu cabelo?
+              {t('filtro_questao5_titulo')}
             </h2>
             <div
               className="orcamento-conteudo_filter field-group_filter"
               id="orcamento-bikcraft_filter"
             >
               <input type="radio" name="aspecto" value="oleoso" checked={aspecto === 'curto'} id="oleoso" onChange={handleInputChange}/>
-              <label htmlFor="oleoso">Oleoso</label>
+              <label htmlFor="oleoso">{t('filtro_questao5_option1')}</label>
 
               <input type="radio" name="aspecto" value="seco" checked={aspecto === 'seco'} id="seco" onChange={handleInputChange}/>
-              <label htmlFor="seco">Seco</label>
+              <label htmlFor="seco">{t('filtro_questao5_option2')}</label>
 
               <input type="radio" name="aspecto" value="misto" checked={aspecto === 'misto'} id="misto" onChange={handleInputChange}/>
-              <label htmlFor="misto">Misto</label>
+              <label htmlFor="misto">{t('filtro_questao5_option3')}</label>
             </div>
           </div>
 

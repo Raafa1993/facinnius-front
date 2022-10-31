@@ -1,23 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import Speciality1 from "../../../public/images/speciality1.png";
 import Speciality2 from "../../../public/images/speciality2.png";
 import Speciality3 from "../../../public/images/speciality3.png";
 
 export default function Speciality() {
+  const { t } = useTranslation();
+
   return (
     <div className="specialty section container" id="specialty">
       <div className="specialty__container">
         <div className="specialty__box">
           <h2 className="section__titleSpecialty">
-            Produtos especiais para cuidar de você!
+            {t('home_especialidades_text')}
           </h2>
 
           <div>
             <Link href="/lista-produtos" className="buttonDefault specialty__button">
               <a className="buttonDefault specialty__button">
-                Veja mais
+                {t('home_especialidades_button')}
               </a>
             </Link>
           </div>
@@ -31,9 +34,9 @@ export default function Speciality() {
               className="specialty__img"
             />
 
-            <h3 className="specialty__title">Linhas premium</h3>
+            <h3 className="specialty__title">{t('home_especialidades_item1_title')}</h3>
             <p className="specialty__description">
-              linahs premium esperando por você.
+              {t('home_especialidades_item1_descricao')}
             </p>
           </div>
 
@@ -44,9 +47,9 @@ export default function Speciality() {
               className="specialty__img"
             />
 
-            <h3 className="specialty__title">Qualidade</h3>
+            <h3 className="specialty__title">{t('home_especialidades_item2_title')}</h3>
             <p className="specialty__description">
-              Aproveite e desfrute do melhor que a Faccinus oferece.
+            {t('home_especialidades_item2_descricao')}
             </p>
           </div>
 
@@ -57,9 +60,9 @@ export default function Speciality() {
               className="specialty__img"
             />
 
-            <h3 className="specialty__title">Tecnologia</h3>
+            <h3 className="specialty__title">{t('home_especialidades_item3_title')}</h3>
             <p className="specialty__description">
-              Todas as nossas linhas oferecem produtos de qualidade
+              {t('home_especialidades_item3_descricao')}
             </p>
           </div>
         </div>

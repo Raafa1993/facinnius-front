@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { ChangeEvent, useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { BiFilter } from "react-icons/bi";
 import { RiArrowRightLine } from "react-icons/ri";
 import Filtered from "../../components/Filtered";
@@ -10,6 +11,7 @@ import { ProdutosData } from "../../data/ProdutosData";
 
 export default function ProductsList() {
   const router = useRouter();
+  const { t } = useTranslation();
   const [modal, setModal] = useState(false);
   const query = router.query
   const [formData, setFormData] = useState<any>({});
@@ -80,15 +82,15 @@ export default function ProductsList() {
               style={{ gridTemplateColumns: "1fr" }}
             >
               <h2 className="section__titleSpecialty">
-                Lista de produtos Facinnius 
+                {t('produtos_titulo')}
               </h2>
 
               <div className="field-group" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <h3>Linhas especiais</h3>
+                <h3>{t('produtos_subtitulo')}</h3>
                 <div className="filterItems">
                   <button style={{ cursor: 'pointer', gap: '12px', display: 'flex', alignItems: 'center' }} className="buttonDefault specialty__button" onClick={() => setModal(!modal)}>
                     <BiFilter size={18} />
-                    Filtrar itens
+                      {t('produtos_botao_filtro')}
                   </button>
                 </div>
               </div>

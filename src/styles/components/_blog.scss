@@ -23,6 +23,11 @@
         position: absolute;
         right: 0;
         bottom: 0;
+        border: none;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+
 
         & i{
             transform: rotate(-30deg);

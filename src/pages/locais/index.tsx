@@ -11,8 +11,10 @@ import Image from "next/image";
 import { InputDefault } from "../../components/InputDefault";
 import { SelectDefault } from "../../components/SelectDefault";
 import { LocaleData } from "../../data/LocaleData";
+import { useTranslation } from "react-i18next";
 
 export default function Locails() {
+  const { t } = useTranslation();
   const [filter, setFilter] = useState('');
   const filterLocal = LocaleData.filter((obj) => obj.Cidade === filter)
   const verifiFilter = filterLocal.length <= 0 ? LocaleData : filterLocal
@@ -21,8 +23,6 @@ export default function Locails() {
 
     setFilter(value);
   }
-
-  console.log(filterLocal)
 
   return (
     <>
@@ -35,17 +35,17 @@ export default function Locails() {
               style={{ gridTemplateColumns: "1fr" }}
             >
               <h2 className="section__titleSpecialty">
-                Specialty coffees that make you happy and cheer you up!
+                {t('locais_titulo')}
               </h2>
             </div>
 
             <SelectDefault
-              label="Locais"
+              label={t('locais_label')}
               name="name"
-              placeholder="Digite o local"
               id="name"
               onChange={handleSelectChange}
             >
+              <option value="0">{t('locais_option')}</option>
               <option value="Americana">Americana</option>
               <option value="Campinas">Campinas</option>
               <option value="Diadema">Diadema</option>
@@ -68,7 +68,7 @@ export default function Locails() {
 
           <div className="lojas container">
             <h2 className="font-1-xxl">
-              lojas locais<span className="cor-p1">.</span>
+              {t('locais_subtitulo')}<span className="cor-p1">.</span>
             </h2>
             {verifiFilter.map((row) => (
               <div key={row.id} className="lojas-item">

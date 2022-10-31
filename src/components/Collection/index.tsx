@@ -5,8 +5,10 @@ import { RiArrowRightLine } from "react-icons/ri";
 
 import Collection1 from '../../../public/images/collection1.png';
 import Collection2 from '../../../public/images/collection2.png';
+import { useTranslation } from "react-i18next";
 
 export default function Collection() {
+  const { t } = useTranslation();
   const router = useRouter()
 
   function handleOnClickProduct(typo: any) {
@@ -20,12 +22,9 @@ export default function Collection() {
       <div className="collection__container container">
         <div className="collection__explore">
           <div className="collection__data-men">
-            <h2 className="collection__title">
-              Produtos <br />
-              Masculinos
-            </h2>
+          <h2 className="collection__title" dangerouslySetInnerHTML={{ __html: t('home_colecao_masculino') }} />
             <button onClick={() => handleOnClickProduct('masculino')} className="button__link">
-              Veja mais <i className="ri-arrow-right-line"><RiArrowRightLine /></i>
+            {t('home_colecao_botao')} <i className="ri-arrow-right-line"><RiArrowRightLine /></i>
             </button>
           </div>
 
@@ -36,12 +35,9 @@ export default function Collection() {
           <Image src={Collection2} alt="collection image" />
 
           <div className="collection__data-women">
-            <h2 className="collection__title">
-              Produtos <br />
-              Femininos
-            </h2>
+            <h2 className="collection__title" dangerouslySetInnerHTML={{ __html: t('home_colecao_feminino') }} />
             <button onClick={() => handleOnClickProduct('feminino')} className="button__link">
-              Veja mais <i className="ri-arrow-right-line"><RiArrowRightLine /></i>
+            {t('home_colecao_botao')} <i className="ri-arrow-right-line"><RiArrowRightLine /></i>
             </button>
           </div>
         </div>

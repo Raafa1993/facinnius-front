@@ -1,8 +1,11 @@
 import Link from "next/link";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { RiFacebookFill, RiInstagramFill, RiWhatsappFill, RiYoutubeFill } from "react-icons/ri";
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer section">
       <div className="footer__container container grid">
@@ -13,36 +16,33 @@ export default function Footer() {
             </a>
           </Link>
 
-          <p className="footer__description">
-            Comprometidos em <br />
-            levar até você os melhores <br />
-            Produtos.
-          </p>
+          <p className="footer__description" dangerouslySetInnerHTML={{ __html: t('home_footer_descricao') }} />
+           
         </div>
 
         <div className="footer__content">
           <div>
-            <h3 className="footer__title">Companhia</h3>
+            <h3 className="footer__title">{t('home_footer_companhia_titulo')}</h3>
 
             <ul className="footer__links">
               <li>
                 <Link href="/lista-produtos" className="footer__link">
                   <a className="footer__link">
-                    Produtos
+                    {t('home_footer_companhia_produtos')}
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="#new" className="footer__link">
                   <a className="footer__link">
-                    Linhas
+                  {t('home_footer_companhia_linhas')}
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="/contato" className="footer__link">
                   <a className="footer__link">
-                    Contato
+                    {t('home_footer_companhia_contato')}
                   </a>
                 </Link>
               </li>
@@ -50,13 +50,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="footer__title">Blog</h3>
+            <h3 className="footer__title">{t('home_footer_blog_titulo')}</h3>
 
             <ul className="footer__links">
               <li>
                 <Link href="#" className="footer__link">
                   <a  className="footer__link">
-                    Eventos
+                    {t('home_footer_blog_eventos')}
                   </a>
                 </Link>
               </li>
@@ -64,7 +64,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="footer__title">Locao</h3>
+            <h3 className="footer__title">{t('home_footer_localizacao_titulo')}</h3>
 
             <p className="footer__information">
               Av Nova Zelândia, 1050 <br />
@@ -81,7 +81,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="footer__title">Redes sociasi</h3>
+            <h3 className="footer__title">{t('home_footer_redes_titulo')}</h3>
 
             <ul className="footer__social">
               <a
@@ -116,7 +116,7 @@ export default function Footer() {
 
       <div className="footer__info container">
         <span className="footer__copy">
-          &#169; M10web. Todos os direitos reservados
+          &#169; M10-web. Todos os direitos reservados
         </span>
 
         <a href="#" className="footer__privacy">
