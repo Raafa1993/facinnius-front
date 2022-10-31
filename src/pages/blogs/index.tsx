@@ -1,16 +1,8 @@
 import { useRouter } from "next/router";
-import React, { ChangeEvent, useState } from "react";
-import { FiClock } from "react-icons/fi";
-import { IoLocationOutline } from "react-icons/io5";
+
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import ModalDefault from "../../components/ModalDefault";
-import { ItemsData } from "../../data/ItemsData";
-import LocalImg from "../../../public/images/sp.webp";
 import Image from "next/image";
-import { InputDefault } from "../../components/InputDefault";
-import { SelectDefault } from "../../components/SelectDefault";
-import { LocaleData } from "../../data/LocaleData";
 import { useTranslation } from "react-i18next";
 import { BiRightArrowAlt } from "react-icons/bi";
 import { BlogData } from "../../data/BlogData";
@@ -43,7 +35,7 @@ export default function Blogs() {
 
           <div className="blog__content grid">
             {BlogData.map((row) => (
-              <article className="blog__card">
+              <article key={row.id} className="blog__card">
                 <div className="blog__image">
                   <Image src={row.imagem} alt={row.texto} className="blog__img"  />
 
