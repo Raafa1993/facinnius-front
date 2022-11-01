@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import Speciality1 from "../../../public/images/speciality1.png";
 import Speciality2 from "../../../public/images/speciality2.png";
@@ -14,9 +15,11 @@ export default function Speciality() {
           </h2>
 
           <div>
-            <a href="/lista-produtos" className="buttonDefault specialty__button">
-              Veja mais
-            </a>
+            <Link href="/lista-produtos">
+              <a className="buttonDefault specialty__button">
+                Veja mais
+              </a>
+            </Link>
           </div>
         </div>
 

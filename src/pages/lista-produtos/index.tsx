@@ -11,7 +11,6 @@ import { ProdutosData } from "../../data/ProdutosData";
 export default function ProductsList() {
   const router = useRouter();
   const [modal, setModal] = useState(false);
-  const query = router.query
   const [formData, setFormData] = useState<any>({});
   const filterItems =  ProdutosData.filter((obj) => obj.filtros.includes(formData.sexo) || obj.filtros.includes(formData.cabelo) || obj.filtros.includes(formData.tipoCabelo) || obj.filtros.includes(formData.desejoCabelo) || obj.filtros.includes(formData.comprimento) || obj.filtros.includes(formData.aspecto)) || ProdutosData
   const verifiFilter = filterItems.length <= 0 ? ProdutosData : filterItems

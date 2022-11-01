@@ -1,4 +1,6 @@
+import Image from "next/image";
 import React from "react";
+import ImageBlog from "../../../public/images/blog1.png"
 import { BiRightArrowAlt } from "react-icons/bi";
 
 export default function Blog() {
@@ -12,7 +14,7 @@ export default function Blog() {
         <div className="blog__content grid">
           <article className="blog__card">
             <div className="blog__image">
-              <img src="../images/blog1.png" alt="" className="blog__img" />
+              <Image src={ImageBlog} alt="" className="blog__img"  />
               <a href="#" className="blog__button">
                 <i className="bx bx-right-arrow-alt"><BiRightArrowAlt /></i>
               </a>

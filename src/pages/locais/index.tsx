@@ -1,14 +1,8 @@
-import { useRouter } from "next/router";
 import React, { ChangeEvent, useState } from "react";
-import { FiClock } from "react-icons/fi";
-import { IoLocationOutline } from "react-icons/io5";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import ModalDefault from "../../components/ModalDefault";
-import { ItemsData } from "../../data/ItemsData";
 import LocalImg from "../../../public/images/sp.webp";
 import Image from "next/image";
-import { InputDefault } from "../../components/InputDefault";
 import { SelectDefault } from "../../components/SelectDefault";
 import { LocaleData } from "../../data/LocaleData";
 
@@ -21,8 +15,6 @@ export default function Locails() {
 
     setFilter(value);
   }
-
-  console.log(filterLocal)
 
   return (
     <>
@@ -71,7 +63,7 @@ export default function Locails() {
               lojas locais<span className="cor-p1">.</span>
             </h2>
             {verifiFilter.map((row) => (
-              <div className="lojas-item">
+              <div key={row.id} className="lojas-item">
                 <Image
                   src={LocalImg}
                   width="1120"
@@ -95,97 +87,6 @@ export default function Locails() {
                 </div>
               </div>
             ))}
-            {/* <div className="lojas-item">
-              <Image
-                src={LocalImg}
-                width="1120"
-                height="520"
-                alt="mapa marcando o endereço em Rua Ali Perto, 35 - Rio de Janeiro - RJ"
-              />
-              <div className="lojas-conteudo">
-                <h3 className="font-1-xl">Rio de Janeiro</h3>
-                <div className="lojas-dados font-2-s cor-8">
-                  <p>Rua Ali Perto, 35</p>
-                  <p>Rio de Janeiro - RJ</p>
-                </div>
-                <div className="lojas-dados font-2-s cor-8">
-                  <a href="rj@bikcraft.com">rj@bikcraft.com</a>
-                  <a href="tel:+552199999999">+55 21 9999-9999</a>
-                </div>
-                <p className="lojas-tempo font-1-s">
-                  <FiClock /> 08-18h de seg à dom
-                </p>
-              </div>
-            </div>
-
-            <div className="lojas-item">
-              <Image
-                src={LocalImg}
-                width="1120"
-                height="520"
-                alt="mapa marcando o endereço em Rua Ali Perto, 35 - São Paulo - SP"
-              />
-              <div className="lojas-conteudo">
-                <h3 className="font-1-xl">São Paulo</h3>
-                <div className="lojas-dados font-2-s cor-8">
-                  <p>Rua Ali Perto, 35</p>
-                  <p>São Paulo - SP</p>
-                </div>
-                <div className="lojas-dados font-2-s cor-8">
-                  <a href="sp@bikcraft.com">sp@bikcraft.com</a>
-                  <a href="tel:+551199999999">+55 11 9999-9999</a>
-                </div>
-                <p className="lojas-tempo font-1-s">
-                  <FiClock /> 08-18h de seg à dom
-                </p>
-              </div>
-            </div>
-
-            <div className="lojas-item">
-              <Image
-                src={LocalImg}
-                width="1120"
-                height="520"
-                alt="mapa marcando o endereço em Rua Ali Perto, 35 - São Paulo - SP"
-              />
-              <div className="lojas-conteudo">
-                <h3 className="font-1-xl">São Paulo</h3>
-                <div className="lojas-dados font-2-s cor-8">
-                  <p>Rua Ali Perto, 35</p>
-                  <p>São Paulo - SP</p>
-                </div>
-                <div className="lojas-dados font-2-s cor-8">
-                  <a href="sp@bikcraft.com">sp@bikcraft.com</a>
-                  <a href="tel:+551199999999">+55 11 9999-9999</a>
-                </div>
-                <p className="lojas-tempo font-1-s">
-                  <FiClock /> 08-18h de seg à dom
-                </p>
-              </div>
-            </div>
-
-            <div className="lojas-item">
-              <Image
-                src={LocalImg}
-                width="1120"
-                height="520"
-                alt="mapa marcando o endereço em Rua Ali Perto, 35 - São Paulo - SP"
-              />
-              <div className="lojas-conteudo">
-                <h3 className="font-1-xl">São Paulo</h3>
-                <div className="lojas-dados font-2-s cor-8">
-                  <p>Rua Ali Perto, 35</p>
-                  <p>São Paulo - SP</p>
-                </div>
-                <div className="lojas-dados font-2-s cor-8">
-                  <a href="sp@bikcraft.com">sp@bikcraft.com</a>
-                  <a href="tel:+551199999999">+55 11 9999-9999</a>
-                </div>
-                <p className="lojas-tempo font-1-s">
-                  <FiClock /> 08-18h de seg à dom
-                </p>
-              </div>
-            </div> */}
           </div>
         </section>
         <Footer />
