@@ -1,19 +1,24 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { ChangeEvent, useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { BiFilter } from "react-icons/bi";
 import { RiArrowRightLine } from "react-icons/ri";
 import Filtered from "../../components/Filtered";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import { ProdutosData } from "../../data/ProdutosData";
+import { ProdutosBrData } from "../../data/ProdutosBrData";
+import { ProdutosEnData } from "../../data/ProdutosEnData";
 
 export default function ProductsList() {
   const router = useRouter();
+  const { t, i18n } = useTranslation();
   const [modal, setModal] = useState(false);
   const [formData, setFormData] = useState<any>({});
-  const filterItems =  ProdutosData.filter((obj) => obj.filtros.includes(formData.sexo) || obj.filtros.includes(formData.cabelo) || obj.filtros.includes(formData.tipoCabelo) || obj.filtros.includes(formData.desejoCabelo) || obj.filtros.includes(formData.comprimento) || obj.filtros.includes(formData.aspecto)) || ProdutosData
-  const verifiFilter = filterItems.length <= 0 ? ProdutosData : filterItems
+
+  const isBr = i18n.language === 'ptbr' ? ProdutosBrData : ProdutosEnData;
+  const filterItems =  isBr.filter((obj) => obj.filtros.includes(formData.sexo) || obj.filtros.includes(formData.cabelo) || obj.filtros.includes(formData.tipoCabelo) || obj.filtros.includes(formData.desejoCabelo) || obj.filtros.includes(formData.comprimento) || obj.filtros.includes(formData.aspecto)) || isBr
+  const verifiFilter = filterItems.length <= 0 ? isBr : filterItems
 
   function handleOnClickProduct(id: any, title: string) {
     router.push({
@@ -79,15 +84,15 @@ export default function ProductsList() {
               style={{ gridTemplateColumns: "1fr" }}
             >
               <h2 className="section__titleSpecialty">
-                Lista de produtos Facinnius 
+                {t('produtos_titulo')}
               </h2>
 
               <div className="field-group" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <h3>Linhas especiais</h3>
+                <h3>{t('produtos_subtitulo')}</h3>
                 <div className="filterItems">
                   <button style={{ cursor: 'pointer', gap: '12px', display: 'flex', alignItems: 'center' }} className="buttonDefault specialty__button" onClick={() => setModal(!modal)}>
                     <BiFilter size={18} />
-                    Filtrar itens
+                      {t('produtos_botao_filtro')}
                   </button>
                 </div>
               </div>

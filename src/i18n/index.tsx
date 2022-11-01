@@ -2,16 +2,17 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
 import enJSon from './translation/en.json'
-import ptBRJson from './translation/ptBR.json'
+import ptBRJson from './translation/ptbr.json'
 
 i18n.use(initReactI18next).init({
-  fallbackLng: 'br', 
+  fallbackLng: 'ptbr',
   interpolation: {
     escapeValue: false
   },
+  
   resources: {
-    en: enJSon,
-    br: ptBRJson
+    ptbr: ptBRJson,
+    en: enJSon
   }
 })
 

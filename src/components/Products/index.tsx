@@ -1,18 +1,19 @@
 import React from "react";
-import { RiArrowRightLine, RiArrowLeftLine, RiHomeWifiFill } from "react-icons/ri";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
-import { ItemsData } from "../../data/ItemsData";
 import { useRouter } from "next/router";
-import { ProdutosData } from "../../data/ProdutosData";
+import { ProdutosBrData } from "../../data/ProdutosBrData";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
+import { ProdutosEnData } from "../../data/ProdutosEnData";
 
 export default function Products() {
-  const router = useRouter()
+  const router = useRouter();
+  const { t, i18n } = useTranslation();
 
   function handleOnClickProduct(id: any, title: string) {
     router.push({
@@ -23,7 +24,7 @@ export default function Products() {
 
   return (
     <section className="products section" id="products">
-      <h2 className="section__title">Nossos produtos</h2>
+      <h2 className="section__title">{t('home_produtos')}</h2>
 
       <div className="products__container container swiper">
         <div className="swiper-wrapper">
@@ -46,7 +47,36 @@ export default function Products() {
             slidesPerView="auto"
             loop={true}
           >
-            {ProdutosData.map((row) => (
+
+            {i18n.language === 'ptbr' ? (
+              ProdutosBrData.map((row) => (
+                <SwiperSlide key={row.id} onClick={() => handleOnClickProduct(row.id, row.title)} className="products__card swiper-slide" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                    <Image
+                      src={row.imagem as any}
+                      alt={row.title}
+                      className="products__img"
+                    />
+
+                    <h2 className="products__title">{row.title}</h2>
+                    {/* <span className="products__price">{row.subtitulo}</span> */}
+                </SwiperSlide>
+              ))
+            ) : (
+              ProdutosEnData.map((row) => (
+                <SwiperSlide key={row.id} onClick={() => handleOnClickProduct(row.id, row.title)} className="products__card swiper-slide" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                    <Image
+                      src={row.imagem as any}
+                      alt={row.title}
+                      className="products__img"
+                    />
+  
+                    <h2 className="products__title">{row.title}</h2>
+                    {/* <span className="products__price">{row.subtitulo}</span> */}
+                </SwiperSlide>
+              ))
+            )}
+
+            {ProdutosBrData.map((row) => (
               <SwiperSlide key={row.id} onClick={() => handleOnClickProduct(row.id, row.title)} className="products__card swiper-slide" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
                   <Image
                     src={row.imagem as any}

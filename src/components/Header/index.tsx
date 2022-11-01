@@ -3,9 +3,11 @@ import React, { useEffect, useState } from "react";
 import LanguagesSwitch from "../LanguagesSwitch";
 import logoFacinnius from '../../../public/images/logoFacinnius.png'
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export default function Header() {
   const [menuFixed, setMenuFixed] = useState<boolean>(false);
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     document.addEventListener("scroll", () => {
@@ -31,7 +33,6 @@ export default function Header() {
           </a>
         </Link>
 
-        {/* <LanguagesSwitch /> */}
 
         <div className="nav__menu" id="nav-menu">
           <ul className="nav__list">
@@ -45,10 +46,19 @@ export default function Header() {
             </li>
 
             <li className="nav__item">
+              <Link href="/facinnius" className="nav__link active-link">
+                <a>
+                  <i className="ri-home-line"></i>
+                  <span>Facinnius</span>
+                </a>
+              </Link>
+            </li>
+
+            <li className="nav__item">
               <Link href="/lista-produtos" className="nav__link">
                 <a>
                   <i className="ri-price-tag-3-line"></i>
-                  <span>Produtos</span>
+                  <span>{t('home_heade_produtos')}</span>
                 </a>
               </Link>
             </li>
@@ -57,7 +67,7 @@ export default function Header() {
               <Link href="/locais" className="nav__link">
                 <a>
                   <i className="ri-compass-line"></i>
-                  <span>Locais</span>
+                  <span>{t('home_header_locais')}</span>
                 </a>
               </Link>
             </li>
@@ -66,14 +76,14 @@ export default function Header() {
               <Link href="/contato" className="nav__link">
                 <a>
                   <i className="ri-t-shirt-line"></i>
-                  <span>Contato</span>
+                  <span>{t('home_header_contato')}</span>
                 </a>
               </Link>
             </li>
           </ul>
         </div>
 
-        <i className="ri-moon-line change-theme" id="theme-button"></i>
+        <i className="ri-moon-line change-theme" id="theme-button"><LanguagesSwitch /></i>
       </nav>
     </header>
   );

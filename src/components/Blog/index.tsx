@@ -1,72 +1,63 @@
 import Image from "next/image";
 import React from "react";
-import ImageBlog from "../../../public/images/blog1.png"
+import BlogImage from '../../../public/images/blog1.png'
 import { BiRightArrowAlt } from "react-icons/bi";
+import { useTranslation } from "react-i18next";
+import { BlogData } from "../../data/BlogData";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 export default function Blog() {
+  const router = useRouter();
+  const { t } = useTranslation();
+
+  function handleOnClickProduct(title: string) {
+    router.push({
+      pathname: `/blogs/${title}`,
+    })
+  }
+
+  const blogs = BlogData
+  const latesBlogs = blogs.slice(0, 2);
+
+  console.log('latesBlogs', latesBlogs)
+
   return (
     <section className="blog section" id="blog">
       <div className="blog__container container">
         <h2 className="section__titleSpecialty">
-          Acesse nossos blogs!
+          {t('home_blog_titulo')}
         </h2>
 
         <div className="blog__content grid">
-          <article className="blog__card">
-            <div className="blog__image">
-              <Image src={ImageBlog} alt="" className="blog__img"  />
-              <a href="#" className="blog__button">
-                <i className="bx bx-right-arrow-alt"><BiRightArrowAlt /></i>
-              </a>
-            </div>
+          {latesBlogs.map((row) => (
 
-            <div className="blog__data">
-              <h2 className="blog__title">Técnica de mechas indolor</h2>
-              <p className="blog__description">
-                Nova técnica de mechas indolor com alta tendência no mundo dos cabeleireiros.
-              </p>
+            <article key={row.id} className="blog__card">
+              <div className="blog__image">
+                <Image src={row.imagem} alt={row.titulo} className="blog__img" />
 
-              {/* <div className="blog__footer">
-                <div className="blog__reaction">
-                  <i className="bx bx-comment"></i>
-                  <span>12</span>
-                </div>
-                <div className="blog__reaction">
-                  <i className="bx bx-show"></i>
-                  <span>76,5K</span>
-                </div>
-              </div> */}
-            </div>
-          </article>
-
-          {/* <article className="blog__card">
-            <div className="blog__image">
-              <img src="https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGhhaXJkcmVzc2VyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=380&q=60" alt="" className="blog__img" />
-              <a href="#" className="blog__button">
-                <i className="bx bx-right-arrow-alt"><BiRightArrowAlt /></i>
-              </a>
-            </div>
-
-            <div className="blog__data">
-              <h2 className="blog__title">12 Benefits Of Drinking Coffee</h2>
-              <p className="blog__description">
-                The blogs about coffee will help you a lot about how it is
-                prepared, its waiting time, for a good quality coffee.
-              </p>
-
-              <div className="blog__footer">
-                <div className="blog__reaction">
-                  <i className="bx bx-comment"></i>
-                  <span>45</span>
-                </div>
-                <div className="blog__reaction">
-                  <i className="bx bx-show"></i>
-                  <span>356,5K</span>
-                </div>
+                <button onClick={() => handleOnClickProduct(row.query)} className="blog__button">
+                  <i className="bx bx-right-arrow-alt"><BiRightArrowAlt /></i>
+                </button>
               </div>
-            </div>
-          </article> */}
+
+              <div className="blog__data">
+                <h2 className="blog__title">{row.descricao}</h2>
+                <p className="blog__description">
+                  {row.descricao}
+                </p>
+              </div>
+            </article>
+          ))}
         </div>
+
+        <div style={{ display: 'flex', alignItems: 'center',justifyItems: 'center', width: '100%', marginTop: '20px' }}>
+            <Link href="/blogs" className="buttonDefault specialty__button">
+              <a className="buttonDefault specialty__button" style={{ marginLeft: '0' }}>
+                {t('home_especialidades_button')}
+              </a>
+            </Link>
+          </div>
       </div>
     </section>
   );

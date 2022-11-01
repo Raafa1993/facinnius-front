@@ -1,5 +1,117 @@
 {
   "translation": {
-    "welcome": "Ola mundo"
+    "welcome": "Ola mundo",
+    "home_welcome": "Ola mundo",
+    
+    "home_heade_produtos": "Produtos",
+    "home_header_locais": "Locais",
+    "home_header_contato": "Contato",
+
+    "home_especialidades_text": "Produtos especiais para cuidar de você!",
+    "home_especialidades_button": "veja mais",
+    "home_especialidades_item1_title": "Linhas premium",
+    "home_especialidades_item1_descricao": "linahs premium esperando por você.",
+    "home_especialidades_item2_title": "Qualidade",
+    "home_especialidades_item2_descricao": "Aproveite e desfrute do melhor que a Faccinus oferece.",
+    "home_especialidades_item3_title": "Tecnologia",
+    "home_especialidades_item3_descricao": "Todas as nossas linhas oferecem produtos de qualidade",
+
+    "home_linhas_produtos_title": "Linhas de produtos",
+
+    "home_colecao_masculino": "Produtos <br /> Masculinos",
+    "home_colecao_feminino": "Produtos <br /> Femininos",
+    "home_colecao_botao": "Veja mais",
+
+    "home_produtos": "Nossos produtos",
+
+    "home_blog_titulo": "Acesse nossos blogs!",
+    "home_blog_subtitulo": "Técnica de mechas indolor",
+    "home_blog_descricao": "Nova técnica de mechas indolor com alta tendência no mundo dos cabeleireiros.",
+
+    "home_footer_descricao": "Comprometidos em <br /> levar até você os melhores <br /> Produtos.",
+    "home_footer_companhia_titulo": "Companhia",
+    "home_footer_companhia_produtos": "Produtos",
+    "home_footer_companhia_linhas": "Linhas",
+    "home_footer_companhia_contato": "Contato",
+    "home_footer_blog_titulo": "Blog",
+    "home_footer_blog_eventos": "Eventos",
+    "home_footer_localizacao_titulo": "Localização",
+    "home_footer_localizacao_endereco": "Av Nova Zelândia, 1050 Parque Capuava - Santo André/SP",
+    "home_footer_localizacao_endereco_cep": "CEP 09270-190",
+    "home_footer_localizacao_endereco_cnpj": "CNPJ 20.712.759/0001-04",
+    "home_footer_redes_titulo": "Redes sociais",
+
+    "produtos_titulo": "Lista de produtos Facinnius",
+    "produtos_subtitulo": "Linhas especiais",
+    "produtos_botao_filtro": "Filtrar itens",
+
+    "locais_titulo": "Veja onde pode encotrar nossos produtos",
+    "locais_label": "Locais",
+    "locais_option": "Selecione uma opção",
+    "locais_botao_select": "Selecione",
+    "locais_subtitulo": "Lojas e endereços",
+
+    "filtro_titulo": "Filtros",
+    "filtro_questao1_titulo": "QUAL O SEU SEXO?",
+    "filtro_questao1_option1": "Feminino",
+    "filtro_questao1_option2": "Masculino",
+    "filtro_questao2_titulo": "DADOS DO CABELO",
+    "filtro_questao2_option1_placeholder": "Você considera seu cabelo?",
+    "filtro_questao2_option0": "Selecione uma opção",
+    "filtro_questao2_option1": "Liso",
+    "filtro_questao2_option2": "Ondulado",
+    "filtro_questao2_option3": "Cacheado",
+    "filtro_questao2_option4": "Crespo",
+    
+    "filtro_questao3_option1_placeholder": "Tipo de cabelo",
+    "filtro_questao3_option0": "Selecione uma opção",
+    "filtro_questao3_option1": "Natural",
+    "filtro_questao3_option2": "Com mechas",
+    "filtro_questao3_option3": "Com alisamento",
+    "filtro_questao3_option4": "Com coloração",
+
+    "filtro_questao4_titulo": "COMPRIMENTO DO SEU CABELO?",
+    "filtro_questao4_option1": "Longo",
+    "filtro_questao4_option2": "Médio",
+    "filtro_questao4_option3": "Curto",
+
+    "filtro_questao5_titulo": "ASPECTO DO SEU CABELO?",
+    "filtro_questao5_option1": "Oleoso",
+    "filtro_questao5_option2": "Seco",
+    "filtro_questao5_option3": "Misto",
+
+
+    "contato_titulo": "Estão com dúvidas ou tem alguma sugestão? Preencha os campos abaixo!",
+    "contato_subtitulo": "Fale com a Facinnius.",
+    "contato_tipo_contato": "TIPO DE CONTATO",
+    "contato_tipo_input1": "Contato",
+    "contato_tipo_input2": "Seja um distribuidor",
+    "contato_tipo_input3": "Deixe sua opnião",
+    "contato_form_titulo": "Dados",
+    "contato_form_nome": "Nome",
+    "contato_form_telefone": "Telefone",
+    "contato_form_email": "E-mail",
+    "contato_form_regiao": "Região",
+    "contato_form_cabeleireiro": "Você é cabeleireiro",
+    "contato_form_cabeleireiro_option1": "Sim",
+    "contato_form_cabeleireiro_option2": "Não",
+    "contato_form_categoria": "Categoria",
+    "contato_form_categoria_option1": "Site",
+    "contato_form_categoria_option2": "Produtos",
+    "contato_form_categoria_option3": "Consultores",
+    "contato_form_categoria_option4": "Elogios",
+    "contato_form_categoria_option5": "Duvidas",
+    "contato_form_categoria_option6": "Sugestoes",
+    "contato_form_mensagem": "Deixe sua mensagem",
+    "contato_form_endereco": "Endereço",
+    "contato_form_numero": "Numero",
+    "contato_form_cidade": "Cidade",
+    "contato_form_opinião": "Opinião",
+    "contato_form_enviar": "Enviar",
+
+    "sobre_titulo": "Sobre a Facinnius",
+    "sobre_descrição1": "Com um pouco mais de 5 anos no ramo de cosméticos profissionais, a marca oferece o que há de mais inovador e tecnológico no segmento. Os produtos são elaborados com matérias-primas importadas de altíssima qualidade, que atendem perfeitamente as necessidades dos melhores cabeleireiros da atualidade.",
+    "sobre_descrição2": "Com lançamentos frequentes que acompanham o mercado mundial, a Facinnius proporciona em suas linhas produtos com características exclusivas que apresentam ótimos resultados e satisfação de seus clientes."
+
   }
 }
