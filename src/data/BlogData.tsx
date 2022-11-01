@@ -12,7 +12,7 @@ export const BlogData = [
     imagem: Blog_1,
   },
   {
-    id: 1,
+    id: 2,
     titulo: 'Técnica de mechas indolor',
     query: 'tecnica_de_pintar',
     descricao: 'Nova técnica de mechas indolor com alta tendência no mundo dos cabeleireiros.',

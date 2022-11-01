@@ -1,23 +1,24 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
+import { useRouter } from "next/router";
+import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper";
-import { useRouter } from "next/router";
-import { ProdutosBrData } from "../../data/ProdutosBrData";
-import Image from "next/image";
-import { useTranslation } from "react-i18next";
-import { ProdutosEnData } from "../../data/ProdutosEnData";
 
-export default function Products() {
+export default function Products({ productEn, productBr }) {
   const router = useRouter();
   const { t, i18n } = useTranslation();
 
   function handleOnClickProduct(id: any, title: string) {
+    var convertTitle = new URLSearchParams(title).toString();
+    var convertUnderline = convertTitle.replaceAll("+", "-");
+
     router.push({
-      pathname: `/products/${title}`,
+      pathname: `/products/${convertUnderline}`,
       query: { id },
     })
   }
@@ -49,7 +50,7 @@ export default function Products() {
           >
 
             {i18n.language === 'ptbr' ? (
-              ProdutosBrData.map((row) => (
+              productBr.map((row: any) => (
                 <SwiperSlide key={row.id} onClick={() => handleOnClickProduct(row.id, row.title)} className="products__card swiper-slide" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
                     <Image
                       src={row.imagem as any}
@@ -62,7 +63,7 @@ export default function Products() {
                 </SwiperSlide>
               ))
             ) : (
-              ProdutosEnData.map((row) => (
+              productEn.map((row: any) => (
                 <SwiperSlide key={row.id} onClick={() => handleOnClickProduct(row.id, row.title)} className="products__card swiper-slide" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
                     <Image
                       src={row.imagem as any}
@@ -75,20 +76,6 @@ export default function Products() {
                 </SwiperSlide>
               ))
             )}
-
-            {ProdutosBrData.map((row) => (
-              <SwiperSlide key={row.id} onClick={() => handleOnClickProduct(row.id, row.title)} className="products__card swiper-slide" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-                  <Image
-                    src={row.imagem as any}
-                    alt={row.title}
-                    className="products__img"
-                  />
-
-                  <h2 className="products__title">{row.title}</h2>
-                  {/* <span className="products__price">{row.subtitulo}</span> */}
-              </SwiperSlide>
-            ))}
-
             
           </Swiper>
         </div>

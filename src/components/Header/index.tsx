@@ -36,8 +36,8 @@ export default function Header() {
 
         <div className="nav__menu" id="nav-menu">
           <ul className="nav__list">
-            <li className="nav__item">
-              <Link href="/" className="nav__link active-link">
+            <li className="nav__item active-link">
+              <Link href="/" className="nav__link ">
                 <a>
                   <i className="ri-home-line"></i>
                   <span>Home</span>
@@ -46,7 +46,7 @@ export default function Header() {
             </li>
 
             <li className="nav__item">
-              <Link href="/facinnius" className="nav__link active-link">
+              <Link href="/facinnius" className="nav__link ">
                 <a>
                   <i className="ri-home-line"></i>
                   <span>Facinnius</span>

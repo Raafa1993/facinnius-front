@@ -1,4 +1,4 @@
-import { t } from "i18next";
+import { GetServerSideProps } from "next";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
@@ -7,17 +7,19 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import { ProdutosBrData } from "../../data/ProdutosBrData";
 import { ProdutosEnData } from "../../data/ProdutosEnData";
+import { getProdutcBr } from "../../lib/produtosBr";
+import { getProdutcEn } from "../../lib/produtosEn";
 
-export default function Products(props: any) {
+export default function Products({ productBr, productEn }) {
   const router = useRouter();
   const { t, i18n } = useTranslation();
 
-  const isBr = i18n.language === 'ptbr' ? ProdutosBrData : ProdutosEnData
+  const isBr = i18n.language === 'ptbr' ? productBr : productEn
   const [filterProductsId, setFilterProductsId] = useState<any>({});
 
   useEffect(() => {
     setFilterProductsId({
-      ...isBr.filter((obj) => obj.id === Number(router.query.id))[0],
+      ...isBr.filter((obj: any) => obj.id === Number(router.query.id))[0],
     });
   }, [isBr]);
 
@@ -65,4 +67,16 @@ export default function Products(props: any) {
       </main>
     </>
   );
+}
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const productBr = getProdutcBr();
+  const productEn = getProdutcEn();
+
+  return {
+    props: {
+      productBr: productBr,
+      productEn: productEn,
+    }
+  }
 }

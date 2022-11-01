@@ -5,15 +5,22 @@ import Header from "../../components/Header";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { BiRightArrowAlt } from "react-icons/bi";
-import { BlogData } from "../../data/BlogData";
+import { GetStaticProps } from "next";
+import { getBlogBr } from "../../lib/blogBr";
+import { getBlogEn } from "../../lib/blogEn";
 
-export default function Blogs() {
+export default function Blogs({ blogBr, blogEn }) {
   const router = useRouter();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isBr = i18n.language === 'ptbr' ? blogBr : blogEn
 
-  function handleOnClickProduct(title: string) {
+  function handleOnClickProduct(id: any, title: string) {
+    var convertTitle = new URLSearchParams(title).toString();
+    var convertUnderline = convertTitle.replaceAll("+", "-");
+
     router.push({
-      pathname: `/blogs/${title}`,
+      pathname: `/blogs/${convertUnderline}`,
+      query: { id },
     })
   }
 
@@ -34,12 +41,12 @@ export default function Blogs() {
           </div>
 
           <div className="blog__content grid">
-            {BlogData.map((row) => (
+            {isBr.map((row: any) => (
               <article key={row.id} className="blog__card">
                 <div className="blog__image">
                   <Image src={row.imagem} alt={row.texto} className="blog__img"  />
 
-                  <button onClick={() => handleOnClickProduct(row.query)} className="blog__button">
+                  <button onClick={() => handleOnClickProduct(row.id, row.titulo)} className="blog__button">
                     <i className="bx bx-right-arrow-alt"><BiRightArrowAlt /></i>
                   </button>
                 </div>
@@ -58,4 +65,16 @@ export default function Blogs() {
       </main>
     </>
   );
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const blogBr = getBlogBr();
+  const blogEn = getBlogEn();
+
+  return {
+    props: {
+      blogBr,
+      blogEn,
+    }
+  }
 }

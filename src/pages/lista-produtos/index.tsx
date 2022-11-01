@@ -1,3 +1,4 @@
+import { GetStaticProps } from "next";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { ChangeEvent, useEffect, useState } from "react";
@@ -7,22 +8,27 @@ import { RiArrowRightLine } from "react-icons/ri";
 import Filtered from "../../components/Filtered";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import { ProdutosBrData } from "../../data/ProdutosBrData";
-import { ProdutosEnData } from "../../data/ProdutosEnData";
 
-export default function ProductsList() {
+//DATA
+import { getProdutcBr } from "../../lib/produtosBr";
+import { getProdutcEn } from "../../lib/produtosEn";
+
+export default function ProductsList({ productBr, productEn }) {
   const router = useRouter();
   const { t, i18n } = useTranslation();
   const [modal, setModal] = useState(false);
   const [formData, setFormData] = useState<any>({});
 
-  const isBr = i18n.language === 'ptbr' ? ProdutosBrData : ProdutosEnData;
-  const filterItems =  isBr.filter((obj) => obj.filtros.includes(formData.sexo) || obj.filtros.includes(formData.cabelo) || obj.filtros.includes(formData.tipoCabelo) || obj.filtros.includes(formData.desejoCabelo) || obj.filtros.includes(formData.comprimento) || obj.filtros.includes(formData.aspecto)) || isBr
+  const isBr = i18n.language === 'ptbr' ? productBr : productEn;
+  const filterItems =  isBr.filter((obj: any) => obj.filtros.includes(formData.sexo) || obj.filtros.includes(formData.cabelo) || obj.filtros.includes(formData.tipoCabelo) || obj.filtros.includes(formData.desejoCabelo) || obj.filtros.includes(formData.comprimento) || obj.filtros.includes(formData.aspecto)) || isBr
   const verifiFilter = filterItems.length <= 0 ? isBr : filterItems
 
   function handleOnClickProduct(id: any, title: string) {
+    var convertTitle = new URLSearchParams(title).toString();
+    var convertUnderline = convertTitle.replaceAll("+", "-");
+
     router.push({
-      pathname: `/products/${title}`,
+      pathname: `/products/${convertUnderline}`,
       query: { id },
     });
   }
@@ -61,7 +67,6 @@ export default function ProductsList() {
         router.push({
           query: queryString
         })
-        console.log("QUERY", queryString)
     }
 
 }
@@ -129,4 +134,16 @@ export default function ProductsList() {
       </main>
     </>
   );
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const productBr = getProdutcBr();
+  const productEn = getProdutcEn();
+
+  return {
+    props: {
+      productBr: productBr,
+      productEn: productEn,
+    }
+  }
 }
