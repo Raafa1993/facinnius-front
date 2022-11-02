@@ -43,6 +43,6 @@ export const getStaticProps: GetStaticProps = async () => {
       productEn: productEn,
       blogBr,
       blogEn,
-    }
+    },
   }
 }

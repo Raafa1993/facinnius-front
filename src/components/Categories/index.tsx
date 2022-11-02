@@ -31,7 +31,22 @@ export default function Categories() {
             </article>  
           ))
         ) : (
-          null
+          LinhasData.map((row) => (
+            <article key={row.id} className="new__card">
+              <Image src={row.imagem} className="new__img" alt="teste" />
+
+                <Link href="/lista-produtos" className="new__link">
+                  <a className="new__link">
+                    <div className="new__data">
+                      <h2 className="new__title">{row.title}</h2>
+                      <span className="new__subtitle">{row.title}</span>
+                    </div>
+
+                    <i className="ri-arrow-right-line"><RiArrowRightLine /></i>
+                  </a>
+                </Link>
+            </article>  
+          ))
         )}
 
         {/* {LinhasData.map((row) => (

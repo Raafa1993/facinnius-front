@@ -1,4 +1,5 @@
-import produto1 from '../../public/images/produto1.png';
+
+import produto1 from '../../public/images/produto16.png';
 
 export const ProdutosEnData = [
 	{
