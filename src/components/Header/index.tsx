@@ -33,7 +33,6 @@ export default function Header() {
           </a>
         </Link>
 
-
         <div className="nav__menu" id="nav-menu">
           <ul className="nav__list">
             <li className="nav__item active-link">
