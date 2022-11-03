@@ -1,4 +1,4 @@
-import produto1 from '../../public/images/imagemUnica.png';
+import produto1 from '../../public/images/produto3.png';
 
 
 export const ProdutosBrData = [
