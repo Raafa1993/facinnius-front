@@ -4,8 +4,10 @@ import LanguagesSwitch from "../LanguagesSwitch";
 import logoFacinnius from '../../../public/images/logoFacinnius.png'
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
+import { useRouter } from "next/router";
 
 export default function Header() {
+  const router = useRouter();
   const [menuFixed, setMenuFixed] = useState<boolean>(false);
   const { t, i18n } = useTranslation();
 
@@ -35,8 +37,8 @@ export default function Header() {
 
         <div className="nav__menu" id="nav-menu">
           <ul className="nav__list">
-            <li className="nav__item active-link">
-              <Link href="/" className="nav__link ">
+            <li className={`nav__item ${router.pathname === '/' ? "active-link" : ""}`}>
+              <Link href="/" className="nav__link" >
                 <a>
                   <i className="ri-home-line"></i>
                   <span>Home</span>
@@ -44,7 +46,7 @@ export default function Header() {
               </Link>
             </li>
 
-            <li className="nav__item">
+            <li className={`nav__item ${router.pathname === '/facinnius' ? "active-link" : ""}`}>
               <Link href="/facinnius" className="nav__link ">
                 <a>
                   <i className="ri-home-line"></i>
@@ -53,7 +55,7 @@ export default function Header() {
               </Link>
             </li>
 
-            <li className="nav__item">
+            <li className={`nav__item ${router.pathname === '/lista-produtos' ? "active-link" : ""}`} >
               <Link href="/lista-produtos" className="nav__link">
                 <a>
                   <i className="ri-price-tag-3-line"></i>
@@ -62,7 +64,7 @@ export default function Header() {
               </Link>
             </li>
 
-            <li className="nav__item">
+            <li className={`nav__item ${router.pathname === '/locais' ? "active-link" : ""}`}>
               <Link href="/locais" className="nav__link">
                 <a>
                   <i className="ri-compass-line"></i>
@@ -71,7 +73,7 @@ export default function Header() {
               </Link>
             </li>
 
-            <li className="nav__item">
+            <li className={`nav__item ${router.pathname === '/contato' ? "active-link" : ""}`}>
               <Link href="/contato" className="nav__link">
                 <a>
                   <i className="ri-t-shirt-line"></i>

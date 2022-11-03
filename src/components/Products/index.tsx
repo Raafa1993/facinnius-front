@@ -2,8 +2,8 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import { useRouter } from "next/router";
-import Image from "next/image";
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 
 // Import Swiper styles
 import "swiper/css";
@@ -53,7 +53,7 @@ export default function Products({ productEn, productBr }) {
               productBr.map((row: any) => (
                 <SwiperSlide key={row.id} onClick={() => handleOnClickProduct(row.id, row.title)} className="products__card swiper-slide" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
                     <Image
-                      src={row.imagem as any}
+                      src={row.imagem}
                       alt={row.title}
                       className="products__img"
                     />
@@ -66,7 +66,7 @@ export default function Products({ productEn, productBr }) {
               productEn.map((row: any) => (
                 <SwiperSlide key={row.id} onClick={() => handleOnClickProduct(row.id, row.title)} className="products__card swiper-slide" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
                     <Image
-                      src={row.imagem as any}
+                      src={row.imagem}
                       alt={row.title}
                       className="products__img"
                     />
@@ -88,6 +88,7 @@ export default function Products({ productEn, productBr }) {
           <i className="ri-arrow-left-line"></i>
         </div>
       </div>
+
     </section>
   );
 }
