@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 export default function Header() {
   const router = useRouter();
   const [menuFixed, setMenuFixed] = useState<boolean>(false);
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   useEffect(() => {
     document.addEventListener("scroll", () => {

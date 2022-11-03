@@ -111,11 +111,12 @@ export default function ProductsList({ productBr, productEn }) {
           >
             {verifiFilter.map((row) => (
               <article className="new__card" key={row.id}>
-                <Image src={row.imagem} className="new__img" alt="teste" />
+                <Image src={row.imagem} className="new__img" alt={row.title} />
 
                 <button
                   onClick={() => handleOnClickProduct(row.id, row.title)}
                   className="new__link"
+                  style={{ width: '100%' }}
                 >
                   <div className="new__data">
                     <h2 className="new__title">{row.title}</h2>

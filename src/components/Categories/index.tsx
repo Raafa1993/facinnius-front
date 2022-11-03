@@ -4,8 +4,10 @@ import { useTranslation } from 'react-i18next'
 import { RiArrowRightLine } from "react-icons/ri";
 import {LinhasData} from '../../data/LinhasData'
 
-export default function Categories() {
+export default function Categories({ lineBr, lineEn }) {
   const { t, i18n } = useTranslation();
+
+  const isBr = i18n.language === 'ptbr' ? lineBr : lineEn
 
   return (
     <section className="new section" id="new">
@@ -13,8 +15,7 @@ export default function Categories() {
 
       <div className="new__container container grid">
 
-        {i18n.language === 'ptbr' ? (
-          LinhasData.map((row) => (
+          {isBr.map((row: any) => (
             <article key={row.id} className="new__card">
               <Image src={row.imagem} className="new__img" alt="teste" />
 
@@ -29,42 +30,7 @@ export default function Categories() {
                   </a>
                 </Link>
             </article>  
-          ))
-        ) : (
-          LinhasData.map((row) => (
-            <article key={row.id} className="new__card">
-              <Image src={row.imagem} className="new__img" alt="teste" />
-
-                <Link href="/lista-produtos" className="new__link">
-                  <a className="new__link">
-                    <div className="new__data">
-                      <h2 className="new__title">{row.title}</h2>
-                      <span className="new__subtitle">{row.title}</span>
-                    </div>
-
-                    <i className="ri-arrow-right-line"><RiArrowRightLine /></i>
-                  </a>
-                </Link>
-            </article>  
-          ))
-        )}
-
-        {/* {LinhasData.map((row) => (
-          <article key={row.id} className="new__card">
-            <Image src={row.imagem} className="new__img" alt="teste" />
-
-              <Link href="/lista-produtos" className="new__link">
-                <a className="new__link">
-                  <div className="new__data">
-                    <h2 className="new__title">{row.title}</h2>
-                    <span className="new__subtitle">{row.title}</span>
-                  </div>
-
-                  <i className="ri-arrow-right-line"><RiArrowRightLine /></i>
-                </a>
-              </Link>
-          </article>  
-        ))} */}
+          ))}
       </div>
     </section>
   );

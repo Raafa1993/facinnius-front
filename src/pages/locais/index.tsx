@@ -1,17 +1,16 @@
 import React, { ChangeEvent, useState } from "react";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import LocalImg from "../../../public/images/sp.webp";
-import Image from "next/image";
 import { SelectDefault } from "../../components/SelectDefault";
-import { LocaleData } from "../../data/LocaleData";
 import { useTranslation } from "react-i18next";
+import { GetStaticProps } from "next";
+import { getlocal } from "../../lib/locais";
 
-export default function Locails() {
+export default function Locails({ locais }) {
   const { t } = useTranslation();
   const [filter, setFilter] = useState('');
-  const filterLocal = LocaleData.filter((obj) => obj.Cidade === filter)
-  const verifiFilter = filterLocal.length <= 0 ? LocaleData : filterLocal
+  const filterLocal = locais.filter((obj) => obj.Cidade === filter)
+  const verifiFilter = filterLocal.length <= 0 ? locais : filterLocal
   function handleSelectChange(event: ChangeEvent<HTMLSelectElement>) {
     const { value } = event.target;
 
@@ -40,22 +39,9 @@ export default function Locails() {
               onChange={handleSelectChange}
             >
               <option value="0">{t('locais_option')}</option>
-              <option value="Americana">Americana</option>
-              <option value="Campinas">Campinas</option>
-              <option value="Diadema">Diadema</option>
-              <option value="Dourados">Dourados</option>
-              <option value="Embú das artes">Embú das artes</option>
-              <option value="Goiânia">Goiânia</option>
-              <option value="Guarulhos">Guarulhos</option>
-              <option value="Jabaquara">Jabaquara</option>
-              <option value="Mauá">Mauá</option>
-              <option value="Santo André">Santo André</option>
-              <option value="São Bernardo do Campo">São Bernardo do Campo</option>
-              <option value="São João Del Rei">São João Del Rei</option>
-              <option value="São Luís">São Luís</option>
-              <option value="São Paulo">São Paulo</option>
-              <option value="Taboão da Serra">Taboão da Serra</option>
-
+              {locais.map((row: any) => (
+                <option key={row.id} value={row.Cidade}>{row.Cidade}</option>
+              ))}
             </SelectDefault>
        
           </div>
@@ -66,13 +52,9 @@ export default function Locails() {
             </h2>
             {verifiFilter.map((row) => (
               <div key={row.id} className="lojas-item">
-                <Image
-                  src={LocalImg}
-                  width="1120"
-                  height="520"
-                  alt="mapa marcando o endereço em Rua Ali Perto, 35 - Rio de Janeiro - RJ"
-                />
-                {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14622.659689625338!2d-46.5836981!3d-23.6163472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5c7fba38b58d%3A0x63edb00b22d11c62!2sAME%20Barradas!5e0!3m2!1spt-BR!2sbr!4v1666896128380!5m2!1spt-BR!2sbr" width="100%" height="450" style={{border: "0"}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe> */}
+
+                <div className="maps" dangerouslySetInnerHTML={{ __html: row.iframe }}/> 
+                
                 <div className="lojas-conteudo">
                   <h3 className="font-1-xl">{row.Cidade}</h3>
                   <div className="lojas-dados font-2-s cor-8">
@@ -80,12 +62,8 @@ export default function Locails() {
                     <p>{row.Salao}</p>
                   </div>
                   <div className="lojas-dados font-2-s cor-8">
-                    {/* <a href="rj@bikcraft.com">{row.Telefone}</a> */}
                     <a href="tel:+552199999999">{row.Telefone}</a>
                   </div>
-                  {/* <p className="lojas-tempo font-1-s">
-                    <FiClock /> 08-18h de seg à dom
-                  </p> */}
                 </div>
               </div>
             ))}
@@ -95,4 +73,14 @@ export default function Locails() {
       </main>
     </>
   );
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const locais = getlocal();
+
+  return {
+    props: {
+      locais,
+    }
+  }
 }

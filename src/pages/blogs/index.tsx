@@ -44,7 +44,7 @@ export default function Blogs({ blogBr, blogEn }) {
             {isBr.map((row: any) => (
               <article key={row.id} className="blog__card">
                 <div className="blog__image">
-                  <Image src={row.imagem} alt={row.texto} className="blog__img"  />
+                  <Image src={row.imagem} alt={'blogImage'} className="blog__img"  />
 
                   <button onClick={() => handleOnClickProduct(row.id, row.titulo)} className="blog__button">
                     <i className="bx bx-right-arrow-alt"><BiRightArrowAlt /></i>

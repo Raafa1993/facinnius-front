@@ -6,8 +6,8 @@ import { useTranslation } from "react-i18next";
 import Image from "next/image";
 
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
+// import "swiper/css";
+// import "swiper/css/navigation";
 
 export default function Products({ productEn, productBr }) {
   const router = useRouter();
@@ -51,32 +51,31 @@ export default function Products({ productEn, productBr }) {
 
             {i18n.language === 'ptbr' ? (
               productBr.map((row: any) => (
-                <SwiperSlide key={row.id} onClick={() => handleOnClickProduct(row.id, row.title)} className="products__card swiper-slide" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                <SwiperSlide key={row.id} onClick={() => handleOnClickProduct(row.id, row.title)} className="products__card swiper-slide" style={{ display: 'flex', alignItems: 'center', background: '#f5f6f8', justifyContent: 'center', flexDirection: 'column' }}>
                     <Image
                       src={row.imagem}
                       alt={row.title}
                       className="products__img"
                     />
 
-                    <h2 className="products__title">{row.title}</h2>
+                    <h2 className="products__title" style={{ textAlign: 'center' }}>{row.title}</h2>
                     {/* <span className="products__price">{row.subtitulo}</span> */}
                 </SwiperSlide>
               ))
             ) : (
               productEn.map((row: any) => (
-                <SwiperSlide key={row.id} onClick={() => handleOnClickProduct(row.id, row.title)} className="products__card swiper-slide" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                <SwiperSlide key={row.id} onClick={() => handleOnClickProduct(row.id, row.title)} className="products__card swiper-slide" style={{ display: 'flex', alignItems: 'center', background: '#f5f6f8', justifyContent: 'center', flexDirection: 'column' }}>
                     <Image
                       src={row.imagem}
                       alt={row.title}
                       className="products__img"
                     />
   
-                    <h2 className="products__title">{row.title}</h2>
+                    <h2 className="products__title" style={{ textAlign: 'center' }}>{row.title}</h2>
                     {/* <span className="products__price">{row.subtitulo}</span> */}
                 </SwiperSlide>
               ))
             )}
-            
           </Swiper>
         </div>
 
