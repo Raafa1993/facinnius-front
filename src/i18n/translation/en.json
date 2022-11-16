@@ -83,12 +83,12 @@
     "filtro_questao5_option2": "Dry",
     "filtro_questao5_option3": "Mixed",
 
-    "contato_titulo": "Have questions or have any suggestions? Fill in the fields below!",
+    "contato_titulo": "Questions or Suggestion? Fill in the fields below to contact us.",
     "contato_subtitulo": "Talk to Facinnius.",
     "contato_tipo_contato": "TYPE OF CONTACT",
     "contato_tipo_input1": "Contact",
-    "contato_tipo_input2": "Be a distributor",
-    "contato_tipo_input3": "Leave your opinion",
+    "contato_tipo_input2": "Be a Distributor",
+    "contato_tipo_input3": "Leave your Opinion",
 
     "contato_form_titulo": "Filter",
     "contato_form_nome": "Name",

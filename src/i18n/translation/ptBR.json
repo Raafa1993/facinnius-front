@@ -10,13 +10,13 @@
     "home_especialidades_text": "Produtos especiais para cuidar de você!",
     "home_especialidades_button": "veja mais",
     "home_especialidades_item1_title": "Linhas premium",
-    "home_especialidades_item1_descricao": "linahs premium esperando por você.",
+    "home_especialidades_item1_descricao": "Linhas premium esperando por você.",
     "home_especialidades_item2_title": "Qualidade",
-    "home_especialidades_item2_descricao": "Aproveite e desfrute do melhor que a Facinnus oferece.",
+    "home_especialidades_item2_descricao": "Aproveite e desfrute do melhor que a Facinnius oferece.",
     "home_especialidades_item3_title": "Tecnologia",
-    "home_especialidades_item3_descricao": "Todas as nossas linhas oferecem produtos de qualidade",
+    "home_especialidades_item3_descricao": "Todas as nossas linhas oferecem Nano Tecnologia",
 
-    "home_linhas_produtos_title": "Linhas de produtos",
+    "home_linhas_produtos_title": "Linhas de Produtos",
 
     "home_colecao_masculino": "Linha <br /> Profissional",
     "home_colecao_feminino": "Linha <br /> Homecare",
@@ -88,12 +88,12 @@
     "filtro_questao5_option3": "Misto",
 
 
-    "contato_titulo": "Estão com dúvidas ou tem alguma sugestão? Preencha os campos abaixo!",
+    "contato_titulo": "Dúvidas ou Sugestão? Preencha os campos abaixo para entrar em contato conosco.",
     "contato_subtitulo": "Fale com a Facinnius.",
     "contato_tipo_contato": "TIPO DE CONTATO",
     "contato_tipo_input1": "Contato",
-    "contato_tipo_input2": "Seja um distribuidor",
-    "contato_tipo_input3": "Deixe sua opnião",
+    "contato_tipo_input2": "Seja um Distribuidor",
+    "contato_tipo_input3": "Deixe sua Opinião",
     "contato_form_titulo": "Dados",
     "contato_form_nome": "Nome",
     "contato_form_telefone": "Telefone",

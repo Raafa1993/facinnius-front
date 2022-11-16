@@ -38,7 +38,7 @@ export default function Main() {
   };
 
   return (
-    <section className="home" style={{ marginTop: '4.5rem' }} id="home">
+    <section className="home" id="home">
       {/* <div className="home__container container grid">
         <div className="home__data">
           <h1 className="home__title">
@@ -74,23 +74,23 @@ export default function Main() {
           modules={[Autoplay, Pagination]}
           className="mySwiper"
         >
-          <SwiperSlide><Image src={banner1} alt="banner1"/></SwiperSlide>
-          <SwiperSlide><Image src={banner2} alt="banner2"/></SwiperSlide>
-          <SwiperSlide><Image src={banner3} alt="banner3"/></SwiperSlide>
-          <SwiperSlide><Image src={banner4} alt="banner4"/></SwiperSlide>
-          <SwiperSlide><Image src={banner5} alt="banner5"/></SwiperSlide>
-          <SwiperSlide><Image src={banner6} alt="banner6"/></SwiperSlide>
-          <SwiperSlide><Image src={banner7} alt="banner7"/></SwiperSlide>
-          <SwiperSlide><Image src={banner8} alt="banner8"/></SwiperSlide>
-          <SwiperSlide><Image src={banner9} alt="banner9"/></SwiperSlide>
-          <SwiperSlide><Image src={banner10} alt="banner10"/></SwiperSlide>
-          <SwiperSlide><Image src={banner11} alt="banner11"/></SwiperSlide>
-          <SwiperSlide><Image src={banner12} alt="banner12"/></SwiperSlide>
-          <SwiperSlide><Image src={banner13} alt="banner13"/></SwiperSlide>
-          <SwiperSlide><Image src={banner14} alt="banner14"/></SwiperSlide>
-          <SwiperSlide><Image src={banner15} alt="banner15"/></SwiperSlide>
-          <SwiperSlide><Image src={banner16} alt="banner16"/></SwiperSlide>
-          <SwiperSlide><Image src={banner17} alt="banner17"/></SwiperSlide>
+          <SwiperSlide><Image src={banner1} objectFit="cover" alt="banner1"/></SwiperSlide>
+          <SwiperSlide><Image src={banner2} objectFit="cover" alt="banner2"/></SwiperSlide>
+          <SwiperSlide><Image src={banner3} objectFit="cover" alt="banner3"/></SwiperSlide>
+          <SwiperSlide><Image src={banner4} objectFit="cover" alt="banner4"/></SwiperSlide>
+          <SwiperSlide><Image src={banner5} objectFit="cover" alt="banner5"/></SwiperSlide>
+          <SwiperSlide><Image src={banner6} objectFit="cover" alt="banner6"/></SwiperSlide>
+          <SwiperSlide><Image src={banner7} objectFit="cover" alt="banner7"/></SwiperSlide>
+          <SwiperSlide><Image src={banner8} objectFit="cover" alt="banner8"/></SwiperSlide>
+          <SwiperSlide><Image src={banner9} objectFit="cover" alt="banner9"/></SwiperSlide>
+          <SwiperSlide><Image src={banner10} objectFit="cover" alt="banner10"/></SwiperSlide>
+          <SwiperSlide><Image src={banner11} objectFit="cover" alt="banner11"/></SwiperSlide>
+          <SwiperSlide><Image src={banner12} objectFit="cover" alt="banner12"/></SwiperSlide>
+          <SwiperSlide><Image src={banner13} objectFit="cover" alt="banner13"/></SwiperSlide>
+          <SwiperSlide><Image src={banner14} objectFit="cover" alt="banner14"/></SwiperSlide>
+          <SwiperSlide><Image src={banner15} objectFit="cover" alt="banner15"/></SwiperSlide>
+          <SwiperSlide><Image src={banner16} objectFit="cover" alt="banner16"/></SwiperSlide>
+          <SwiperSlide><Image src={banner17} objectFit="cover" alt="banner17"/></SwiperSlide>
         </Swiper>
       </div>
     </section>

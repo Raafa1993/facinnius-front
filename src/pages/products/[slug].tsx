@@ -29,9 +29,9 @@ export default function Product({ productBr, productEn }) {
       <main className="main">
         <section className="quality section" id="premium">
           <div className="quality__container container">
-            <h2 className="section__title">
+            {/* <h2 className="section__title">
               {t('produtoId_titulo')}
-            </h2>
+            </h2> */}
 
             <div className="quality__content grid">
               <div className="quality__images">

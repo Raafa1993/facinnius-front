@@ -2,6 +2,9 @@ import Link from "next/link";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { RiFacebookFill, RiInstagramFill, RiWhatsappFill, RiYoutubeFill } from "react-icons/ri";
+import { BiHomeAlt, BiStore, BiLocationPlus, BiPhoneCall } from "react-icons/bi";
+import { AiOutlineShoppingCart } from "react-icons/ai";
+import { SiBloglovin } from "react-icons/si";
 
 export default function Footer() {
   const { t } = useTranslation();
