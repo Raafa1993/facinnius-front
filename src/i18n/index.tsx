@@ -2,7 +2,7 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
 import enJSon from './translation/en.json'
-import ptBRJson from './translation/ptbr.json'
+import ptBRJson from './translation/ptBR.json'
 
 i18n
   .use(initReactI18next)
