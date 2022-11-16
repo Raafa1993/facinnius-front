@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from 'react-i18next'
 import { RiArrowRightLine } from "react-icons/ri";
-import {LinhasData} from '../../data/LinhasData'
 
 export default function Categories({ lineBr, lineEn }) {
   const { t, i18n } = useTranslation();

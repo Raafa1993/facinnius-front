@@ -39,6 +39,14 @@ import item19 from "../../../public/images/item19.png";
 import item20 from "../../../public/images/item20.png";
 import item21 from "../../../public/images/item21.png";
 
+import blog1 from "../../../public/images/blog_1.png";
+import blog2 from "../../../public/images/blog_2.png";
+
+import linha_profissional from '../../../public/images/linha_profissional.png';
+import Linha_infinity from '../../../public/images/linha_infiniy.png';
+import Linha_finalizadores from '../../../public/images/linha_finalizadores.png';
+import Linha_homecare from '../../../public/images/linha_homecare.png';
+
 // Import Swiper styles
 // import "swiper/css";
 // import "swiper/css/navigation";
@@ -64,6 +72,45 @@ export default function Products({ productEn, productBr }) {
       <div className="products__container container swiper">
         <div className="swiper-wrapper">
           <div className="divNone" style={{ display: "none", opacity: 0 }}>
+
+          <Image
+              src={blog1}
+              alt="testeImage"
+              className="products__img"
+              // style={{ display: "none" }}
+            />
+                        <Image
+              src={blog2}
+              alt="testeImage"
+              className="products__img"
+              // style={{ display: "none" }}
+            />
+                        <Image
+              src={linha_profissional}
+              alt="testeImage"
+              className="products__img"
+              // style={{ display: "none" }}
+            />
+                        <Image
+              src={Linha_infinity}
+              alt="testeImage"
+              className="products__img"
+              // style={{ display: "none" }}
+            />
+                        <Image
+              src={Linha_finalizadores}
+              alt="testeImage"
+              className="products__img"
+              // style={{ display: "none" }}
+            />
+                        <Image
+              src={Linha_homecare}
+              alt="testeImage"
+              className="products__img"
+              // style={{ display: "none" }}
+            />
+
+
             <Image
               src={item1}
               alt="testeImage"
