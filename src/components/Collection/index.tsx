@@ -5,6 +5,7 @@ import { RiArrowRightLine } from "react-icons/ri";
 
 import Collection1 from '../../../public/images/collection1.png';
 import Collection2 from '../../../public/images/collection2.png';
+import Teste from '../../../public/images/item1.png';
 import { useTranslation } from "react-i18next";
 
 export default function Collection() {

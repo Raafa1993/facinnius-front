@@ -10,7 +10,7 @@ import { ProdutosEnData } from "../../data/ProdutosEnData";
 import { getProdutcBr } from "../../lib/produtosBr";
 import { getProdutcEn } from "../../lib/produtosEn";
 
-export default function Products({ productBr, productEn }) {
+export default function Product({ productBr, productEn }) {
   const router = useRouter();
   const { t, i18n } = useTranslation();
 
