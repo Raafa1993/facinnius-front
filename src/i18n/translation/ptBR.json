@@ -18,8 +18,8 @@
 
     "home_linhas_produtos_title": "Linhas de produtos",
 
-    "home_colecao_masculino": "Produtos <br /> Masculinos",
-    "home_colecao_feminino": "Produtos <br /> Femininos",
+    "home_colecao_masculino": "Linha <br /> Profissional",
+    "home_colecao_feminino": "Linha <br /> Homecare",
     "home_colecao_botao": "Veja mais",
 
     "home_produtos": "Nossos produtos",
@@ -54,6 +54,11 @@
     "locais_subtitulo": "Lojas e endereços",
 
     "filtro_titulo": "Filtros",
+
+    "filtro_questao0_titulo": "Linhas",
+    "filtro_questao0_option1": "Profissional",
+    "filtro_questao0_option2": "Homecare",
+
     "filtro_questao1_titulo": "QUAL O SEU SEXO?",
     "filtro_questao1_option1": "Feminino",
     "filtro_questao1_option2": "Masculino",

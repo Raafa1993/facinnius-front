@@ -1,9 +1,10 @@
-import Image from "next/image";
 import React from "react";
-import { useTranslation } from "react-i18next";
+import { useRouter } from "next/router";
+import Image from "next/image";
 
 import FlagBr from '../../../public/images/flag_br.png'
 import FlagEua from '../../../public/images/flag_eua.png'
+import i18n from "../../i18n";
 
 const languageOptions = [
   {
@@ -32,7 +33,13 @@ const stylesButton = {
 }
 
 export default function LanguagesSwitch() {
-  const { t, i18n } = useTranslation();
+  const { push, pathname } = useRouter()
+  const mockUrl = pathname
+  function handleOnLanguage(language: string) {
+    i18n.changeLanguage(language);
+    localStorage.setItem("@Facinnius:lang", language);
+    push(mockUrl, undefined, { locale: language })
+  }
 
   return (
     <div className="language-switch">
@@ -42,7 +49,7 @@ export default function LanguagesSwitch() {
             style={stylesButton}
             key={row.value}
             onClick={() => {
-              i18n.changeLanguage(row.value)
+              handleOnLanguage(row.value)
             }}
           >
             <Image 

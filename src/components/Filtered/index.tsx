@@ -15,7 +15,8 @@ export default function Filtered({ isOpen, handleInputChange, formValue, handleS
   const router = useRouter();
   const { t } = useTranslation();
 
-  const { sexo, cabelo, tipoCabelo, desejoCabelo, comprimento, aspecto } = router.query
+  const { sexo, cabelo, linha, comprimento, aspecto } = router.query
+
 
   return (
     <div className={`cart ${isOpen && "show-cart"}`} id="cart">
@@ -31,6 +32,37 @@ export default function Filtered({ isOpen, handleInputChange, formValue, handleS
 
       <div className="cart__container">
         <div className="orcamento_filter">
+
+          <div className="orcamento-produto_filter">
+            <h2 className="font-1-xs cor-5" style={{ marginBottom: "12px" }}>
+            {t('filtro_questao0_titulo')}
+            </h2>
+            <div
+              className="orcamento-conteudo_filter field-group_filter"
+              id="orcamento-bikcraft_filter"
+            >
+              <input 
+                type="radio" 
+                name="linha" 
+                value="profissional" 
+                id="profissional" 
+                checked={linha === 'profissional'} 
+                onChange={handleInputChange}
+              />
+              <label htmlFor="profissional">{t('filtro_questao0_option1')}</label>
+
+              <input
+                type="radio"
+                name="linha"
+                value="homecare"
+                checked={linha === 'homecare'}
+                id="homecare"
+                onChange={handleInputChange}
+              />
+              <label htmlFor="homecare">{t('filtro_questao0_option2')}</label>
+            </div>
+          </div>
+
           <div className="orcamento-produto_filter">
             <h2 className="font-1-xs cor-5" style={{ marginBottom: "12px" }}>
             {t('filtro_questao1_titulo')}

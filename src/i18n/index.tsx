@@ -4,11 +4,13 @@ import { initReactI18next } from "react-i18next";
 import enJSon from './translation/en.json'
 import ptBRJson from './translation/ptbr.json'
 
-i18n.use(initReactI18next).init({
-  fallbackLng: 'ptbr',
-  interpolation: {
-    escapeValue: false
-  },
+i18n
+  .use(initReactI18next)
+  .init({
+    fallbackLng: 'ptbr',
+    interpolation: {
+      escapeValue: false
+    },
   
   resources: {
     ptbr: ptBRJson,

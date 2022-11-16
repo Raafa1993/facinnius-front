@@ -7,10 +7,9 @@ import i18n from '../i18n';
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   if (router.locale) {
-    router.locale = 'ptbr'
-    i18n.changeLanguage('ptbr')
+    i18n.changeLanguage(router.locale)
   }
-  
+
   return (
     <>
       <Component {...pageProps} />

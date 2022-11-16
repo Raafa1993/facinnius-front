@@ -5,7 +5,6 @@ import { RiArrowRightLine } from "react-icons/ri";
 
 import Collection1 from '../../../public/images/collection1.png';
 import Collection2 from '../../../public/images/collection2.png';
-import Teste from '../../../public/images/item1.png';
 import { useTranslation } from "react-i18next";
 
 export default function Collection() {
@@ -15,7 +14,7 @@ export default function Collection() {
   function handleOnClickProduct(typo: any) {
     router.push({
       pathname: `/lista-produtos/`,
-      query: { sexo: typo },
+      query: { linha: typo },
     })
   }
   return (
@@ -24,7 +23,7 @@ export default function Collection() {
         <div className="collection__explore">
           <div className="collection__data-men">
           <h2 className="collection__title" dangerouslySetInnerHTML={{ __html: t('home_colecao_masculino') }} />
-            <button onClick={() => handleOnClickProduct('masculino')} className="button__link">
+            <button onClick={() => handleOnClickProduct('profissional')} className="button__link">
             {t('home_colecao_botao')} <i className="ri-arrow-right-line"><RiArrowRightLine /></i>
             </button>
           </div>
@@ -37,7 +36,7 @@ export default function Collection() {
 
           <div className="collection__data-women">
             <h2 className="collection__title" dangerouslySetInnerHTML={{ __html: t('home_colecao_feminino') }} />
-            <button onClick={() => handleOnClickProduct('feminino')} className="button__link">
+            <button onClick={() => handleOnClickProduct('homecare')} className="button__link">
             {t('home_colecao_botao')} <i className="ri-arrow-right-line"><RiArrowRightLine /></i>
             </button>
           </div>

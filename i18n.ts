@@ -15,16 +15,13 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: 'ptbr',
-    defaultNS: 'ptbr',
+    defaultNS: 'default',
     lng: 'ptbr',
-    ns: ['ptbr'],
-    
+    ns: ['default'],
     debug: false,
     interpolation: {
       escapeValue: false,
     },
-    
     resources: resources,
   })
 

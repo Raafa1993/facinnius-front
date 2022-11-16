@@ -15,8 +15,8 @@
     "home_especialidades_item3_title": "Technology",
     "home_especialidades_item3_descricao": "All our lines offer quality products",
     "home_linhas_produtos_title": "Product lines",
-    "home_colecao_masculino": "Men's <br /> Products",
-    "home_colecao_feminino": "Women's <br /> Products",
+    "home_colecao_masculino": "Professional <br /> Line",
+    "home_colecao_feminino": "Homecare <br /> Line",
     "home_colecao_botao": "See more",
     "home_produtos": "Our products",
     "home_blog_titulo": "Access our blogs!",
@@ -50,6 +50,11 @@
     "locais_option": "Select an option",
 
     "filtro_titulo": "Filter",
+
+    "filtro_questao0_titulo": "Lines",
+    "filtro_questao0_option1": "Professional",
+    "filtro_questao0_option2": "Homecare",
+
     "filtro_questao1_titulo": "WHAT'S YOUR SEX?",
     "filtro_questao1_option1": "Feminine",
     "filtro_questao1_option2": "Male",
