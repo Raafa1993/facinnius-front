@@ -9,8 +9,13 @@ import { getlocal } from "../../lib/locais";
 export default function Locails({ locais }) {
   const { t } = useTranslation();
   const [filter, setFilter] = useState('');
-  const filterLocal = locais.filter((obj) => obj.Cidade === filter)
-  const verifiFilter = filterLocal.length <= 0 ? locais : filterLocal
+
+  const filterLocal = locais.filter((obj: any) => obj.Cidade === filter);
+  const filtercities = locais.map((obj: any) => obj.Cidade)
+  const novaArr = filtercities.filter((este: any, i: any) => filtercities.indexOf(este) === i);
+
+  const verifiFilter = filterLocal.length <= 0 ? locais : filterLocal;
+
   function handleSelectChange(event: ChangeEvent<HTMLSelectElement>) {
     const { value } = event.target;
 
@@ -39,8 +44,8 @@ export default function Locails({ locais }) {
               onChange={handleSelectChange}
             >
               <option value="0">{t('locais_option')}</option>
-              {locais.map((row: any) => (
-                <option key={row.id} value={row.Cidade}>{row.Cidade}</option>
+              {novaArr.map((row: any) => (
+                <option key={row} value={row}>{row}</option>
               ))}
             </SelectDefault>
        
@@ -50,7 +55,7 @@ export default function Locails({ locais }) {
             <h2 className="font-1-xxl">
               {t('locais_subtitulo')}<span className="cor-p1">.</span>
             </h2>
-            {verifiFilter.map((row) => (
+            {verifiFilter.map((row: any) => (
               <div key={row.id} className="lojas-item">
 
                 <div className="maps" dangerouslySetInnerHTML={{ __html: row.iframe }}/> 
