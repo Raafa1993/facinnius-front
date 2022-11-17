@@ -15,8 +15,7 @@ export default function Filtered({ isOpen, handleInputChange, formValue, handleS
   const router = useRouter();
   const { t } = useTranslation();
 
-  const { sexo, cabelo, linha, comprimento, aspecto } = router.query
-
+  const { sexo, cabelo, linha, tipoCabelo, comprimento, aspecto } = router.query
 
   return (
     <div className={`cart ${isOpen && "show-cart"}`} id="cart">
@@ -101,7 +100,7 @@ export default function Filtered({ isOpen, handleInputChange, formValue, handleS
 
             <div className="col-2">
               <label htmlFor="tipoCabelo">{t('filtro_questao3_option1_placeholder')}</label>
-              <select id="tipoCabelo" name="tipoCabelo" value={cabelo} onChange={handleSelectChange}>
+              <select id="tipoCabelo" name="tipoCabelo" value={tipoCabelo} onChange={handleSelectChange}>
                 <option value="0">{t('filtro_questao3_option0')}</option>
                 <option value="natural">{t('filtro_questao3_option1')}</option>
                 <option value="comMechas">{t('filtro_questao3_option2')}</option>
