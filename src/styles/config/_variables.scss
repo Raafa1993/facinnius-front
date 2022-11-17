@@ -1,6 +1,11 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap');
 
+@font-face {
+    font-family: 'Mantika';
+    src: url(../../../public/fonts/Mantika-Book-W01-Regular.ttf);
+}
+
 /*=============== VARIABLES CSS ===============*/
 :root{
     --header-height: 3.5rem;
@@ -38,7 +43,7 @@
 
     /*========== Font and typography ==========*/
     /*.5rem = 8px | 1rem = 16px ...*/
-    --body-font: 'Lora', serif;
+    --body-font: 'Mantika', serif;
 
     --biggest-font-size: 2.25rem;
     --h1-font-size: 1.5rem;

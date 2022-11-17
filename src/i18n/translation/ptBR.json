@@ -7,14 +7,14 @@
     "home_header_locais": "Locais",
     "home_header_contato": "Contato",
 
-    "home_especialidades_text": "Produtos especiais para cuidar de você!",
+    "home_especialidades_text": "Produtos especiais para cuidar de você",
     "home_especialidades_button": "veja mais",
     "home_especialidades_item1_title": "Linhas premium",
     "home_especialidades_item1_descricao": "Linhas premium esperando por você.",
     "home_especialidades_item2_title": "Qualidade",
     "home_especialidades_item2_descricao": "Aproveite e desfrute do melhor que a Facinnius oferece.",
     "home_especialidades_item3_title": "Tecnologia",
-    "home_especialidades_item3_descricao": "Todas as nossas linhas oferecem Nano Tecnologia",
+    "home_especialidades_item3_descricao": "Contamos com algumas linhas que possuem nano tecnologia.",
 
     "home_linhas_produtos_title": "Linhas de Produtos",
 
@@ -57,7 +57,7 @@
 
     "filtro_questao0_titulo": "Linhas",
     "filtro_questao0_option1": "Profissional",
-    "filtro_questao0_option2": "Homecare",
+    "filtro_questao0_option2": "Home Care",
 
     "filtro_questao1_titulo": "QUAL O SEU SEXO?",
     "filtro_questao1_option1": "Feminino",
@@ -89,7 +89,7 @@
 
 
     "contato_titulo": "Dúvidas ou Sugestão? Preencha os campos abaixo para entrar em contato conosco.",
-    "contato_subtitulo": "Fale com a Facinnius.",
+    "contato_subtitulo": "Fale com a Facinnius",
     "contato_tipo_contato": "TIPO DE CONTATO",
     "contato_tipo_input1": "Contato",
     "contato_tipo_input2": "Seja um Distribuidor",
@@ -117,8 +117,9 @@
     "contato_form_enviar": "Enviar",
 
     "sobre_titulo": "Sobre a Facinnius",
-    "sobre_descrição1": "Com um pouco mais de 5 anos no ramo de cosméticos profissionais, a marca oferece o que há de mais inovador e tecnológico no segmento. Os produtos são elaborados com matérias-primas importadas de altíssima qualidade, que atendem perfeitamente as necessidades dos melhores cabeleireiros da atualidade.",
-    "sobre_descrição2": "Com lançamentos frequentes que acompanham o mercado mundial, a Facinnius proporciona em suas linhas produtos com características exclusivas que apresentam ótimos resultados e satisfação de seus clientes."
-
+    "sobre_descrição1": "Fundada em 1998, a empresa passou a contar com uma nova gestão em 2014, passando assim por reformulações em embalagens e fórmulas. Melhorando ainda mais a qualidade e excelência dos produtos.",
+    "sobre_descrição2": "Buscando sempre o que há de melhor no mercado como matérias-primas importadas de altíssima qualidade, e sempre de olho e novas tecnologias Para sempre melhorar a qualidade a ser entregue aos profissionais da beleza.",
+    "sobre_descrição3": "Contamos com uma equipe qualificada de representantes, que atendem exclusivamente aos profissionais da beleza em seus estabelecimentos.",
+    "sobre_descrição4": "Com lançamentos frequentes que acompanham o mercado mundial, a Facinnius proporciona em suas linhas produtos com características exclusivas que apresentam ótimos resultados e satisfação de seus clientes."
   }
 }

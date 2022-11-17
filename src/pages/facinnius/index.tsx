@@ -29,10 +29,16 @@ export default function Products() {
                 <h1 className="quality__titleFaccinnius">
                   {t('sobre_descrição1')}
                 </h1>
+                <h1 className="quality__titleFaccinnius" style={{ marginTop: '2rem' }}>
+                  {t('sobre_descrição2')}
+                </h1>
                 {/* <h2 className="quality__price">{filterProductsId.title}</h2> */}
                 {/* <span className="quality__special">Especial Price</span> */}
                 <p className="quality__titleFaccinnius" style={{ marginTop: '2rem' }}>
-                  {t('sobre_descrição2')}
+                  {t('sobre_descrição3')}
+                </p>
+                <p className="quality__titleFaccinnius" style={{ marginTop: '2rem' }}>
+                  {t('sobre_descrição4')}
                 </p>
 
                 {/* <div className="quality__buttons">

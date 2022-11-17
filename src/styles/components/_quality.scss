@@ -1,13 +1,15 @@
 /*=============== QUALITY ===============*/
 .quality{
     background-color: #fff;
-
+    
     &__content{
         row-gap: 2.5rem;
     }
     &__images{
         position: relative;
         justify-self: center;
+        
+        height: 100%;
     }
     &__img-big,
     &__img-small{

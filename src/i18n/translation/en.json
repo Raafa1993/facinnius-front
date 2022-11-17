@@ -6,14 +6,16 @@
     "home_heade_produtos": "Products",
     "home_header_locais": "Locations",
     "home_header_contato": "Contact",
-    "home_especialidades_text": "Special products to take care of you!",
+
+    "home_especialidades_text": "Special products to take care of you",
     "home_especialidades_button": "See more",
     "home_especialidades_item1_title": "Premium lines",
     "home_especialidades_item1_descricao": "Premium linahs waiting for you.",
     "home_especialidades_item2_title": "Quality",
     "home_especialidades_item2_descricao": "Enjoy and enjoy the best that Facinnus offers.",
     "home_especialidades_item3_title": "Technology",
-    "home_especialidades_item3_descricao": "All our lines offer quality products",
+    "home_especialidades_item3_descricao": "We have some lines that have nano technology.",
+
     "home_linhas_produtos_title": "Product lines",
     "home_colecao_masculino": "Professional <br /> Line",
     "home_colecao_feminino": "Homecare <br /> Line",
@@ -53,7 +55,7 @@
 
     "filtro_questao0_titulo": "Lines",
     "filtro_questao0_option1": "Professional",
-    "filtro_questao0_option2": "Homecare",
+    "filtro_questao0_option2": "Home Care",
 
     "filtro_questao1_titulo": "WHAT'S YOUR SEX?",
     "filtro_questao1_option1": "Feminine",
@@ -84,7 +86,7 @@
     "filtro_questao5_option3": "Mixed",
 
     "contato_titulo": "Questions or Suggestion? Fill in the fields below to contact us.",
-    "contato_subtitulo": "Talk to Facinnius.",
+    "contato_subtitulo": "Talk to Facinnius",
     "contato_tipo_contato": "TYPE OF CONTACT",
     "contato_tipo_input1": "Contact",
     "contato_tipo_input2": "Be a Distributor",
@@ -113,9 +115,9 @@
     "contato_form_enviar": "Submit",
 
     "sobre_titulo": "ABOUT FACINNIUS",
-    "sobre_descrição1": "With more 15 years in the field of professional cosmetics, the brand offers what there are the most innovative and technological in the segment. The products are made with imported raw materials of the highest quality, which perfectly meet the needs of best hairdressers.",
-    "sobre_descrição2": "With frequent launches that follow the world market, Facinnius provides in its lines products with exclusive characteristics that present great results and satisfaction of their customers."
-
-
+    "sobre_descrição1": "Founded in 1998, the company began to have a new management in 2014, thus undergoing reformulations in packaging and formulas. Further improving the quality and excellence of products.",
+    "sobre_descrição2": "Always looking for the best in the market as imported raw materials of the highest quality, and always on the lookout for new technologies To always improve the quality to be delivered to beauty professionals.",
+    "sobre_descrição3": "We have a qualified team of representatives, who serve exclusively beauty professionals in their establishments.",
+    "sobre_descrição4": "With frequent launches that accompany the world market, Facinnius provides in its lines products with exclusive characteristics that present excellent results and satisfaction of its customers."
   }
 }
