@@ -77,37 +77,37 @@ export default function Products({ productEn, productBr }) {
               src={blog1}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
                         <Image
               src={blog2}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
                         <Image
               src={linha_profissional}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
                         <Image
               src={Linha_infinity}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
                         <Image
               src={Linha_finalizadores}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
                         <Image
               src={Linha_homecare}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
 
 
@@ -115,201 +115,201 @@ export default function Products({ productEn, productBr }) {
               src={item1}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
             <Image
               src={item2}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
             <Image
               src={item1_1}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
             <Image
               src={item2_1}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
             <Image
               src={item2_2}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
             <Image
               src={item3}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
             <Image
               src={item3_1}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
             <Image
               src={item4}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
             <Image
               src={item4_1}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
             <Image
               src={item5}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
             <Image
               src={item5_1}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
             <Image
               src={item6}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
             <Image
               src={item8}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
             <Image
               src={item8_1}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
             <Image
               src={item9}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
             <Image
               src={item10}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
             <Image
               src={item11}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
             <Image
               src={item12}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
             <Image
               src={item13}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
             <Image
               src={item13_1}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
             <Image
               src={item14}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
             <Image
               src={item14_1}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
             <Image
               src={item15}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
             <Image
               src={item16}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
             <Image
               src={item16_1}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
             <Image
               src={item16_2}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
             <Image
               src={item16_3}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
             <Image
               src={item16_4}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
             <Image
               src={item17}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
 
             <Image
               src={item18}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
             <Image
               src={item19}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
             <Image
               src={item20}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
 
             <Image
               src={item21}
               alt="testeImage"
               className="products__img"
-              // style={{ display: "none" }}
+           
             />
           </div>
 

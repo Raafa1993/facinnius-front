@@ -14,7 +14,6 @@ interface Props {
 export default function Filtered({ isOpen, handleInputChange, formValue, handleSelectChange, handleCloseModal }: Props) {
   const router = useRouter();
   const { t } = useTranslation();
-
   const { sexo, cabelo, linha, tipoCabelo, comprimento, aspecto } = router.query
 
   return (
