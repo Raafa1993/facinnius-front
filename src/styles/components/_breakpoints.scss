@@ -26,11 +26,16 @@
     }
 
     .nav__menu{
-        padding: 1rem 1.5rem;
+        padding: 1rem 0.5rem;
+        width: 96%;
+
+        .nav__list{
+            font-size: 12px;
+        }
     }
 
     .home{
-        margin-top: 8rem !important;
+        // margin-top: 8rem;
         
 
         &__container{
@@ -108,11 +113,11 @@
 /* For medium devices */
 @media screen and (min-width: 576px){
 
-    .home > div {
-        &.swipper {
-            height: 500px;
-        }
-    }
+    // .home > div {
+    //     &.swipper {
+    //         height: 500px;
+    //     }
+    // }
 
     .specialty__category{
         grid-template-columns: repeat(2, 200px);
@@ -166,11 +171,6 @@
 
 /* For large devices */
 @media screen and (min-width: 1023px){
-    .home  {
-        &.swiper {
-            height: 500px;
-        }
-    }
     .section{
         padding: 7rem 0 1rem;
 

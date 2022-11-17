@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 //ImagesBanner
 import banner1 from '../../../public/images/banner1.jpg';
@@ -28,40 +28,42 @@ import { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 
-
 export default function Main() {
-  const pagination = {
-    clickable: true,
-    renderBullet: function (index: any, className: any) {
-      return '<span class="' + className + '">' + (index + 1) + "</span>";
-    },
-  };
+  const [activeBanner, setActiveBanner] = useState(1);
+  const banners = [
+    banner1,
+    banner2,
+    banner3,
+    banner4,
+    banner5,
+    banner6,
+    banner7,
+    banner8,
+    banner9,
+    banner10,
+    banner11,
+    banner12,
+    banner13,
+    banner14,
+    banner15,
+    banner16,
+    banner17
+  ]
 
   return (
     <section className="home" id="home">
-      {/* <div className="home__container container grid">
-        <div className="home__data">
-          <h1 className="home__title">
-            New Clothing <br />
-            Collection
-          </h1>
+      <div className="divTeste" 
+        style={{
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+          backgroundImage: `url(${banners[activeBanner].src})`,
+          filter: 'blur(10px)',
+          backgroundColor: '#cecece',
+        }}
+      />
 
-          <p className="home__description">
-            The new collection of clothing from <br />
-            the best brands this year.
-          </p>
-
-          <a href="#new" className="button__link">
-            Explore <i className="ri-arrow-right-line"></i>
-          </a>
-        </div>
-
-        <div className="home__images">
-          <img src='../images/home1.png' alt="teste" />
-          <img src='../images/home2.png' alt="teste" />
-        </div>
-      </div> */}
-      <div style={{ display: 'flex' }}>
+      <div className="background-image">
         <Swiper
           pagination={{
             dynamicBullets: true,
@@ -72,6 +74,7 @@ export default function Main() {
             disableOnInteraction: false,
           }}
           modules={[Autoplay, Pagination]}
+          onActiveIndexChange={(i) => setActiveBanner(i.realIndex)}
           className="mySwiper"
         >
           <SwiperSlide><Image src={banner1} objectFit="cover" alt="banner1"/></SwiperSlide>

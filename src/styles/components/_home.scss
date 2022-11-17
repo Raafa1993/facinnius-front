@@ -5,19 +5,19 @@
   transition: 0.4s; /*For animation dark mode*/
 
   margin-top: 4.5rem;
-  // &.mt_swipper {
-  // }
+  position: relative;
 
-  @media screen and (max-width: 575px) {
-    margin-top: 3.5rem;
-  }
+  .background-image {
+      display: flex;
+      max-width: 1024px;
+      margin: 0 auto;
+    }
 
   .swiper {
     width: 100%;
-    height: 600px;
 
     @media screen and (max-width: 1023px) {
-      height: 275px;
+      height: 100%;
     }
   }
 
