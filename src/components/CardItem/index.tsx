@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
+import { BiChevronLeft, BiChevronRight, BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 
 export const SliderData = [
   {
@@ -24,9 +24,13 @@ export const SliderData = [
   }
 ];
 
+interface PropsImages  {
+  images: any;
+  title: string;  
+}
 
-export function CardItem() {
-  const slides = SliderData;
+export function CardItem({ images, title }: PropsImages) {
+  const slides = images;
   const [current, setCurrent] = useState(0);
   const length = slides.length;
 
@@ -44,31 +48,43 @@ export function CardItem() {
   return (
     <div id="sliderContainer">
       <div className="sliderCarrosel">
-        <button className="leftArrow" onClick={prevSlide}>
-          <BiLeftArrowAlt />
-        </button>
-        <button className="rightArrow" onClick={nextSlide}>
-          <BiLeftArrowAlt />
-        </button>
-        {SliderData.map((slide, index) => {
+        {length > 1 && (
+          <>
+            <button className="leftArrow" onClick={prevSlide}>
+              <BiChevronLeft size={20} />
+            </button>
+            <button className="rightArrow" onClick={nextSlide}>
+              <BiChevronRight size={20} />
+            </button>
+          </>
+        )}
+
+        {images.map((row, index) => {
           return (
-            <div
-              className={index === current ? "slideEdit active" : "slideEdit"}
-              key={index}
-              style={{ transitionDuration: '0.4s' }}
-            >
-              {index === current && (
-                <img
-                  src={slide.image}
-                  style={{ borderRadius: '4px' }}
-                  alt="uma imagem"
-                  className="imageSlider"
-                />
-              )}
-            </div>
+              <div
+                className={index === current ? "slideEdit active" : "slideEdit"}
+                key={index}
+                style={{ transitionDuration: '0.4s' }}
+              >
+                {index === current && (
+                  <img
+                    src={row.src}
+                    style={{ borderRadius: '4px 4px 0 0' }}
+                    alt="uma imagem"
+                    className="imageSlider"
+                  />
+                )}
+              </div>
           );
         })}
       </div>
+
+      <h2
+        className="slider-info"
+        style={{ textAlign: "center" }}
+      >
+        {title}
+      </h2>
     </div>
   );
 }

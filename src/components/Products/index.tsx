@@ -484,7 +484,7 @@ export default function Products({ productEn, productBr }) {
               : productEn.map((row: any) => (
                   <SwiperSlide
                     key={row.id}
-                    onClick={() => handleOnClickProduct(row.id, row.title)}
+                    // onClick={() => handleOnClickProduct(row.id, row.title)}
                     className="products__card swiper-slide"
                     style={{
                       display: "flex",
@@ -494,7 +494,13 @@ export default function Products({ productEn, productBr }) {
                       flexDirection: "column",
                     }}
                   >
-                    <Image
+
+                    <CardItem
+                      images={row.colecao}
+                      title={row.title}
+                    />
+
+                    {/* <Image
                       src={row.imagem}
                       alt={row.title}
                       className="products__img"
@@ -505,7 +511,7 @@ export default function Products({ productEn, productBr }) {
                       style={{ textAlign: "center" }}
                     >
                       {row.title}
-                    </h2>
+                    </h2> */}
                     {/* <span className="products__price">{row.subtitulo}</span> */}
                   </SwiperSlide>
                 ))}
@@ -524,7 +530,6 @@ export default function Products({ productEn, productBr }) {
         </div>
       </div>
 
-      {/* <CardItem /> */}
     </section>
   );
 }
