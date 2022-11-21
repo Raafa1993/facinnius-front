@@ -5,39 +5,57 @@ import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
 
-import item1 from "../../../public/images/item1.png";
-import item1_1 from "../../../public/images/item1_1.png";
-import item2 from "../../../public/images/item2.png";
-import item2_1 from "../../../public/images/item2_1.png";
-import item2_2 from "../../../public/images/item2_2.png";
-import item3 from "../../../public/images/item3.png";
-import item3_1 from "../../../public/images/item3_1.png";
-import item4 from "../../../public/images/item4.png";
-import item4_1 from "../../../public/images/item4_1.png";
-import item5 from "../../../public/images/item5.png";
-import item5_1 from "../../../public/images/item5_1.png";
-import item6 from "../../../public/images/item6.png";
-import item8 from "../../../public/images/item8.png";
-import item8_1 from "../../../public/images/item8_1.png";
-import item9 from "../../../public/images/item9.png";
-import item10 from "../../../public/images/item10.png";
-import item11 from "../../../public/images/item11.png";
-import item12 from "../../../public/images/item12.png";
-import item13 from "../../../public/images/item13.png";
-import item13_1 from "../../../public/images/item13_1.png";
-import item14 from "../../../public/images/item14.png";
-import item14_1 from "../../../public/images/item14_1.png";
-import item15 from "../../../public/images/item15.png";
-import item16 from "../../../public/images/item16.png";
-import item16_1 from "../../../public/images/item1.png";
-import item16_2 from "../../../public/images/item16_2.png";
-import item16_3 from "../../../public/images/item16_3.png";
-import item16_4 from "../../../public/images/item16_4.png";
-import item17 from "../../../public/images/item17.png";
-import item18 from "../../../public/images/item18.png";
-import item19 from "../../../public/images/item19.png";
-import item20 from "../../../public/images/item20.png";
-import item21 from "../../../public/images/item21.png";
+import item1 from '../../../public/images/item1.png';
+import item1_1 from '../../../public/images/item1_1.png';
+import item2 from '../../../public/images/item2.png';
+import item2_1 from '../../../public/images/item2_1.png';
+import item2_2 from '../../../public/images/item2_2.png';
+import item3 from '../../../public/images/item3.png';
+import item3_1 from '../../../public/images/item3_1.png';
+import item4 from '../../../public/images/item4.png';
+import item4_1 from '../../../public/images/item4_1.png';
+import item5 from '../../../public/images/item5.png';
+import item5_1 from '../../../public/images/item5_1.png';
+import item6 from '../../../public/images/item6.png';
+import item8 from '../../../public/images/item8.png';
+import item8_1 from '../../../public/images/item8_1.png';
+import item9 from '../../../public/images/item9.png';
+import item10 from '../../../public/images/item10.png';
+import item11 from '../../../public/images/item11.png';
+import item12 from '../../../public/images/item12.png';
+import item13 from '../../../public/images/item13.png';
+import item13_1 from '../../../public/images/item13_1.png';
+import item14 from '../../../public/images/item14.png';
+import item14_1 from '../../../public/images/item14_1.png';
+import item15 from '../../../public/images/item15.png';
+import item16 from '../../../public/images/item16.png';
+import item16_1 from '../../../public/images/item1.png';
+import item16_2 from '../../../public/images/item16_2.png';
+import item16_3 from '../../../public/images/item16_3.png';
+import item16_4 from '../../../public/images/item16_4.png';
+import item17 from '../../../public/images/item17.png';
+import item18 from '../../../public/images/item18.png';
+import item19 from '../../../public/images/item19.png';
+import item20 from '../../../public/images/item20.png';
+import item21 from '../../../public/images/item21.png';
+import item22 from '../../../public/images/item22.png';
+import item23 from '../../../public/images/item23.png';
+import item24 from '../../../public/images/item24.png';
+import item25 from '../../../public/images/item25.png';
+import item26 from '../../../public/images/item26.png';
+import item27 from '../../../public/images/item27.png';
+import item27_1 from '../../../public/images/item27_1.png';
+import item28 from '../../../public/images/item28.png';
+import item28_1 from '../../../public/images/item28_1.png';
+import item29 from '../../../public/images/item29.png';
+import item29_1 from '../../../public/images/item29_1.png';
+import item29_2 from '../../../public/images/item29_2.png';
+import item30 from '../../../public/images/item30.png';
+import item30_1 from '../../../public/images/item30_1.png';
+import item31 from '../../../public/images/item31.png';
+import item32 from '../../../public/images/item32.png';
+import item33 from '../../../public/images/item33.png';
+import item34 from '../../../public/images/item34.png';
 
 import blog1 from "../../../public/images/blog_1.png";
 import blog2 from "../../../public/images/blog_2.png";
@@ -46,6 +64,8 @@ import linha_profissional from '../../../public/images/linha_profissional.png';
 import Linha_infinity from '../../../public/images/linha_infiniy.png';
 import Linha_finalizadores from '../../../public/images/linha_finalizadores.png';
 import Linha_homecare from '../../../public/images/linha_homecare.png';
+import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
+import { CardItem } from "../CardItem";
 
 // Import Swiper styles
 // import "swiper/css";
@@ -309,14 +329,114 @@ export default function Products({ productEn, productBr }) {
               src={item21}
               alt="testeImage"
               className="products__img"
-           
+            />
+
+<Image
+              src={item22}
+              alt="testeImage"
+              className="products__img"
+            />
+            <Image
+              src={item23}
+              alt="testeImage"
+              className="products__img"
+            />
+            <Image
+              src={item23}
+              alt="testeImage"
+              className="products__img"
+            />
+            <Image
+              src={item24}
+              alt="testeImage"
+              className="products__img"
+            />
+            <Image
+              src={item25}
+              alt="testeImage"
+              className="products__img"
+            />
+            <Image
+              src={item26}
+              alt="testeImage"
+              className="products__img"
+            />
+            <Image
+              src={item27}
+              alt="testeImage"
+              className="products__img"
+            />
+            <Image
+              src={item27_1}
+              alt="testeImage"
+              className="products__img"
+            />
+            <Image
+              src={item28}
+              alt="testeImage"
+              className="products__img"
+            />
+            <Image
+              src={item28_1}
+              alt="testeImage"
+              className="products__img"
+            />
+            <Image
+              src={item29}
+              alt="testeImage"
+              className="products__img"
+            />
+            <Image
+              src={item29}
+              alt="testeImage"
+              className="products__img"
+            />
+            <Image
+              src={item29_1}
+              alt="testeImage"
+              className="products__img"
+            />
+            <Image
+              src={item29_2}
+              alt="testeImage"
+              className="products__img"
+            />
+            <Image
+              src={item30}
+              alt="testeImage"
+              className="products__img"
+            />
+            <Image
+              src={item30_1}
+              alt="testeImage"
+              className="products__img"
+            />
+            <Image
+              src={item31}
+              alt="testeImage"
+              className="products__img"
+            />
+            <Image
+              src={item32}
+              alt="testeImage"
+              className="products__img"
+            />
+            <Image
+              src={item33}
+              alt="testeImage"
+              className="products__img"
+            />
+            <Image
+              src={item34}
+              alt="testeImage"
+              className="products__img"
             />
           </div>
 
           <Swiper
             navigation={{
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
+              nextEl: ".swiper-button-prev",
+              prevEl: ".swiper-button-next",
             }}
             modules={[Navigation]}
             breakpoints={{
@@ -392,14 +512,19 @@ export default function Products({ productEn, productBr }) {
           </Swiper>
         </div>
 
-        <div className="swiper-button-next">
-          <i className="ri-arrow-right-line"></i>
-        </div>
+        <div className="divTeste" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1.5rem', marginTop: '2rem', width: '100%' }}>
+          <div className="swiper-button-next" style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-end'}}>
+            <i className="ri-arrow-right-line" style={{ cursor: 'pointer' }}><BiLeftArrowAlt /></i>
+          </div>
 
-        <div className="swiper-button-prev">
-          <i className="ri-arrow-left-line"></i>
+          <div className="swiper-button-prev" style={{ display: 'inline', alignItems: 'center', justifyContent: 'center'}}>
+            <i className="ri-arrow-left-line" style={{ cursor: 'pointer' }}><BiRightArrowAlt /></i>
+          </div>
+
         </div>
       </div>
+
+      {/* <CardItem /> */}
     </section>
   );
 }
