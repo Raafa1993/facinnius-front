@@ -3,10 +3,9 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { CardItem } from "../../components/CardItem";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import { ProdutosBrData } from "../../data/ProdutosBrData";
-import { ProdutosEnData } from "../../data/ProdutosEnData";
 import { getProdutcBr } from "../../lib/produtosBr";
 import { getProdutcEn } from "../../lib/produtosEn";
 
@@ -35,29 +34,25 @@ export default function Product({ productBr, productEn }) {
 
             <div className="quality__content grid">
               <div className="quality__images">
-                <Image
+                {/* <Image
                   src={filterProductsId.imagem}
                   alt={filterProductsId.title}
                   className="quality__img-big"
+                /> */}
+
+                <CardItem
+                  handleOnClick={() => {}}
+                  images={filterProductsId.colecao}
+                  title={''}
                 />
               </div>
 
               <div className="quality__data">
                 <h1 className="quality__title">{filterProductsId.title}</h1>
-                {/* <h2 className="quality__price">{filterProductsId.title}</h2>
-                <span className="quality__special">Especial Price</span> */}
-                <p className="quality__description">
+                <p style={{ marginBottom: '1.5rem' }} className="quality__description">
                   {filterProductsId.descricao}
                 </p>
-
-                {/* <div className="quality__buttons">
-                  <button className="button">Buy Now</button>
-
-                  <a href="#" className="quality__button">
-                    See more
-                    <i className="bx bx-right-arrow-alt"></i>
-                  </a>
-                </div> */}
+                <span style={{ fontSize: '16px' }} className="quality__price">{filterProductsId.versões}</span>
               </div>
             </div>
           </div>

@@ -1,0 +1,17 @@
+.acc-item {
+  list-style: none;
+}
+
+.acc-item > div:first-of-type > * {
+  pointer-events: none;
+}
+
+.acc-item > div:first-of-type {
+  cursor: pointer;
+}
+
+.acc-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}

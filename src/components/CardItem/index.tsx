@@ -27,12 +27,13 @@ export const SliderData = [
 interface PropsImages  {
   images: any;
   title: string;  
+  handleOnClick: () => void;
 }
 
-export function CardItem({ images, title }: PropsImages) {
+export function CardItem({ images, handleOnClick, title }: PropsImages) {
   const slides = images;
   const [current, setCurrent] = useState(0);
-  const length = slides.length;
+  const length = slides?.length;
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
@@ -65,6 +66,7 @@ export function CardItem({ images, title }: PropsImages) {
                 className={index === current ? "slideEdit active" : "slideEdit"}
                 key={index}
                 style={{ transitionDuration: '0.4s' }}
+                onClick={handleOnClick}
               >
                 {index === current && (
                   <img
@@ -80,6 +82,7 @@ export function CardItem({ images, title }: PropsImages) {
       </div>
 
       <h2
+        onClick={handleOnClick}
         className="slider-info"
         style={{ textAlign: "center" }}
       >

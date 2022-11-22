@@ -496,6 +496,7 @@ export default function Products({ productEn, productBr }) {
                   >
 
                     <CardItem
+                      handleOnClick={() => handleOnClickProduct(row.id, row.title)}
                       images={row.colecao}
                       title={row.title}
                     />
