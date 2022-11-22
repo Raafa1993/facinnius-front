@@ -39,4 +39,10 @@
         font-size: var(--smaller-font-size);
         color: var(--text-color);
     }
+    &__sub {
+        font-size: var(--h2-font-size);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }

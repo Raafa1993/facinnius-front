@@ -466,7 +466,12 @@ export default function Products({ productEn, productBr }) {
                       flexDirection: "column",
                     }}
                   >
-                    <Image
+                    <CardItem
+                      handleOnClick={() => handleOnClickProduct(row.id, row.title)}
+                      images={row.colecao}
+                      title={row.title}
+                    />
+                    {/* <Image
                       src={row.imagem}
                       alt={row.title}
                       className="products__img"
@@ -477,7 +482,7 @@ export default function Products({ productEn, productBr }) {
                       style={{ textAlign: "center" }}
                     >
                       {row.title}
-                    </h2>
+                    </h2> */}
                     {/* <span className="products__price">{row.subtitulo}</span> */}
                   </SwiperSlide>
                 ))

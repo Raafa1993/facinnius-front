@@ -3,6 +3,7 @@ import { GetStaticProps } from "next";
 import Blog from "../components/Blog";
 import Categories from "../components/Categories";
 import Collection from "../components/Collection";
+import Duvidas from "../components/Duvidas";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Main from "../components/Main";
@@ -14,8 +15,10 @@ import { getLineBr } from "../lib/lineBr";
 import { getLineEn } from "../lib/lineEn";
 import { getProdutcBr } from "../lib/produtosBr";
 import { getProdutcEn } from "../lib/produtosEn";
+import { getQuestionBr } from "../lib/questionBr";
+import { getQuestionEn } from "../lib/questionEn";
 
-export default function Home({ productEn, productBr, blogBr, blogEn, lineBr, lineEn }) {
+export default function Home({ productEn, productBr, blogBr, blogEn, questionBr, questionEn }) {
 
   return (
     <>
@@ -23,7 +26,8 @@ export default function Home({ productEn, productBr, blogBr, blogEn, lineBr, lin
       <main className="main">
         <Main />
         <Speciality />
-        <Categories lineBr={lineBr} lineEn={lineEn} />
+        {/* <Categories lineBr={lineBr} lineEn={lineEn} /> */}
+        <Duvidas questionBr={questionBr} questionEn={questionEn} />
         <Collection />
         <Products productEn={productEn} productBr={productBr} />
         <Blog blogBr={blogBr} blogEn={blogEn}/>
@@ -40,6 +44,8 @@ export const getStaticProps: GetStaticProps = async () => {
   const blogEn = getBlogEn();
   const lineBr = getLineBr();
   const lineEn = getLineEn();
+  const questionBr = getQuestionBr();
+  const questionEn = getQuestionEn();
 
   return {
     props: {
@@ -49,6 +55,8 @@ export const getStaticProps: GetStaticProps = async () => {
       blogEn,
       lineBr,
       lineEn,
+      questionBr,
+      questionEn
     },
   }
 }

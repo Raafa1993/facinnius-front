@@ -1,8 +1,4 @@
-import { useState } from "react";
-import { BiMinus, BiPlus } from "react-icons/bi";
-import { FiMinus, FiPlus } from "react-icons/fi";
-
-export const Data = [
+export const QuestionBrData = [
   {
     question: 'Não Sou profissional da beleza e quero adquirir os produtos como faço?',
     answer: 'Na aba locais você pode estar encontrando um salão mais próximo, ou nos procure em nossas redes sociais que indicaremos um de nossos representantes.'
@@ -78,41 +74,4 @@ export const Data = [
     question: 'A Facinnius tem progressiva orgânica?',
     answer: 'Temos nosso redutor de volume Ilummini qué é indicado para realização de progressivas orgânicas, produto sem formol.'
   },
-
 ];
-
-const Accordion = ({ question }: any) => {
-  const [clicked, setClicked] = useState(0);
-
-  const toggle = index => {
-    if (clicked === index) {
-      //if clicked question is already active, then close it
-      return setClicked(null);
-    }
-    setClicked(index);
-  };
-  
-  return (
-    <div className="AccordionSection">
-      <div className="containerAccordion">
-          {question.map((item, index) => {
-            return (
-              <>
-                <div className="wrapperAccordion" onClick={() => toggle(index)} key={index}>
-                  <h1 style={clicked === index ? { color: "hsl(36, 72%, 48%)" }: null}>{item.question}</h1>
-                  <span>{clicked === index ? <FiMinus color="hsl(36, 72%, 48%)" /> : <FiPlus />}</span>
-                </div>
-                {clicked === index ? (
-                  <div className="dropdown">
-                    <p>{item.answer}</p>
-                  </div>
-                ) : null}
-              </>
-            );
-          })}
-      </div>
-    </div>
-  );
-};
-
-export default Accordion;
