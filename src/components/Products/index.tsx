@@ -456,7 +456,7 @@ export default function Products({ productEn, productBr }) {
               ? productBr.map((row: any) => (
                   <SwiperSlide
                     key={row.id}
-                    onClick={() => handleOnClickProduct(row.id, row.title)}
+                    // onClick={() => handleOnClickProduct(row.id, row.title)}
                     className="products__card swiper-slide"
                     style={{
                       display: "flex",
