@@ -27,9 +27,9 @@ export default function Home({ productEn, productBr, blogBr, blogEn, questionBr,
         <Main />
         <Speciality />
         {/* <Categories lineBr={lineBr} lineEn={lineEn} /> */}
-        <Duvidas questionBr={questionBr} questionEn={questionEn} />
         <Collection />
         <Products productEn={productEn} productBr={productBr} />
+        <Duvidas questionBr={questionBr} questionEn={questionEn} />
         <Blog blogBr={blogBr} blogEn={blogEn}/>
         <Footer />
       </main>

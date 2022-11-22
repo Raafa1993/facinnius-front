@@ -7,7 +7,7 @@ export default function Duvidas({ questionBr, questionEn }) {
   const verify = i18n.language === 'ptbr' ? questionBr : questionEn;
 
   return (
-    <section className="new section" id="new">
+    <section className="new section container" id="new">
       <h2 className="section__title" style={{ marginBottom: '14px' }}>{t('duvidas_titulo')}</h2>
       <span className="new__sub">{t('duvidas_subtitulo')}</span>
       {/* <div className="new__container container grid"> */}
