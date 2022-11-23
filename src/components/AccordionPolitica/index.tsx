@@ -81,7 +81,7 @@ export const Data = [
 
 ];
 
-const Accordion = ({ question }: any) => {
+const AccordionPolitica = ({ question }: any) => {
   const [clicked, setClicked] = useState(0);
 
   const toggle = index => {
@@ -104,7 +104,7 @@ const Accordion = ({ question }: any) => {
                 </div>
                 {clicked === index ? (
                   <div className="dropdown">
-                    <p dangerouslySetInnerHTML={{ __html: item.answer }}/>
+                    <p>{item.answer}</p>
                   </div>
                 ) : null}
               </>
@@ -115,4 +115,4 @@ const Accordion = ({ question }: any) => {
   );
 };
 
-export default Accordion;
+export default AccordionPolitica;

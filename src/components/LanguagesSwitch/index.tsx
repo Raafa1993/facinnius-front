@@ -33,12 +33,13 @@ const stylesButton = {
 }
 
 export default function LanguagesSwitch() {
-  const { push, pathname } = useRouter()
+  const router = useRouter()
+  const { push, pathname} = useRouter()
   const mockUrl = pathname
   function handleOnLanguage(language: string) {
     i18n.changeLanguage(language);
     localStorage.setItem("@Facinnius:lang", language);
-    push(mockUrl, undefined, { locale: language })
+    push(mockUrl, undefined, { locale: language, scroll: false })
   }
 
   return (
@@ -51,6 +52,7 @@ export default function LanguagesSwitch() {
             onClick={() => {
               handleOnLanguage(row.value)
             }}
+            
           >
             <Image 
               src={row.flag} 

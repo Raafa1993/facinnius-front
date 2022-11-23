@@ -21,10 +21,10 @@
 
     "home_linhas_produtos_title": "Product lines",
     "home_colecao_masculino": "Professional <br /> Line",
-    "home_colecao_feminino": "Homecare <br /> Line",
+    "home_colecao_feminino": "Home Care <br /> Line",
     "home_colecao_botao": "See more",
     "home_produtos": "Our products",
-    "home_blog_titulo": "Access our blogs!",
+    "home_blog_titulo": "Access our blog!",
     "home_blog_subtitulo": "Painless lock technique",
     "home_blog_descricao": "New technique of painless locks with high trend in the world of hairdressers.",
 
@@ -87,6 +87,9 @@
     "filtro_questao5_option1": "Oily",
     "filtro_questao5_option2": "Dry",
     "filtro_questao5_option3": "Mixed",
+
+    "privacidade_titulo": "Privacy Policy",
+    "privacidade_subtitulo": "At Facinnius, we take privacy seriously.",
 
     "contato_titulo": "Questions or Suggestion? Fill in the fields below to contact us.",
     "contato_subtitulo": "Talk to Facinnius",

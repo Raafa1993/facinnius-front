@@ -119,7 +119,7 @@ export default function Footer() {
 
       <div className="footer__info container">
         <span className="footer__copy">
-          &#169; M10-web. Todos os direitos reservados
+           Copyright &#169; - Desenvolvido por M10web
         </span>
 
         <a href="#" className="footer__privacy">

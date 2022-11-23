@@ -18,10 +18,10 @@ export default function ProductsList({ productBr, productEn }) {
   const { t, i18n } = useTranslation();
   const [modal, setModal] = useState(false);
   const [formData, setFormData] = useState<any>({});
-
+  
   const isBr = i18n.language === 'ptbr' ? productBr : productEn;
-  const filterItems =  isBr.filter((obj: any) => obj.filtros.includes(formData.sexo) || obj.filtros.includes(formData.cabelo) || obj.filtros.includes(formData.tipoCabelo) || obj.filtros.includes(formData.desejoCabelo) || obj.filtros.includes(formData.comprimento) || obj.filtros.includes(formData.aspecto)) || isBr
-  const verifiFilter = filterItems.length <= 0 ? isBr : filterItems
+  const filterItems =  isBr.filter((obj: any) => obj.filtros.includes(formData.sexo) || obj.filtros.includes(formData.cabelo) || obj.filtros.includes(formData.linha) || obj.filtros.includes(formData.tipoCabelo) || obj.filtros.includes(formData.desejoCabelo) || obj.filtros.includes(formData.comprimento) || obj.filtros.includes(formData.aspecto))
+  let verifiFilter = filterItems.length <= 0 ? isBr : filterItems
 
   function handleOnClickProduct(id: any, title: string) {
     var convertTitle = new URLSearchParams(title).toString();
@@ -109,7 +109,7 @@ export default function ProductsList({ productBr, productEn }) {
             className="new__container container grid"
             style={{ marginTop: "4rem" }}
           >
-            {verifiFilter.map((row) => (
+            {filterItems.map((row) => (
               <article className="new__card" key={row.id}>
                 <Image src={row.imagem} className="new__img" alt={row.title} />
 

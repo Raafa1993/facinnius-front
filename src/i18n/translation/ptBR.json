@@ -22,12 +22,12 @@
     "home_linhas_produtos_title": "Linhas de Produtos",
 
     "home_colecao_masculino": "Linha <br /> Profissional",
-    "home_colecao_feminino": "Linha <br /> Homecare",
+    "home_colecao_feminino": "Linha <br /> Home Care",
     "home_colecao_botao": "Veja mais",
 
     "home_produtos": "Nossos produtos",
 
-    "home_blog_titulo": "Acesse nossos blogs!",
+    "home_blog_titulo": "Acesse nossos blog!",
     "home_blog_subtitulo": "Técnica de mechas indolor",
     "home_blog_descricao": "Nova técnica de mechas indolor com alta tendência no mundo dos cabeleireiros.",
 
@@ -89,6 +89,9 @@
     "filtro_questao5_option1": "Oleoso",
     "filtro_questao5_option2": "Seco",
     "filtro_questao5_option3": "Misto",
+
+    "privacidade_titulo": "Política de privacidade",
+    "privacidade_subtitulo": "Na Facinnius, levamos privacidade a sério.",
 
 
     "contato_titulo": "Dúvidas ou Sugestão? Preencha os campos abaixo para entrar em contato conosco.",
