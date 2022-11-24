@@ -19,7 +19,6 @@ import { getProdutcEn } from "../lib/produtosEn";
 import { getQuestionBr } from "../lib/questionBr";
 import { getQuestionEn } from "../lib/questionEn";
 
-
 export default function Home({ productEn, productBr, blogBr, blogEn, questionBr, questionEn, cookies }) {
 
   return (
@@ -35,14 +34,13 @@ export default function Home({ productEn, productBr, blogBr, blogEn, questionBr,
         <Blog blogBr={blogBr} blogEn={blogEn}/>
         <Footer />
 
-        {/* <ModalCookies cookies={cookies}/> */}
+        {/* <ModalCookies/> */}
       </main>
     </>
   );
 }
 
 export const getStaticProps: GetStaticProps = async () => {
- 
   const productBr = getProdutcBr();
   const productEn = getProdutcEn();
   const blogBr = getBlogBr();

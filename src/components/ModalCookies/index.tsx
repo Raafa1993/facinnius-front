@@ -1,34 +1,30 @@
-import { GetServerSideProps } from "next";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-import {setCookie, parseCookies} from 'nookies'
-import nookies from 'nookies'
-
-const ModalCookies = (props) => {
+const ModalCookies = () => {
   const [modal, setModal] = useState(false);
   const [teste, setTeste] = useState(false);
-  // const [cookie, setCookie] = useState(() => {
-  //   const coke = localStorage.getItem('@Alpha:Cookie');
-  //   if (coke) {
-  //     return { coke };
-  //   }
-  //   return {};
-  // });
-
-  console.log('cookies', props)
+  const [cookie, setCookie] = useState(() => {
+    if (typeof window !== "undefined") {
+      const coke = localStorage.getItem('@Alpha:Cookie');
+      if (coke) {
+        return { coke };
+      }
+    } 
+    return {};
+  });
 
   function handleCookie() {
-    // localStorage.setItem('@Alpha:Cookie', 'true');
-    setCookie(null, 'COKE', 'true', {
-      maxAge: 86400 * 7,
-      path: '/'
-    })
+    localStorage.setItem('@Alpha:Cookie', 'true');
     setTeste(!teste)
+    setCookie({
+      coke: 'true'
+    })
   }
 
+  console.log('teste', cookie)
   
   return (
-    <div className={`containerCookie containerCookieDark `}>
+    <div className={`containerCookie ${teste || !!cookie.coke ? 'coke' : ''}`}>
       <div className="infoCookie">
         <span>
           Utilizamos cookies para melhorar sua experiência. Ao continuar
@@ -52,14 +48,3 @@ const ModalCookies = (props) => {
 };
 
 export default ModalCookies;
-
-export async function getServerSideProps(ctx) {
-  const cookies = nookies.get(ctx);
-
-  console.log("TESTE", cookies)
-  return {
-    props: {
-      cokies: cookies.COKE
-    }, // will be passed to the page component as props
-  }
-}
