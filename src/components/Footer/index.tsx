@@ -123,12 +123,12 @@ export default function Footer() {
         </span>
 
         <Link href="/privacidade" className="footer__privacy">
-          Termos & Condiçoes
+        {t('home_footer_politica')}
         </Link>
 
-        <Link href="/cookies" className="footer__privacy">
+        {/* <Link href="/cookies" className="footer__privacy">
           Cookies
-        </Link>
+        </Link> */}
       </div>
     </footer>
   );
