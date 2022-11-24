@@ -5,6 +5,7 @@ import React, { ChangeEvent, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { BiFilter } from "react-icons/bi";
 import { RiArrowRightLine } from "react-icons/ri";
+import { CardItem } from "../../components/CardItem";
 import Filtered from "../../components/Filtered";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
@@ -109,25 +110,31 @@ export default function ProductsList({ productBr, productEn }) {
             className="new__container container grid"
             style={{ marginTop: "4rem" }}
           >
-            {filterItems.map((row) => (
-              <article className="new__card" key={row.id}>
-                <Image src={row.imagem} className="new__img" alt={row.title} />
+            {verifiFilter.map((row) => (
+              // <article className="new__card" key={row.id}>
+              //   <Image src={row.imagem} className="new__img" alt={row.title} />
 
-                <button
-                  onClick={() => handleOnClickProduct(row.id, row.title)}
-                  className="new__link"
-                  style={{ width: '100%' }}
-                >
-                  <div className="new__data">
-                    <h2 className="new__title">{row.title}</h2>
-                    {/* <span className="new__subtitle">{row.title}</span> */}
-                  </div>
+              //   <button
+              //     onClick={() => handleOnClickProduct(row.id, row.title)}
+              //     className="new__link"
+              //     style={{ width: '100%' }}
+              //   >
+              //     <div className="new__data">
+              //       <h2 className="new__title">{row.title}</h2>
+              //       {/* <span className="new__subtitle">{row.title}</span> */}
+              //     </div>
 
-                  <i className="ri-arrow-right-line">
-                    <RiArrowRightLine />
-                  </i>
-                </button>
-              </article>
+              //     <i className="ri-arrow-right-line">
+              //       <RiArrowRightLine />
+              //     </i>
+              //   </button>
+              // </article>
+
+            <CardItem
+            handleOnClick={() => handleOnClickProduct(row.id, row.title)}
+            images={row.colecao}
+            title={row.title}
+            />
             ))}
           </div>
         </section>

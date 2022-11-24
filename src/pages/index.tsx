@@ -1,12 +1,13 @@
 
-import { GetStaticProps } from "next";
+import { GetServerSideProps, GetStaticProps } from "next";
+import {parseCookies } from "nookies";
 import Blog from "../components/Blog";
-import Categories from "../components/Categories";
 import Collection from "../components/Collection";
 import Duvidas from "../components/Duvidas";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Main from "../components/Main";
+import ModalCookies from "../components/ModalCookies";
 import Products from "../components/Products";
 import Speciality from "../components/Speciality";
 import { getBlogBr } from "../lib/blogBr";
@@ -18,7 +19,8 @@ import { getProdutcEn } from "../lib/produtosEn";
 import { getQuestionBr } from "../lib/questionBr";
 import { getQuestionEn } from "../lib/questionEn";
 
-export default function Home({ productEn, productBr, blogBr, blogEn, questionBr, questionEn }) {
+
+export default function Home({ productEn, productBr, blogBr, blogEn, questionBr, questionEn, cookies }) {
 
   return (
     <>
@@ -32,12 +34,15 @@ export default function Home({ productEn, productBr, blogBr, blogEn, questionBr,
         <Duvidas questionBr={questionBr} questionEn={questionEn} />
         <Blog blogBr={blogBr} blogEn={blogEn}/>
         <Footer />
+
+        {/* <ModalCookies cookies={cookies}/> */}
       </main>
     </>
   );
 }
 
 export const getStaticProps: GetStaticProps = async () => {
+ 
   const productBr = getProdutcBr();
   const productEn = getProdutcEn();
   const blogBr = getBlogBr();
@@ -56,7 +61,7 @@ export const getStaticProps: GetStaticProps = async () => {
       lineBr,
       lineEn,
       questionBr,
-      questionEn
+      questionEn,
     },
   }
 }

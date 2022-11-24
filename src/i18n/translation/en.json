@@ -43,7 +43,7 @@
 
     "produtoId_titulo": "A premium and best quality preparation just for you!",
 
-    "produtos_titulo": "Facinnius product list",
+    "produtos_titulo": "Check out our product list.",
     "produtos_subtitulo": "Special lines",
     "produtos_botao_filtro": "Filter items",
 
@@ -90,6 +90,8 @@
 
     "privacidade_titulo": "Privacy Policy",
     "privacidade_subtitulo": "At Facinnius, we take privacy seriously.",
+
+    "cookies_titulo": "Cookie Policy",
 
     "contato_titulo": "Questions or Suggestion? Fill in the fields below to contact us.",
     "contato_subtitulo": "Talk to Facinnius",

@@ -122,9 +122,13 @@ export default function Footer() {
            Copyright &#169; - Desenvolvido por M10web
         </span>
 
-        <a href="#" className="footer__privacy">
+        <Link href="/privacidade" className="footer__privacy">
           Termos & Condiçoes
-        </a>
+        </Link>
+
+        <Link href="/cookies" className="footer__privacy">
+          Cookies
+        </Link>
       </div>
     </footer>
   );

@@ -46,7 +46,7 @@
 
     "produtoId_titulo": "Uma preparação premium e de melhor qualidade só para você!",
 
-    "produtos_titulo": "Lista de produtos Facinnius",
+    "produtos_titulo": "Confira nossa lista de produtos.",
     "produtos_subtitulo": "Linhas especiais",
     "produtos_botao_filtro": "Filtrar itens",
 
@@ -93,6 +93,7 @@
     "privacidade_titulo": "Política de privacidade",
     "privacidade_subtitulo": "Na Facinnius, levamos privacidade a sério.",
 
+    "cookies_titulo": "Política de Cookies",
 
     "contato_titulo": "Dúvidas ou Sugestão? Preencha os campos abaixo para entrar em contato conosco.",
     "contato_subtitulo": "Fale com a Facinnius",

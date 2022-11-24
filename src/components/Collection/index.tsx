@@ -28,11 +28,11 @@ export default function Collection() {
             </button>
           </div>
 
-          <Image src={Collection1} alt="collection image" />
+          <Image src={Collection1} alt="collection image" onClick={() => handleOnClickProduct('profissional')} style={{ cursor: 'pointer'}}/>
         </div>
 
-        <div className="collection__explore">
-          <Image src={Collection2} alt="collection image" />
+        <div className="collection__explore" >
+          <Image src={Collection2} alt="collection image" onClick={() => handleOnClickProduct('homecare')} style={{ cursor: 'pointer' }} />
 
           <div className="collection__data-women">
             <h2 className="collection__title" dangerouslySetInnerHTML={{ __html: t('home_colecao_feminino') }} />
