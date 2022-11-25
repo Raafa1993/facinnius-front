@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { ToastContainer } from 'react-toastify';
 import i18n from '../i18n';
 
+
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   if (router.locale) {

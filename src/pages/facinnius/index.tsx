@@ -14,7 +14,7 @@ export default function Products() {
       <main className="main">
         <section className="quality section" id="premium">
           <div className="quality__container container">
-            <h2 className="section__title">{t('sobre_titulo')}</h2>
+            <h2 dangerouslySetInnerHTML={{ __html: t('sobre_titulo') }} className="section__title"/>
 
             <div className="quality__content grid">
               <div className="quality__images">

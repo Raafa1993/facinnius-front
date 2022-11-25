@@ -40,7 +40,7 @@
     "home_footer_localizacao_endereco_cep": "CEP 09270-190",
     "home_footer_localizacao_endereco_cnpj": "CNPJ 20.712.759/0001-04",
     "home_footer_redes_titulo": "Social",
-    "home_footer_politica": "We use cookies and other similar technologies to improve your browsing experience. To learn more, visit: Cookies Policy and Privacy Policy. The images linked here are merely illustrative, logo and brand are our property. Its reproduction, in whole or in part, without the express authorization of the site administrator is prohibited. Copyright © - Developed by M10web",
+    "home_footer_politica": "We use cookies and other similar technologies to improve your browsing experience. To learn more, visit: Cookies Policy and Privacy Policy. The images linked here are merely illustrative, logo and brand are our property. Its reproduction, in whole or in part, without the express authorization of the site administrator is prohibited.",
 
 
     "produtoId_titulo": "A premium and best quality preparation just for you!",
@@ -96,7 +96,7 @@
     "cookies_titulo": "Cookie Policy",
 
     "contato_titulo": "Questions or Suggestion? Fill in the fields below to contact us.",
-    "contato_subtitulo": "Talk to Facinnius",
+    "contato_subtitulo": "Talk to <h6 class='titulo_facinnius'>Facinnius</h6>",
     "contato_tipo_contato": "TYPE OF CONTACT",
     "contato_tipo_input1": "Contact",
     "contato_tipo_input2": "Be a Distributor",
@@ -124,7 +124,7 @@
     "contato_form_opinião": "Opinion",
     "contato_form_enviar": "Submit",
 
-    "sobre_titulo": "ABOUT FACINNIUS",
+    "sobre_titulo": "ABOUT <h6 class='titulo_facinnius'>Facinnius</h6>",
     "sobre_descrição1": "Founded in 1998, the company began to have a new management in 2014, thus undergoing reformulations in packaging and formulas. Further improving the quality and excellence of products.",
     "sobre_descrição2": "Always looking for the best in the market as imported raw materials of the highest quality, and always on the lookout for new technologies To always improve the quality to be delivered to beauty professionals.",
     "sobre_descrição3": "We have a qualified team of representatives, who serve exclusively beauty professionals in their establishments.",

@@ -70,9 +70,7 @@ export default function Contato() {
           <div className="titulo-bg">
             <div className="titulo container">
               <p className="font-2-l-b cor-5">{t('contato_titulo')}</p>
-              <h1 className="font-1-xxl cor-0">
-              {t('contato_subtitulo')}<span className="cor-p1">.</span>
-              </h1>
+              <h1 dangerouslySetInnerHTML={{ __html: t('contato_subtitulo') }} className="font-1-xxl cor-0" />
             </div>
           </div>
 

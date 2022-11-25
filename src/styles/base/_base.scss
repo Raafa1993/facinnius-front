@@ -33,6 +33,15 @@ img{
     height: auto;
 }
 
+.titulo_facinnius {
+  font-family: var(--body-font-facinnius);
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline;
+  font-size: inherit;
+  color: var(--first-color);
+}
+
 .cor-0 {
     color: var(--cor-0);
   }

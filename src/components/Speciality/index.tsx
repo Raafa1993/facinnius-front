@@ -49,9 +49,7 @@ export default function Speciality() {
             />
 
             <h3 className="specialty__title">{t('home_especialidades_item2_title')}</h3>
-            <p className="specialty__description">
-            {t('home_especialidades_item2_descricao')}
-            </p>
+            <p className="specialty__description" dangerouslySetInnerHTML={{ __html: t('home_especialidades_item2_descricao') }}/>
           </div>
 
           <div className="specialty__group">

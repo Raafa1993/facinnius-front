@@ -31,7 +31,7 @@ export default function Home({ productEn, productBr, blogBr, blogEn, questionBr,
         <Collection />
         <Products productEn={productEn} productBr={productBr} />
         <Duvidas questionBr={questionBr} questionEn={questionEn} />
-        <Blog blogBr={blogBr} blogEn={blogEn}/>
+        {/* <Blog blogBr={blogBr} blogEn={blogEn}/> */}
         <Footer />
 
         {/* <ModalCookies/> */}

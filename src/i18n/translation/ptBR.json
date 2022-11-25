@@ -12,7 +12,7 @@
     "home_especialidades_item1_title": "Linhas premium",
     "home_especialidades_item1_descricao": "Linhas premium esperando por você.",
     "home_especialidades_item2_title": "Qualidade",
-    "home_especialidades_item2_descricao": "Aproveite e desfrute do melhor que a Facinnius oferece.",
+    "home_especialidades_item2_descricao": "Aproveite e desfrute do melhor que a <h6 class='titulo_facinnius'>Facinnius</h6> oferece.",
     "home_especialidades_item3_title": "Tecnologia",
     "home_especialidades_item3_descricao": "Contamos com algumas linhas que possuem nano tecnologia.",
 
@@ -43,7 +43,7 @@
     "home_footer_localizacao_endereco_cep": "CEP 09270-190",
     "home_footer_localizacao_endereco_cnpj": "CNPJ 20.712.759/0001-04",
     "home_footer_redes_titulo": "Redes sociais",
-    "home_footer_politica": "Nós usamos cookies e outras tecnologias semelhantes para melhorar a sua experiência de navegação. Para saber mais acesse: Política de Cookies e Política de Privacidade. As imagens aqui vinculadas são meramente ilustrativas, logotipo e marca são de nossa propriedade. É vetada a sua reprodução, total ou parcial, sem a expressa autorização da administradora do site. Copyright © - Desenvolvido por M10web",
+    "home_footer_politica": "Nós usamos cookies e outras tecnologias semelhantes para melhorar a sua experiência de navegação. Para saber mais acesse: Política de Cookies e Política de Privacidade. As imagens aqui vinculadas são meramente ilustrativas, logotipo e marca são de nossa propriedade. É vetada a sua reprodução, total ou parcial, sem a expressa autorização da administradora do site.",
 
     "produtoId_titulo": "Uma preparação premium e de melhor qualidade só para você!",
 
@@ -51,7 +51,7 @@
     "produtos_subtitulo": "Linhas especiais",
     "produtos_botao_filtro": "Filtrar itens",
 
-    "locais_titulo": "Veja onde pode encotrar nossos produtos",
+    "locais_titulo": "Veja onde pode encontrar nossos produtos",
     "locais_label": "Locais",
     "locais_option": "Selecione uma opção",
     "locais_botao_select": "Selecione",
@@ -97,7 +97,7 @@
     "cookies_titulo": "Política de Cookies",
 
     "contato_titulo": "Dúvidas ou Sugestão? Preencha os campos abaixo para entrar em contato conosco.",
-    "contato_subtitulo": "Fale com a Facinnius",
+    "contato_subtitulo": "Fale com a <h6 class='titulo_facinnius'>Facinnius</h6>",
     "contato_tipo_contato": "TIPO DE CONTATO",
     "contato_tipo_input1": "Contato",
     "contato_tipo_input2": "Seja um Distribuidor",
@@ -116,7 +116,7 @@
     "contato_form_categoria_option3": "Consultores",
     "contato_form_categoria_option4": "Elogios",
     "contato_form_categoria_option5": "Duvidas",
-    "contato_form_categoria_option6": "Sugestoes",
+    "contato_form_categoria_option6": "Sugestões",
     "contato_form_mensagem": "Deixe sua mensagem",
     "contato_form_endereco": "Endereço",
     "contato_form_numero": "Numero",
@@ -124,7 +124,7 @@
     "contato_form_opinião": "Opinião",
     "contato_form_enviar": "Enviar",
 
-    "sobre_titulo": "Sobre a Facinnius",
+    "sobre_titulo": "Sobre a <h6 class='titulo_facinnius'>Facinnius</h6>",
     "sobre_descrição1": "Fundada em 1998, a empresa passou a contar com uma nova gestão em 2014, passando assim por reformulações em embalagens e fórmulas. Melhorando ainda mais a qualidade e excelência dos produtos.",
     "sobre_descrição2": "Buscando sempre o que há de melhor no mercado como matérias-primas importadas de altíssima qualidade, e sempre de olho e novas tecnologias Para sempre melhorar a qualidade a ser entregue aos profissionais da beleza.",
     "sobre_descrição3": "Contamos com uma equipe qualificada de representantes, que atendem exclusivamente aos profissionais da beleza em seus estabelecimentos.",

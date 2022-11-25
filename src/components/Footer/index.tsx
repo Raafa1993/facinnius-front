@@ -1,10 +1,8 @@
 import Link from "next/link";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { RiFacebookFill, RiInstagramFill, RiWhatsappFill, RiYoutubeFill } from "react-icons/ri";
-import { BiHomeAlt, BiStore, BiLocationPlus, BiPhoneCall } from "react-icons/bi";
-import { AiOutlineShoppingCart } from "react-icons/ai";
-import { SiBloglovin } from "react-icons/si";
+import { RiFacebookFill, RiInstagramFill, RiYoutubeFill } from "react-icons/ri";
+import { IoLogoTiktok } from "react-icons/io5";
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -15,7 +13,7 @@ export default function Footer() {
         <div>
           <Link href="#" className="footer__logo">
             <a className="footer__logo">
-              Facinnius.
+              <h6 className="titulo_facinnius">Facinnius.</h6> 
             </a>
           </Link>
 
@@ -112,19 +110,28 @@ export default function Footer() {
               >
                 <i className="ri-whatsapp-line"><RiYoutubeFill /></i>
               </a>
+
+              <a
+                href="https://www.youtube.com/facinnius-cosmeticos"
+                target="_blank"
+                rel="noreferrer"
+                className="footer__social-link"
+              >
+                <i className="ri-whatsapp-line"><IoLogoTiktok size={18} /></i>
+              </a>
             </ul>
           </div>
         </div>
       </div>
 
       <div className="footer__info container">
-        <span className="footer__copy">
-           Copyright &#169; - Desenvolvido por M10web
-        </span>
 
         <Link href="/privacidade" className="footer__privacy">
         {t('home_footer_politica')}
         </Link>
+        <span className="footer__copy">
+           Copyright &#169; - Desenvolvido por M10web
+        </span>
 
         {/* <Link href="/cookies" className="footer__privacy">
           Cookies
