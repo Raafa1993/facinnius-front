@@ -1,9 +1,41 @@
 /*=============== QUALITY ===============*/
 .quality{
     background-color: #fff;
+
+    .listItems-group {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        gap: 1rem;
+
+        .filterItems {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            > button {
+                width: 100%;
+            }
+        }
+        @media screen and (min-width: 765px){
+            flex-direction: row;
+
+            .filterItems {
+                width: 100%;
+    
+                > button {
+                    width: auto;
+                }
+            }
+          }
+      }
     
     &__content{
         row-gap: 2.5rem;
+        
     }
     &__images{
         position: relative;

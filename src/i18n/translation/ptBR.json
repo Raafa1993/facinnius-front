@@ -7,14 +7,14 @@
     "home_header_locais": "Locais",
     "home_header_contato": "Contato",
 
-    "home_especialidades_text": "Produtos especiais para cuidar de você",
+    "home_especialidades_text": "Produtos Especiais para Cuidar de você!",
     "home_especialidades_button": "veja mais",
-    "home_especialidades_item1_title": "Linhas premium",
-    "home_especialidades_item1_descricao": "Linhas premium esperando por você.",
+    "home_especialidades_item1_title": "Linhas Premium",
+    "home_especialidades_item1_descricao": "Linhas de Produtos Premium Esperando por Você.",
     "home_especialidades_item2_title": "Qualidade",
-    "home_especialidades_item2_descricao": "Aproveite e desfrute do melhor que a <h6 class='titulo_facinnius'>Facinnius</h6> oferece.",
+    "home_especialidades_item2_descricao": "Aproveite e desfrute dos melhores produtos cosméticos para você ou seu salão.",
     "home_especialidades_item3_title": "Tecnologia",
-    "home_especialidades_item3_descricao": "Contamos com algumas linhas que possuem nano tecnologia.",
+    "home_especialidades_item3_descricao": "Tecnologia de ponta em todos os processos de fabricação.",
 
     "duvidas_titulo": "Tire suas duvidas",
     "duvidas_subtitulo": "Estamos prontos para te ajudar",
@@ -25,13 +25,13 @@
     "home_colecao_feminino": "Linha <br /> Home Care",
     "home_colecao_botao": "Veja mais",
 
-    "home_produtos": "Nossos produtos",
+    "home_produtos": "Nossos Produtos",
 
     "home_blog_titulo": "Acesse nosso blog!",
     "home_blog_subtitulo": "Técnica de mechas indolor",
     "home_blog_descricao": "Nova técnica de mechas indolor com alta tendência no mundo dos cabeleireiros.",
 
-    "home_footer_descricao": "Comprometidos em <br /> levar até você os melhores <br /> Produtos.",
+    "home_footer_descricao": "Buscando sempre <br /> o que há de melhor no mercado como <br />  matérias-primas importadas de altíssima <br /> qualidade, e sempre de olho e novas <br /> tecnologias Para sempre melhorar a qualidade <br /> a  ser entregue aos profissionais da beleza.",
     "home_footer_companhia_titulo": "Companhia",
     "home_footer_companhia_produtos": "Produtos",
     "home_footer_companhia_linhas": "Linhas",
@@ -43,12 +43,12 @@
     "home_footer_localizacao_endereco_cep": "CEP 09270-190",
     "home_footer_localizacao_endereco_cnpj": "CNPJ 20.712.759/0001-04",
     "home_footer_redes_titulo": "Redes sociais",
-    "home_footer_politica": "Nós usamos cookies e outras tecnologias semelhantes para melhorar a sua experiência de navegação. Para saber mais acesse: Política de Cookies e Política de Privacidade. As imagens aqui vinculadas são meramente ilustrativas, logotipo e marca são de nossa propriedade. É vetada a sua reprodução, total ou parcial, sem a expressa autorização da administradora do site.",
+    "home_footer_politica": "Nós usamos cookies e outras tecnologias semelhantes para melhorar a sua experiência de navegação. Para saber mais acesse: Política de Cookies e Política de Privacidade. <br><br> As imagens aqui vinculadas são meramente ilustrativas, logotipo e marca são de nossa propriedade. É vetada a sua reprodução, total ou parcial, sem a expressa autorização da administradora do site.",
 
     "produtoId_titulo": "Uma preparação premium e de melhor qualidade só para você!",
 
-    "produtos_titulo": "Confira nossa lista de produtos.",
-    "produtos_subtitulo": "Linhas especiais",
+    "produtos_titulo": "Confiram todos os nossos Produtos",
+    "produtos_subtitulo": "Todos os nossos produtos possuem matérias-primas importadas de altíssima qualidade. Aproveite.",
     "produtos_botao_filtro": "Filtrar itens",
 
     "locais_titulo": "Veja onde pode encontrar nossos produtos",
@@ -97,7 +97,7 @@
     "cookies_titulo": "Política de Cookies",
 
     "contato_titulo": "Dúvidas ou Sugestão? Preencha os campos abaixo para entrar em contato conosco.",
-    "contato_subtitulo": "Fale com a <h6 class='titulo_facinnius'>Facinnius</h6>",
+    "contato_subtitulo": "Fale Conosco:",
     "contato_tipo_contato": "TIPO DE CONTATO",
     "contato_tipo_input1": "Contato",
     "contato_tipo_input2": "Seja um Distribuidor",

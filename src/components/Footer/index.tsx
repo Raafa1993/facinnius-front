@@ -3,6 +3,9 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { RiFacebookFill, RiInstagramFill, RiYoutubeFill } from "react-icons/ri";
 import { IoLogoTiktok } from "react-icons/io5";
+import Image from "next/image";
+import logoFacinnius from '../../../public/images/logoFacinnius.png'
+
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -11,11 +14,12 @@ export default function Footer() {
     <footer className="footer section">
       <div className="footer__container container grid">
         <div>
-          <Link href="#" className="footer__logo">
-            <a className="footer__logo">
-              <h6 className="titulo_facinnius">Facinnius.</h6> 
-            </a>
-          </Link>
+        <Link href="/" className="nav__logo"  >
+          <a style={{ display: 'flex', alignItems: 'center', justifyItems: 'center', marginLeft: '-10px', marginBottom: '8px' }}>
+            <Image src={logoFacinnius} alt="Logo" />
+            Facinnius.
+          </a>
+        </Link>
 
           <p className="footer__description" dangerouslySetInnerHTML={{ __html: t('home_footer_descricao') }} />
            
@@ -50,7 +54,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          {/* <div>
             <h3 className="footer__title">{t('home_footer_blog_titulo')}</h3>
 
             <ul className="footer__links">
@@ -62,7 +66,7 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           <div>
             <h3 className="footer__title">{t('home_footer_localizacao_titulo')}</h3>
@@ -112,7 +116,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://www.youtube.com/facinnius-cosmeticos"
+                href="https://www.tiktok.com/@facinnius"
                 target="_blank"
                 rel="noreferrer"
                 className="footer__social-link"
@@ -127,7 +131,7 @@ export default function Footer() {
       <div className="footer__info container">
 
         <Link href="/privacidade" className="footer__privacy">
-        {t('home_footer_politica')}
+        <p style={{ textAlign: 'center', maxWidth: '80ch' }} dangerouslySetInnerHTML={{ __html: t('home_footer_politica') }}/>
         </Link>
         <span className="footer__copy">
            Copyright &#169; - Desenvolvido por M10web

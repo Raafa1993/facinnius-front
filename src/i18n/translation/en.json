@@ -9,12 +9,12 @@
 
     "home_especialidades_text": "Special products to take care of you",
     "home_especialidades_button": "See more",
-    "home_especialidades_item1_title": "Premium lines",
-    "home_especialidades_item1_descricao": "Premium linahs waiting for you.",
+    "home_especialidades_item1_title": "Premium Lines",
+    "home_especialidades_item1_descricao": "Premium Product Lines Awaiting You",
     "home_especialidades_item2_title": "Quality",
-    "home_especialidades_item2_descricao": "Enjoy and enjoy the best that Facinnus offers.",
+    "home_especialidades_item2_descricao": "Enjoy and enjoy the best cosmetic products for you or your salon.",
     "home_especialidades_item3_title": "Technology",
-    "home_especialidades_item3_descricao": "We have some lines that have nano technology.",
+    "home_especialidades_item3_descricao": "State-of-the-art technology in all manufacturing processes.",
 
     "duvidas_titulo": "Clear your doubts",
     "duvidas_subtitulo": "We are ready to help you",
@@ -23,12 +23,12 @@
     "home_colecao_masculino": "Professional <br /> Line",
     "home_colecao_feminino": "Home Care <br /> Line",
     "home_colecao_botao": "See more",
-    "home_produtos": "Our products",
+    "home_produtos": "Our Products",
     "home_blog_titulo": "Access our blog!",
     "home_blog_subtitulo": "Painless lock technique",
     "home_blog_descricao": "New technique of painless locks with high trend in the world of hairdressers.",
 
-    "home_footer_descricao": "Committed to <br /> bringing you the best <br /> Products.",
+    "home_footer_descricao": "Always looking for the best in <br />  the market, such as imported raw materials of <br />  the highest quality,  and always keeping <br /> an eye  on new technologies. To always improve the <br /> quality to be  delivered to beauty professionals.",
     "home_footer_companhia_titulo": "Company",
     "home_footer_companhia_produtos": "Products",
     "home_footer_companhia_linhas": "Lines",
@@ -40,12 +40,12 @@
     "home_footer_localizacao_endereco_cep": "CEP 09270-190",
     "home_footer_localizacao_endereco_cnpj": "CNPJ 20.712.759/0001-04",
     "home_footer_redes_titulo": "Social",
-    "home_footer_politica": "We use cookies and other similar technologies to improve your browsing experience. To learn more, visit: Cookies Policy and Privacy Policy. The images linked here are merely illustrative, logo and brand are our property. Its reproduction, in whole or in part, without the express authorization of the site administrator is prohibited.",
+    "home_footer_politica": "We use cookies and other similar technologies to improve your browsing experience. To learn more, visit: Cookies Policy and Privacy Policy. <br><br> The images linked here are merely illustrative, logo and brand are our property. Its reproduction, in whole or in part, without the express authorization of the site administrator is prohibited.",
 
 
     "produtoId_titulo": "A premium and best quality preparation just for you!",
 
-    "produtos_titulo": "Check out our product list.",
+    "produtos_titulo": "All our products have high quality imported raw materials. Enjoy.",
     "produtos_subtitulo": "Special lines",
     "produtos_botao_filtro": "Filter items",
 
@@ -96,7 +96,7 @@
     "cookies_titulo": "Cookie Policy",
 
     "contato_titulo": "Questions or Suggestion? Fill in the fields below to contact us.",
-    "contato_subtitulo": "Talk to <h6 class='titulo_facinnius'>Facinnius</h6>",
+    "contato_subtitulo": "Contact us:",
     "contato_tipo_contato": "TYPE OF CONTACT",
     "contato_tipo_input1": "Contact",
     "contato_tipo_input2": "Be a Distributor",

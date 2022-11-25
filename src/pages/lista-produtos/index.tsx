@@ -93,10 +93,10 @@ export default function ProductsList({ productBr, productEn }) {
                 {t('produtos_titulo')}
               </h2>
 
-              <div className="field-group" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+              <div className="listItems-group">
                 <h3>{t('produtos_subtitulo')}</h3>
                 <div className="filterItems">
-                  <button style={{ cursor: 'pointer', gap: '12px', display: 'flex', alignItems: 'center' }} className="buttonDefault specialty__button" onClick={() => setModal(!modal)}>
+                  <button style={{ cursor: 'pointer', gap: '12px', display: 'flex', alignItems: 'center' }} className="buttonDefault" onClick={() => setModal(!modal)}>
                     <BiFilter size={18} />
                       {t('produtos_botao_filtro')}
                   </button>
