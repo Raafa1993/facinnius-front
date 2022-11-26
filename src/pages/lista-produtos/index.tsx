@@ -131,9 +131,10 @@ export default function ProductsList({ productBr, productEn }) {
               // </article>
 
             <CardItem
-            handleOnClick={() => handleOnClickProduct(row.id, row.title)}
-            images={row.colecao}
-            title={row.title}
+              handleOnClick={() => handleOnClickProduct(row.id, row.title)}
+              images={row.colecao}
+              title={row.title}
+              isBorder
             />
             ))}
           </div>

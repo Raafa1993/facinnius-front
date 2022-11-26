@@ -102,6 +102,11 @@
 
     .products__card{
         width: 230px;
+        border: 2px solid red;
+
+        :hover {
+            border: 2px solid red;
+        }
     }
 
     .brand__container{

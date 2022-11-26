@@ -44,6 +44,7 @@ export default function Product({ productBr, productEn }) {
                   handleOnClick={() => {}}
                   images={filterProductsId.colecao}
                   title={''}
+                  isBorder
                 />
               </div>
 

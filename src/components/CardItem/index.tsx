@@ -1,16 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BiChevronLeft, BiChevronRight} from "react-icons/bi";
 
 interface PropsImages  {
   images: any;
   title: string;  
+  isBorder?: boolean
   handleOnClick: () => void;
 }
 
-export function CardItem({ images, handleOnClick, title }: PropsImages) {
+export function CardItem({ images, handleOnClick, title, isBorder }: PropsImages) {
   const slides = images;
   const [current, setCurrent] = useState(0);
   const length = slides?.length;
+
+  // console.log('length', length)
+  // console.log('current', current)
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     // setSeconds(seconds => seconds + 1);
+  //     if(current === length - 1) {
+  //       setCurrent(current + 1);
+  //     }
+  //     setCurrent(current);
+  //   }, 2000);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
@@ -24,7 +38,7 @@ export function CardItem({ images, handleOnClick, title }: PropsImages) {
     return null;
   }
   return (
-    <div id="sliderContainer">
+    <div className={`sliderContainer ${isBorder ? 'isBorder' : null}`}>
       <div className="sliderCarrosel">
         {length > 1 && (
           <>

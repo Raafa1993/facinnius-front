@@ -19,6 +19,7 @@ import item5_1 from '../../../public/images/item5_1.png';
 import item6 from '../../../public/images/item6.png';
 import item8 from '../../../public/images/item8.png';
 import item8_1 from '../../../public/images/item8_1.png';
+import item8_2 from '../../../public/images/item8_2.png';
 import item9 from '../../../public/images/item9.png';
 import item10 from '../../../public/images/item10.png';
 import item11 from '../../../public/images/item11.png';
@@ -29,10 +30,6 @@ import item14 from '../../../public/images/item14.png';
 import item14_1 from '../../../public/images/item14_1.png';
 import item15 from '../../../public/images/item15.png';
 import item16 from '../../../public/images/item16.png';
-import item16_1 from '../../../public/images/item1.png';
-import item16_2 from '../../../public/images/item16_2.png';
-import item16_3 from '../../../public/images/item16_3.png';
-import item16_4 from '../../../public/images/item16_4.png';
 import item17 from '../../../public/images/item17.png';
 import item18 from '../../../public/images/item18.png';
 import item19 from '../../../public/images/item19.png';
@@ -49,13 +46,20 @@ import item28 from '../../../public/images/item28.png';
 import item28_1 from '../../../public/images/item28_1.png';
 import item29 from '../../../public/images/item29.png';
 import item29_1 from '../../../public/images/item29_1.png';
-import item29_2 from '../../../public/images/item29_2.png';
 import item30 from '../../../public/images/item30.png';
-import item30_1 from '../../../public/images/item30_1.png';
 import item31 from '../../../public/images/item31.png';
 import item32 from '../../../public/images/item32.png';
 import item33 from '../../../public/images/item33.png';
 import item34 from '../../../public/images/item34.png';
+import item35 from '../../../public/images/item35.png';
+import item35_1 from '../../../public/images/item35_1.png';
+import item36 from '../../../public/images/item36.png';
+import item36_1 from '../../../public/images/item36_1.png';
+import item37 from '../../../public/images/item37.png';
+import item37_1 from '../../../public/images/item37_1.png';
+import item38 from '../../../public/images/item38.png';
+import item38_1 from '../../../public/images/item38_1.png';
+import item39 from '../../../public/images/item39.png';
 
 import blog1 from "../../../public/images/blog_1.png";
 import blog2 from "../../../public/images/blog_2.png";
@@ -273,37 +277,11 @@ export default function Products({ productEn, productBr }) {
               src={item16}
               alt="testeImage"
               className="products__img"
-           
-            />
-            <Image
-              src={item16_1}
-              alt="testeImage"
-              className="products__img"
-           
-            />
-            <Image
-              src={item16_2}
-              alt="testeImage"
-              className="products__img"
-           
-            />
-            <Image
-              src={item16_3}
-              alt="testeImage"
-              className="products__img"
-           
-            />
-            <Image
-              src={item16_4}
-              alt="testeImage"
-              className="products__img"
-           
             />
             <Image
               src={item17}
               alt="testeImage"
               className="products__img"
-           
             />
 
             <Image
@@ -397,17 +375,7 @@ export default function Products({ productEn, productBr }) {
               className="products__img"
             />
             <Image
-              src={item29_2}
-              alt="testeImage"
-              className="products__img"
-            />
-            <Image
               src={item30}
-              alt="testeImage"
-              className="products__img"
-            />
-            <Image
-              src={item30_1}
               alt="testeImage"
               className="products__img"
             />
@@ -431,6 +399,54 @@ export default function Products({ productEn, productBr }) {
               alt="testeImage"
               className="products__img"
             />
+
+<Image
+              src={item35}
+              alt="testeImage"
+              className="products__img"
+            />
+                        <Image
+              src={item35_1}
+              alt="testeImage"
+              className="products__img"
+            />
+                        <Image
+              src={item36}
+              alt="testeImage"
+              className="products__img"
+            />
+                        <Image
+              src={item36_1}
+              alt="testeImage"
+              className="products__img"
+            />
+                        <Image
+              src={item37}
+              alt="testeImage"
+              className="products__img"
+            />
+
+<Image
+              src={item37_1}
+              alt="testeImage"
+              className="products__img"
+            />
+                        <Image
+              src={item38}
+              alt="testeImage"
+              className="products__img"
+            />
+
+<Image
+              src={item38_1}
+              alt="testeImage"
+              className="products__img"
+            />
+                        <Image
+              src={item39}
+              alt="testeImage"
+              className="products__img"
+            />
           </div>
 
           <Swiper
@@ -451,6 +467,8 @@ export default function Products({ productEn, productBr }) {
             centeredSlides={true}
             slidesPerView="auto"
             loop={true}
+            onMouseEnter={() => console.log('HOVER ENTROU')}
+            onMouseLeave={() => console.log('HOVER SAIOU')}
           >
             {i18n.language === "ptbr"
               ? productBr.map((row: any) => (
@@ -470,6 +488,7 @@ export default function Products({ productEn, productBr }) {
                       handleOnClick={() => handleOnClickProduct(row.id, row.title)}
                       images={row.colecao}
                       title={row.title}
+                      
                     />
                     {/* <Image
                       src={row.imagem}

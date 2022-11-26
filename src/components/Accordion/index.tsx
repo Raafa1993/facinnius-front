@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { FiMinus, FiPlus } from "react-icons/fi";
 
 
@@ -17,19 +17,17 @@ const Accordion = ({ question }: any) => {
     <div className="AccordionSection">
       <div className="containerAccordion">
           {question.map((item, index) => {
-            return (
-              <>
-                <div className="wrapperAccordion" onClick={() => toggle(index)} key={item.question}>
-                  <h1 dangerouslySetInnerHTML={{ __html: item.question }} style={clicked === index ? { color: "hsl(36, 72%, 48%)" }: null }/>
-                  <span>{clicked === index ? <FiMinus color="hsl(36, 72%, 48%)" /> : <FiPlus />}</span>
+            <React.Fragment key={item.question}>
+              <div className="wrapperAccordion" onClick={() => toggle(index)} >
+                <h1 dangerouslySetInnerHTML={{ __html: item.question }} style={clicked === index ? { color: "hsl(36, 72%, 48%)" }: null }/>
+                <span>{clicked === index ? <FiMinus color="hsl(36, 72%, 48%)" /> : <FiPlus />}</span>
+              </div>
+              {clicked === index ? (
+                <div className="dropdown">
+                  <p dangerouslySetInnerHTML={{ __html: item.answer }}/>
                 </div>
-                {clicked === index ? (
-                  <div className="dropdown">
-                    <p dangerouslySetInnerHTML={{ __html: item.answer }}/>
-                  </div>
-                ) : null}
-              </>
-            );
+              ) : null}
+            </React.Fragment>
           })}
       </div>
     </div>
