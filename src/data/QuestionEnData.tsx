@@ -20,10 +20,6 @@ export const QuestionEnData = [
     answer: 'Yes, Facinnius has a complete line of hair schedule for you including products for nutrition, hydration, reconstruction and scalp treatment.'
   },
   {
-    question: 'Which line is best suited for oily hair?',
-    answer: 'We recommend our Detox Refresh and Mint with Malva lines.'
-  },
-  {
     question: "Why can't I find the Facinnius product in perfumery?",
     answer: 'Because Facinnius focuses on serving beauty professionals, with a team of representatives who serve professionals in their establishments. But you can get the products at salons that resell the Facinnius home care line.'
   },

@@ -4,7 +4,9 @@ import Accordion from "../Accordion";
 export default function Duvidas({ questionBr, questionEn }) {
   const { t, i18n } = useTranslation();
 
+  
   const verify = i18n.language === 'ptbr' ? questionBr : questionEn;
+  console.log('verify', verify)
 
   return (
     <section className="new section container" id="new">

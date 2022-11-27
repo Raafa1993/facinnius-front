@@ -219,6 +219,12 @@ export default function Products({ productEn, productBr }) {
               className="products__img"
            
             />
+                        <Image
+              src={item8_2}
+              alt="testeImage"
+              className="products__img"
+           
+            />
             <Image
               src={item9}
               alt="testeImage"

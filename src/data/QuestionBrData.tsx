@@ -20,10 +20,6 @@ export const QuestionBrData = [
     answer: 'Sim, a <h6 class="titulo_facinnius">Facinnius</h6> possui uma linha completa de cronograma capilar para você incluindo produtos para nutrição, hidratação, reconstrução e tratamento do couro cabeludo'
   },
   {
-    question: 'Qual linha é mais indicada para cabelos oleosos?',
-    answer: 'Indicamos as nossas linhas Detox Refresh e Hortelã com Malva.'
-  },
-  {
     question: 'Por que não encontro o produto da <h6 class="titulo_facinnius">Facinnius</h6> em perfumaria?',
     answer: 'Porque a <h6 class="titulo_facinnius">Facinnius</h6> tem como foco atender a profissionais da beleza, com uma equipe de representantes que atendem aos profissionais em seus estabelecimentos. Mas você consegue obter os produtos nos salões que revendem a linha home care <h6 class="titulo_facinnius">Facinnius</h6>.'
   },
